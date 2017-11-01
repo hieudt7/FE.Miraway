@@ -1,8 +1,38 @@
 ﻿.qr-mkt {
+    color: #4d4d4f;
+
     .des {
         text-align: center;
-        padding:0 33%;
+        padding: 0 33%;
+        font-family: 'helveticaneuelight';
+        font-size: 16px;
 
+        @include device-1 {
+            padding: 0 15px;
+        }
+    }
+
+    .btn-flat {
+        text-align: center;
+
+        i {
+            margin-left: 10px;
+            font-size: 14px;
+        }
+
+        @include device-1 {
+            width: 100%;
+            display: block;
+            padding: 8px;
+        }
+
+        @include iphone5Landscape {
+            font-size: 16px;
+
+            i {
+                font-size: 12px;
+            }
+        }
     }
 
     p {
@@ -17,23 +47,77 @@
         .text {
             padding-top: 70px;
 
+            @include device-1 {
+                padding-top: 0;
+            }
+
             h2 {
                 font-family: 'helveticaneuebold';
                 font-size: 40px;
                 color: #188095;
                 text-transform: uppercase;
+                margin-bottom: 0;
+
+                @include device-1 {
+                    font-size: 30px;
+                }
+
+                @include iphone5Landscape {
+                    font-size: 26px;
+                }
+            }
+
+            p {
+                margin-top: 5px;
+                margin-bottom: 20px;
+            }
+
+            a {
+                img {
+                    margin-left: 10px;
+                }
+
+                @include device-1 {
+                    width: 100%;
+                    display: block;
+                    text-align: center;
+                }
+            }
+        }
+
+        .img-banner {
+            float: right;
+            margin-bottom: 25px;
+
+            @include device-1 {
+                float: none;
+            }
+
+            img {
+                max-width: 100%;
             }
         }
     }
 
     .mkt-why {
+        @include device-1 {
+            padding-bottom: 20px;
+        }
 
         .container-sm {
             max-width: 950px;
             margin: 60px auto;
 
+            @include device-1 {
+                width: 100%;
+                margin: 0 auto;
+                padding: 0 15px;
+            }
+
             h3 {
-                color: #868686;
+                color: #707070;
+                font-size: 20px;
+                margin-bottom: 20px;
             }
 
             ul {
@@ -41,13 +125,14 @@
                 padding: 0;
                 list-style: none;
                 margin-bottom: 30px;
+                font-family: 'helveticaneuelight';
 
                 li {
-                    color: #727272;
+                    color: #707070;
                     font-size: 16px;
                     position: relative;
                     margin-bottom: 10px;
-                    padding-left: 20px;
+                    padding-left: 30px;
 
                     &:before {
                         content: "\f1d8";
@@ -67,8 +152,12 @@
         background-repeat: no-repeat;
         background-size: 100%;
         padding-top: 5px;
-        padding-bottom: 50px;
-        height: 570px;
+        min-height: 480px;
+
+        @include device-1 {
+            background-image: none;
+            background-color: #0f9fbc;
+        }
 
         h2 {
             color: #ffffff;
@@ -93,45 +182,93 @@
             list-style: none;
             margin-bottom: 30px;
             margin-top: 60px;
+            font-family: 'helveticaneuelight';
+
+            @include device-1 {
+                margin-top: 10px;
+            }
 
             li {
                 color: #ffffff;
-                font-size: 24px;
+                font-size: 16px;
                 position: relative;
                 margin-bottom: 10px;
                 padding-left: 50px;
-                line-height: 50px;
+                line-height: 35px;
+
+                @include device-1 {
+                    padding-left: 35px;
+                }
+
+                b {
+                    text-transform: uppercase;
+                }
 
                 &:before {
                     content: "\f058";
                     position: absolute;
                     font: normal normal normal 14px/1 FontAwesome;
-                    top: 15px;
+                    top: 8px;
                     left: 0;
                     color: #f58220;
-                    font-size: 24px;
+                    font-size: 20px;
                 }
             }
         }
     }
 
     .mkt-mobi {
+        padding-top: 5px;
+
+        .container {
+            @include device-1 {
+                padding: 0;
+            }
+        }
+
         .item {
             text-align: center;
             min-height: 510px;
+
+            @include device-1 {
+                min-height: 0;
+            }
         }
 
         .mb-text {
             margin-top: 100px;
-        }
-    }
 
-    .mkt-contentqr {
-        #exTab1 .tab-content {
-            color: white;
-            background-color: #428bca;
-            padding: 5px 15px;
-            min-height:350px;
+            @include device-1 {
+                margin-top: 20px;
+            }
+        }
+
+        .mb-slide {
+            float: right;
+
+            @include device-1 {
+                float: none;
+            }
+
+            .item {
+                text-align: center;
+
+                img {
+                    max-width: 100%;
+                    display: inline-block;
+                }
+            }
+        }
+
+        h3 {
+            font-family: 'helveticaneuemedium';
+            color: #707070;
+            font-size: 20px;
+        }
+
+        p {
+            font-family: 'helveticaneuelight';
+            margin-bottom: 20px;
         }
     }
 
@@ -144,36 +281,82 @@
             margin-top: 45px;
             height: 60px;
         }
+
+        img {
+            max-width: 100%;
+        }
     }
 
     .mkt-trial {
         background-image: url(../images/mkt/tenlua.png);
         background-repeat: no-repeat;
         background-size: 100%;
-        height: 540px;
+        min-height: 540px;
+        font-family: 'helveticaneuelight';
+
+        @include device-1 {
+            min-height: 0;
+            background-color: #178094;
+            background-image: none;
+            padding-bottom: 15px;
+        }
 
         h2 {
             color: #fff;
             font-size: 40px;
             margin-top: 90px;
+            font-family: 'helveticaneuemedium';
+
+            @include device-1 {
+                margin-top: 15px;
+                font-size: 29px;
+
+                .btn-flat {
+                    font-size: 18px;
+                    padding: 6px 8px;
+                }
+            }
         }
 
         p {
-            font-size: 24px;
+            font-size: 20px;
             color: #fff;
+            margin-bottom: 20px;
+
+            b {
+                font-size: 30px;
+            }
         }
     }
 
     .mkt-contentqr {
+        .qr-content {
+            font-family: 'helveticaneuelight';
+
+            h3 {
+                font-family: 'helveticaneuemedium';
+                color: #707070;
+                font-size: 20px;
+            }
+        }
+
         .tabs {
             text-align: center;
             height: 80px;
             margin: 15px 0;
 
+            @include device-1 {
+                padding-left: 0;
+            }
+
             .indicator {
                 width: 10%;
                 background-color: #f58220;
                 height: 3px;
+
+                @include device-1 {
+                    width: 70px;
+                }
             }
 
             .tab {
@@ -181,32 +364,7 @@
             }
         }
 
-        .tab-content {
-            .tab-pane {
-                ul {
-                    margin-bottom: 45px;
-                    font-size: 16px;
-                }
-
-                .qrcode {
-                    margin-top: 80px;
-                    font-weight: 700;
-                }
-            }
-        }
-
-        .tabs > li.active > a {
-            background-color: transparent;
-            color: #f58220;
-            border-radius: unset;
-        }
-
-        #exTab1 .tab-content {
-            background-color: transparent;
-            color: #666666;
-        }
-
-        .tabs > li > a {
+        .tab > a {
             background-color: transparent;
             color: #666666;
 
@@ -223,7 +381,7 @@
             i {
                 margin: 5px auto;
             }
-            /*icon content*/
+
             .sprite {
                 background-image: url(../images/mkt/spritesheet.png);
                 background-repeat: no-repeat;
@@ -236,15 +394,11 @@
                 background-position: -5px -5px;
             }
 
-
-
             .sprite-type2-1 {
                 width: 18px;
                 height: 28px;
                 background-position: -93px -5px;
             }
-
-
 
             .sprite-type3 {
                 width: 20px;
@@ -252,15 +406,11 @@
                 background-position: -5px -43px;
             }
 
-
-
             .sprite-type4-1 {
                 width: 22px;
                 height: 24px;
                 background-position: -65px -43px;
             }
-
-
 
             .sprite-type5-1 {
                 width: 20px;
@@ -268,25 +418,17 @@
                 background-position: -5px -77px;
             }
 
-
-
             .sprite-type6-1 {
                 width: 28px;
                 height: 22px;
                 background-position: -65px -77px;
             }
 
-
-
             .sprite-type7-1 {
                 width: 30px;
                 height: 24px;
                 background-position: -65px -109px;
             }
-
-
-
-
 
             .sprite-type8-2 {
                 width: 38px;
@@ -299,60 +441,88 @@
                 height: 24px;
                 background-position: -145px -107px;
             }
-            /*-----------------------------end qrcontent*/
+
+            &.active {
+                background-color: transparent;
+                color: #f58220;
+                border-radius: unset;
+
+                .sprite-type9-2 {
+                    background-position: -141px -73px;
+                }
+
+                .sprite-type5-1 {
+                    width: 20px;
+                    height: 24px;
+                    background-position: -35px -77px;
+                }
+
+                .sprite-type6-1 {
+                    width: 28px;
+                    height: 22px;
+                    background-position: -103px -77px;
+                }
+
+                .sprite-type7-1 {
+                    width: 30px;
+                    height: 24px;
+                    background-position: -105px -109px;
+                }
+
+                .sprite-type2-1 {
+                    width: 18px;
+                    height: 28px;
+                    background-position: -121px -5px;
+                }
+
+                .sprite-type8-2 {
+                    width: 38px;
+                    height: 24px;
+                    background-position: -149px -5px;
+                }
+
+                .sprite-type1-1 {
+                    width: 34px;
+                    height: 24px;
+                    background-position: -49px -5px;
+                }
+
+                .sprite-type4-1 {
+                    width: 22px;
+                    height: 24px;
+                    background-position: -97px -43px;
+                }
+
+                .sprite-type3 {
+                    width: 20px;
+                    height: 24px;
+                    background-position: -35px -43px;
+                }
+            }
         }
 
-        .tabs > li.active > a {
-            .sprite-type9-2 {
-                background-position: -141px -73px;
-            }
+        .tab-content {
+            background-color: transparent;
+            color: #666666;
 
-            .sprite-type5-1 {
-                width: 20px;
-                height: 24px;
-                background-position: -35px -77px;
-            }
+            .tab-pane {
+                ul {
+                    margin-bottom: 45px;
+                    font-size: 16px;
 
-            .sprite-type6-1 {
-                width: 28px;
-                height: 22px;
-                background-position: -103px -77px;
-            }
+                    @include device-1 {
+                        padding-left: 15px;
+                    }
+                }
 
-            .sprite-type7-1 {
-                width: 30px;
-                height: 24px;
-                background-position: -105px -109px;
-            }
+                .qrcode {
+                    margin-top: 80px;
+                    font-weight: 700;
 
-            .sprite-type2-1 {
-                width: 18px;
-                height: 28px;
-                background-position: -121px -5px;
-            }
-
-            .sprite-type8-2 {
-                width: 38px;
-                height: 24px;
-                background-position: -149px -5px;
-            }
-
-            .sprite-type1-1 {
-                width: 34px;
-                height: 24px;
-                background-position: -49px -5px;
-            }
-
-            .sprite-type4-1 {
-                width: 22px;
-                height: 24px;
-                background-position: -97px -43px;
-            }
-
-            .sprite-type3 {
-                width: 20px;
-                height: 24px;
-                background-position: -35px -43px;
+                    i {
+                        margin-left: 10px;
+                    }
+                }
             }
         }
     }
