@@ -1,0 +1,269 @@
+﻿.home-page {
+    .home-banner {
+        margin-top: 50px;
+        background-color: #fbfafc;
+        padding-bottom: 30px;
+
+        .content {
+            background-image: url('../images/banner-bg.png');
+
+            img {
+                max-width: 100%;
+                display: inline-block;
+            }
+        }
+
+        .text {
+            padding-top: 70px;
+
+            h2 {
+                font-family: 'helveticaneueultralight';
+                font-size: 42px;
+                color: #2d2d2d;
+                text-transform: uppercase;
+            }
+
+            h3 {
+                font-family: 'helveticaneuebold';
+                font-size: 53px;
+                color: #5f5f5f;
+                text-transform: uppercase;
+
+                span {
+                    color: #f58220;
+                }
+            }
+
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                margin-bottom: 30px;
+
+                li {
+                    color: #727272;
+                    font-size: 20px;
+                    padding-left: 25px;
+                    position: relative;
+                    margin-bottom: 10px;
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        width: 8px;
+                        height: 8px;
+                        background-color: #198096;
+                        top: 10px;
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .home-solution {
+        .qr-typical {
+            margin-bottom: 40px;
+
+            img {
+                display: inline-block;
+                max-width: 100%;
+            }
+
+            h3 {
+                font-size: 20px;
+                color: #5f5f5f;
+                text-transform: uppercase;
+                font-family: 'helveticaneuemedium';
+                margin-bottom: 5px;
+            }
+
+            p {
+                color: #727272;
+                font-family: 'helveticaneuelight';
+                font-size: 16px;
+                padding: 0 540px;
+                margin-bottom: 30px;
+            }
+        }
+
+        .qr-introduce {
+            > div {
+                text-align: center;
+            }
+
+            img {
+                display: inline-block;
+                max-width: 100%;
+            }
+
+            h2 {
+                text-transform: uppercase;
+                font-size: 20px;
+                color: #5f5f5f;
+                font-family: 'helveticaneuemedium';
+            }
+
+            p {
+                padding: 0 30px;
+                font-size: 16px;
+                color: #727272;
+                font-family: 'helveticaneuelight';
+            }
+        }
+    }
+
+    .home-about {
+        background-color: #128097;
+        padding-top: 5px;
+        padding-bottom: 50px;
+
+        .under-title {
+            margin-bottom: 30px;
+        }
+
+        .text {
+            color: #fff;
+            padding-right: 45px;
+
+            h2 {
+                font-size: 20px;
+                font-family: 'helveticaneuemedium';
+                text-transform: uppercase;
+            }
+
+            p {
+                font-size: 16px;
+                font-family: 'helveticaneuelight';
+            }
+
+            ul {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                padding-left: 15px;
+
+                li {
+                    padding-left: 45px;
+                    position: relative;
+
+                    i {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                    }
+                }
+
+                h3 {
+                    font-size: 15px;
+                    font-family: 'helveticaneuemedium';
+                    text-transform: uppercase;
+                }
+
+                p {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        iframe {
+            width: 100% !important;
+            height: 360px !important;
+        }
+    }
+
+    .home-app {
+        padding-top: 10px;
+        padding-bottom: 50px;
+
+        .under-title {
+            margin-bottom: 45px;
+        }
+
+        .content {
+            background-image: url('../images/ico_4.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-position-y: 0%;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                position: relative;
+                margin-bottom: 100px;
+            }
+
+            h3 {
+                font-size: 16px;
+                font-family: 'helveticaneuemedium';
+                text-transform: uppercase;
+                color: #5f5f5f;
+                margin-bottom: 5px;
+            }
+
+            p {
+                font-size: 16px;
+                font-family: 'helveticaneuelight';
+                color: #727272;
+            }
+
+            img {
+                position: absolute;
+                top: 0;
+            }
+
+            &.ul-left {
+                text-align: right;
+                padding-right: 175px;
+                padding-top: 50px;
+
+                img {
+                    right: 0;
+                }
+
+                li {
+                    padding-right: 105px;
+
+                    &:nth-child(2) {
+                        margin-right: 65px;
+                    }
+
+                    &:nth-child(3) {
+                        margin-right: 20px;
+                    }
+                }
+            }
+
+            &.ul-right {
+                text-align: left;
+                padding-left: 175px;
+                padding-top: 50px;
+
+                img {
+                    left: 0;
+                }
+
+                li {
+                    padding-left: 105px;
+
+                    &:nth-child(2) {
+                        margin-left: 65px;
+                    }
+
+                    &:nth-child(3) {
+                        margin-left: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    .rating {
+        background: #fbfafc;
+        padding-top: 10px;
+    }
+}

@@ -1,0 +1,370 @@
+﻿.qr-mkt {
+    .des {
+        text-align: center;
+        padding:0 33%;
+
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .mkt-banner {
+        padding-top: 100px;
+        background-color: #f4f4f4;
+        padding-bottom: 30px;
+
+        .text {
+            padding-top: 70px;
+
+            h2 {
+                font-family: 'helveticaneuebold';
+                font-size: 40px;
+                color: #188095;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    .mkt-why {
+
+        .container-sm {
+            max-width: 950px;
+            margin: 60px auto;
+
+            h3 {
+                color: #868686;
+            }
+
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                margin-bottom: 30px;
+
+                li {
+                    color: #727272;
+                    font-size: 16px;
+                    position: relative;
+                    margin-bottom: 10px;
+                    padding-left: 20px;
+
+                    &:before {
+                        content: "\f1d8";
+                        position: absolute;
+                        font: normal normal normal 14px/1 FontAwesome;
+                        top: 5px;
+                        left: 0;
+                        color: #868686;
+                    }
+                }
+            }
+        }
+    }
+
+    .mkt-benifit {
+        background-image: url('../images/mkt/bg1.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        padding-top: 5px;
+        padding-bottom: 50px;
+        height: 570px;
+
+        h2 {
+            color: #ffffff;
+        }
+
+        p {
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .under-title {
+            margin-bottom: 30px;
+
+            &:after {
+                background-color: #ffffff;
+            }
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            margin-bottom: 30px;
+            margin-top: 60px;
+
+            li {
+                color: #ffffff;
+                font-size: 24px;
+                position: relative;
+                margin-bottom: 10px;
+                padding-left: 50px;
+                line-height: 50px;
+
+                &:before {
+                    content: "\f058";
+                    position: absolute;
+                    font: normal normal normal 14px/1 FontAwesome;
+                    top: 15px;
+                    left: 0;
+                    color: #f58220;
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+
+    .mkt-mobi {
+        .item {
+            text-align: center;
+            min-height: 510px;
+        }
+
+        .mb-text {
+            margin-top: 100px;
+        }
+    }
+
+    .mkt-contentqr {
+        #exTab1 .tab-content {
+            color: white;
+            background-color: #428bca;
+            padding: 5px 15px;
+            min-height:350px;
+        }
+    }
+
+    .mkt-save {
+        .mb-content {
+            text-align: center;
+        }
+
+        .mb-button {
+            margin-top: 45px;
+            height: 60px;
+        }
+    }
+
+    .mkt-trial {
+        background-image: url(../images/mkt/tenlua.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 540px;
+
+        h2 {
+            color: #fff;
+            font-size: 40px;
+            margin-top: 90px;
+        }
+
+        p {
+            font-size: 24px;
+            color: #fff;
+        }
+    }
+
+    .mkt-contentqr {
+        .tabs {
+            text-align: center;
+            height: 80px;
+            margin: 15px 0;
+
+            .indicator {
+                width: 10%;
+                background-color: #f58220;
+                height: 3px;
+            }
+
+            .tab {
+                height: 100px;
+            }
+        }
+
+        .tab-content {
+            .tab-pane {
+                ul {
+                    margin-bottom: 45px;
+                    font-size: 16px;
+                }
+
+                .qrcode {
+                    margin-top: 80px;
+                    font-weight: 700;
+                }
+            }
+        }
+
+        .tabs > li.active > a {
+            background-color: transparent;
+            color: #f58220;
+            border-radius: unset;
+        }
+
+        #exTab1 .tab-content {
+            background-color: transparent;
+            color: #666666;
+        }
+
+        .tabs > li > a {
+            background-color: transparent;
+            color: #666666;
+
+            &:hover, &:focus {
+                text-decoration: none;
+            }
+
+            .mkt-icon {
+                display: block;
+                height: 30px;
+                width: 50px;
+            }
+
+            i {
+                margin: 5px auto;
+            }
+            /*icon content*/
+            .sprite {
+                background-image: url(../images/mkt/spritesheet.png);
+                background-repeat: no-repeat;
+                display: block;
+            }
+
+            .sprite-type1 {
+                width: 34px;
+                height: 24px;
+                background-position: -5px -5px;
+            }
+
+
+
+            .sprite-type2-1 {
+                width: 18px;
+                height: 28px;
+                background-position: -93px -5px;
+            }
+
+
+
+            .sprite-type3 {
+                width: 20px;
+                height: 24px;
+                background-position: -5px -43px;
+            }
+
+
+
+            .sprite-type4-1 {
+                width: 22px;
+                height: 24px;
+                background-position: -65px -43px;
+            }
+
+
+
+            .sprite-type5-1 {
+                width: 20px;
+                height: 24px;
+                background-position: -5px -77px;
+            }
+
+
+
+            .sprite-type6-1 {
+                width: 28px;
+                height: 22px;
+                background-position: -65px -77px;
+            }
+
+
+
+            .sprite-type7-1 {
+                width: 30px;
+                height: 24px;
+                background-position: -65px -109px;
+            }
+
+
+
+
+
+            .sprite-type8-2 {
+                width: 38px;
+                height: 24px;
+                background-position: -149px -39px;
+            }
+
+            .sprite-type9-2 {
+                width: 24px;
+                height: 24px;
+                background-position: -145px -107px;
+            }
+            /*-----------------------------end qrcontent*/
+        }
+
+        .tabs > li.active > a {
+            .sprite-type9-2 {
+                background-position: -141px -73px;
+            }
+
+            .sprite-type5-1 {
+                width: 20px;
+                height: 24px;
+                background-position: -35px -77px;
+            }
+
+            .sprite-type6-1 {
+                width: 28px;
+                height: 22px;
+                background-position: -103px -77px;
+            }
+
+            .sprite-type7-1 {
+                width: 30px;
+                height: 24px;
+                background-position: -105px -109px;
+            }
+
+            .sprite-type2-1 {
+                width: 18px;
+                height: 28px;
+                background-position: -121px -5px;
+            }
+
+            .sprite-type8-2 {
+                width: 38px;
+                height: 24px;
+                background-position: -149px -5px;
+            }
+
+            .sprite-type1-1 {
+                width: 34px;
+                height: 24px;
+                background-position: -49px -5px;
+            }
+
+            .sprite-type4-1 {
+                width: 22px;
+                height: 24px;
+                background-position: -97px -43px;
+            }
+
+            .sprite-type3 {
+                width: 20px;
+                height: 24px;
+                background-position: -35px -43px;
+            }
+        }
+    }
+
+    .mkt-tech {
+        margin-bottom: 30px;
+    }
+
+    .mkt-tut {
+        .thumbnail a > img, .thumbnail > img {
+            padding: 15px;
+            min-height: 350px;
+        }
+    }
+}

@@ -1,0 +1,302 @@
+﻿.qr-bulk {
+    .bulk-banner {
+        padding-top: 100px;
+        background-color: #f4f4f4;
+        padding-bottom: 30px;
+
+        .text {
+            padding-top: 70px;
+
+            h2 {
+                font-family: 'helveticaneuebold';
+                font-size: 30px;
+                color: #797979;
+                text-transform: uppercase;
+            }
+
+            h3 {
+                font-family: 'helveticaneuebold';
+                font-size: 50px;
+                color: #f58220;
+                text-transform: uppercase;
+
+               
+            }
+
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                margin-bottom: 30px;
+
+                li {
+                    color: #727272;
+                    font-size: 16px;
+                    position: relative;
+                    margin-bottom: 10px;
+                    padding-left:20px;
+
+                    &:before {
+                        content: "\f00c";
+                        position:absolute;
+                        font:normal normal normal 14px/1 FontAwesome;
+                        top: 5px;
+                        left: 0;
+                        color: #f58220;
+                    }        
+                }
+            }
+        }
+       
+    }
+
+    .bulk-solution {
+        h2{
+            margin-bottom:30px
+        }
+        .container-sm{
+            max-width:950px;
+            margin: 0 auto;
+            padding: 0 15px;
+        
+        .qr-introduce {
+            margin-bottom:45px;
+            h3 {
+                color: #128097;
+                text-transform: uppercase;
+                font-family: 'helveticaneuebold';
+                margin-bottom: 30px;
+            }
+
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                margin-bottom: 30px;
+
+                li {
+                    color: #727272;
+                    font-size: 16px;
+                    position: relative;
+                    margin-bottom: 10px;
+                    padding-left:20px;
+
+                    &:before {
+                        content: "\f005";
+                        position:absolute;
+                        font:normal normal normal 14px/1 FontAwesome;
+                        top: 5px;
+                        left: 0;
+                        color: #f58220;
+                    }        
+                }
+            }
+
+            button {
+                background-color: #128097;
+                color: #fff;
+                font-family: 'helveticaneuebold';
+                border-radius: 5px;
+                font-size: 16px;
+                text-transform: uppercase;
+                border: solid;
+                padding: 5px 15px;
+            }
+
+            .qr-type {
+                > div {
+                    &:first-child {
+                        float: right;
+                        text-align: right;
+                    }
+
+                    &:last-child {
+                        float: left;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .bulk-about {
+        background-image:url('../images/imghome/banner2.png');
+        padding-top: 5px;
+        padding-bottom: 50px;
+
+        .under-title {
+            margin-bottom: 30px;
+        }
+
+
+        iframe {
+            width: 100% !important;
+            height: 360px !important;
+        }
+    }
+
+    .bulk-app {
+        padding-top: 10px;
+        padding-bottom: 45px;
+
+        .under-title {
+            margin-bottom: 45px;
+        }
+
+        .content {
+            max-width:950px;         
+            margin-bottom:60px;
+
+            .app-item{
+                text-align: center;
+                h3{
+                    color:#f58220;
+                    font-family: 'helveticaneuebold';
+                    text-transform:uppercase;
+
+                }
+                p{
+                font-family: 'helveticaneuebold';
+                font-size:16px;
+                text-transform:uppercase;
+            }
+            }
+            p{
+                
+                font-size:16px;
+            }
+        }
+
+        p{
+            text-align:center;
+
+        }
+    }
+
+    .why-mira{
+        .under-title {
+            margin-bottom: 45px;
+            }
+        .double-list {
+            margin-top: 30px;
+            margin-bottom: 15px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            flex-wrap: wrap;
+
+            > div {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        .content{
+            max-width:950px;
+            margin-bottom:45px;
+            
+            p{
+               text-align:center;
+            }
+            .app-item1{
+                position: relative;
+                padding-left:60px;
+                
+                p{
+                    text-align:left;
+                }                                    
+                &:before{
+                    background-image: url(../images/imghome/but1.png);
+                    background-repeat: no-repeat;
+                    content: "";
+                    position: absolute;
+                    width: 50px;
+                    height: 50px;
+                    top: 25px;
+                    left: 0;
+                        
+                    }
+                         
+            }
+            .app-item2{
+                position: relative;
+                padding-left:60px;
+                
+                p{
+                    text-align:left;
+                }                                    
+                &:before{
+                    background-image: url(../images/imghome/but2.png);
+                    background-repeat: no-repeat;
+                    content: "";
+                    position: absolute;
+                    width: 50px;
+                    height: 50px;
+                    top: 25px;
+                    left: 0;
+                        
+                    }
+                         
+            }
+            .app-item3{
+                position: relative;
+                padding-left:60px;
+                
+                p{
+                    text-align:left;
+                }                                    
+                &:before{
+                    background-image: url(../images/imghome/but3.png);
+                    background-repeat: no-repeat;
+                    content: "";
+                    position: absolute;
+                    width: 50px;
+                    height: 50px;
+                    top: 25px;
+                    left: 0;
+                        
+                    }
+                         
+            }
+            .app-item4{
+                position: relative;
+                padding-left:60px;
+                
+                p{
+                    text-align:left;
+                }                                    
+                &:before{
+                    background-image: url(../images/imghome/but4.png);
+                    background-repeat: no-repeat;
+                    content: "";
+                    position: absolute;
+                    width: 50px;
+                    height: 50px;
+                    top: 25px;
+                    left: 0;
+                        
+                    }
+                         
+            }
+               
+            
+        }
+    }
+    .bulk-struct{
+        p{
+            text-align:center;
+        }
+        .sms,.logo,.verify,.qrcode,.serial{
+            width:20%;
+            float:left;
+            padding:15px;
+            text-align: center
+        }
+    }
+
+    .rating {
+        background: #fbfafc;
+        padding-top: 10px;
+    }
+}

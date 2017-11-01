@@ -1,0 +1,212 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/bootstrap.css" rel="stylesheet" />
+    <link href="styles/font-awesome.min.css" rel="stylesheet" />
+    <link href="styles/materialize.min.css" rel="stylesheet" />
+    <link href="styles/create-all.css" rel="stylesheet" />
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/materialize.min.js"></script>
+    <script src="scripts/bootstrap.js"></script>
+    <link href="styles/animate.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="new-create">
+        <section class="pick-option">
+            <div class="container">
+                <h3 class="title-light">CHỌN LOẠI QR CODE</h3>
+            </div>
+
+            <div class="dp-body">
+                <div class="">
+                    <div class="container">
+                        <ul class="nav nav-tabs">
+                            <li class="col-md-2 active">
+                                <a data-toggle="tab" class="btn btn-default btn-group  qr-option" href="#url">
+                                    <span>
+                                        <i class="qr-type qr-type-ico_10"></i>
+                                    </span><span>Web Link</span>
+                                </a>
+                            </li>
+                            <li class="col-md-2">
+                                <a data-toggle="tab" class="btn btn-default btn-group  qr-option" href="#text">
+                                    <span><i class="qr-type qr-type-ico_9"></i></span>
+                                    <span>Text</span>
+                                </a>
+                            </li>
+                            <li class="col-md-2">
+                                <a data-toggle="tab" class="btn btn-default btn-group  qr-option" href="#phone">
+                                    <span>
+                                        <i class="qr-type qr-type-ico_15"></i>
+                                    </span><span>Phone</span>
+                                </a>
+                            </li>
+                            <li class="col-md-2">
+                                <a data-toggle="tab" class="btn btn-default btn-group  qr-option" href="#sms">
+                                    <span><i class="qr-type qr-type-ico_16"></i></span>
+                                    <span>SMS</span>
+                                </a>
+                            </li>
+                            <li class="col-md-2">
+                                <a data-toggle="tab" class="btn btn-default btn-group  qr-option" href="#email">
+                                    <i aria-hidden="true" class="fa fa-envelope" style="font-size:20px;"></i>Email
+                                </a>
+                            </li>
+                            <li class="col-md-2" >
+                                <a data-toggle="tab" class="btn btn-default btn-group  qr-option" href="#wifi" disabled>
+                                    <span><i class="qr-type qr-type-ico_2"></i></span>
+                                    <span>WIFI</span>
+                                </a>
+                            </li>
+                            <li class="col-md-2">
+                                <a data-toggle="tab" class="btn btn-default btn-group  qr-option" href="#menu7">
+                                    <span><i class="qr-type qr-type-ico_12"></i></span>
+                                    <span>PDF</span>
+                                </a>
+                            </li>
+                            <li class="col-md-2">
+                                <a data-toggle="tab" class="btn btn-default btn-group  qr-option" href="#menu1">
+                                    <span><i class="qr-type qr-type-ico_1"></i></span>
+                                    <span>Audio</span>
+                                </a>
+                            </li>
+                            <li class="col-md-2">
+                                <a data-toggle="tab" class="btn btn-default btn-group  qr-option" href="#menu1">
+                                    <span><i class="qr-type qr-type-ico_3"></i></span>
+                                    <span>Social Media</span>
+                                </a>
+                            </li>
+                            <li class="col-md-2">
+                                <a data-toggle="tab" class="btn btn-default btn-group  qr-option" href="#menu1">
+                                    <span><i class="qr-type qr-type-ico_13"></i></span>
+                                    <span>Image</span>
+                                </a>
+                            </li>
+                            <li class="col-md-2">
+                                <a data-toggle="tab" class="btn btn-default btn-group  qr-option" href="#menu1">
+                                    <span><i class="qr-type qr-type-ico_11"></i></span>
+                                    <span>Map</span>
+                                </a>
+                            </li>
+                            <li class="col-md-2">
+                                <a data-toggle="tab" class="btn btn-default btn-group  qr-option" href="#menu1">
+                                    <span><i class="qr-type qr-type-ico_14"></i></span>
+                                    <span>Vcard</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <section class="display">
+                        <div class="container">
+                            <div class="tab-content col-md-8">
+                                <div id="text" data-type="text" class="tab-pane">
+                                    <div class="">
+                                        <div class="qr-generic-form">
+                                            <div class="animated fadeInLeft display-form">
+                                                <h3>TEXT QR CODE</h3>
+                                                <p>Để tạo QR code có chứa đựng thông tin mong muốn,<br /> bạn có thể nhập nội dung tại đây:</p>
+                                                <input autocomplete="off" class="form-control" id="text" name="text" type="text" required minlength="4" maxlength="100" [ngModel]="text.contentText" (ngModelChange)="onTextChange($event)" #text="ngModel" placeholder="Gõ text ..." />
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="url" data-type="url" class="tab-pane active">
+                                    <div class="qr-generic-form">
+                                        <div class="animated fadeInLeft display-form">
+                                            <div class="animated fadeInLeft">
+                                                <h3>URL QR CODE</h3>
+                                                <div>
+                                                    <p>Để tạo QR code có chứa link URL,<br /> bạn có thể copy đường link URL vào đây:</p>
+                                                    <input pattern="https?://.+" title="Include http://" type="url" id="url" class="form-control" required name="url" [ngModel]="link.url" (ngModelChange)="onContentChange($event)" #url="ngModel">
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+                                <div id="phone" data-type="phone" class="tab-pane fade">
+                                    <div class="qr-generic-form">
+                                        <div class="animated fadeInLeft display-form">
+                                            <div class="animated fadeInLeft">
+                                                <h3>PHONE QR CODE</h3>
+                                                <p>Khi có người quét Phone QR Code,<br />họ có gọi được số điện thoai mà bạn đã tạo</p>
+                                                <input autocomplete="off" class="form-control numeric" id="phone" type="phone" [ngModel]="phone_number.number" (ngModelChange)="onContentChange($event)" placeholder="Số điện thoại" maxlength="11" />
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+                                <div id="sms" data-type="sms" class="tab-pane fade">
+                                    <div class="qr-generic-form">
+                                        <div class="animated fadeInLeft display-form">
+                                            <div class="animated fadeInLeft">
+                                                <h3>SMS QR CODE</h3>
+                                                <p>Để tạo QR Code có chứa thông điệp tin nhắn của bạn gửi tới 1 phần mềm nào đó,bạn hãy viết nội dung đó tại đây:</p>
+                                                <input autocomplete="off" class="form-control numeric" id="smsphone" type="phone" [ngModel]="sms.smsto" (ngModelChange)="onSmsChange($event)" placeholder="Số điện thoại" maxlength="11" />
+                                                <textarea autocomplete="off" class="form-control" id="smscontent" style="width:100%;" minlength="4" maxlength="1000" [ngModel]="sms.content" (ngModelChange)="onContentSmsChange($event)" placeholder="Nội dung tin nhắn"></textarea>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                <div id="email" data-type="email" class="tab-pane fade">
+                                    <div class="qr-generic-form">
+                                        <div class="animated fadeInLeft">
+                                            <h3>EMAIL QR CODE</h3>
+                                            <p>Để tạo QR Code có chứa địa chỉ email của bạn,<br /> hãy cập nhật thông tin email tại đây:</p>
+                                            <input autocomplete="off" class="form-control" id="email" [ngModel]="email.content" (ngModelChange)="onContentEmailChange($event)" placeholder="Địa chỉ mail" />
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+                                
+
+                                <p class="label-group" id="qrCodeType">
+                                    <input class="with-gap active" formControlName="mode" name="mode" type="radio" id="test5" value="static" checked="true" />
+                                    <label for="test5">Static</label>
+                                    <input class="with-gap" formControlName="mode" name="mode" type="radio" id="test4" value="dynamic" />
+                                    <label for="test4">Dynamic</label>
+                                </p>
+                                <div class="animated fadeInLeft  qr-btn-submit">
+                                    <!-- <button queryParamsHandling="preserve" class="waves-effect waves-light btn-material " (click)="typeform == excel ? Show() : CreateExcel()">TẠO QR CODE</button> -->
+                                    <button queryParamsHandling="preserve" class="waves-effect waves-light btn-material ">TẠO QR CODE</button>
+                                </div>
+                            </div>
+                            <div class="col-md-4 display-qrcode">
+                                <div class=preview-box>
+                                    <img src="images/iphone.png" />
+                                    <div class="preview-screen">
+                                        <div class="url" id="preview-body"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </section>
+
+
+
+
+
+
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

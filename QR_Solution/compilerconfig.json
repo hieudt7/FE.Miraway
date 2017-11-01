@@ -1,0 +1,18 @@
+﻿[
+  {
+    "outputFile": "styles/new-styles.css",
+    "inputFile": "styles/new-styles.scss"
+  },
+  {
+    "outputFile": "styles/mkt.css",
+    "inputFile": "styles/mkt.scss"
+  },
+  {
+    "outputFile": "styles/sass/materialize.css",
+    "inputFile": "styles/sass/materialize.scss"
+  },
+  {
+    "outputFile": "styles/create-all.css",
+    "inputFile": "styles/create-all.scss"
+  }
+]

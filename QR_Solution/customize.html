@@ -1,0 +1,581 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/bootstrap.css" rel="stylesheet" />
+    <link href="styles/font-awesome.min.css" rel="stylesheet" />
+    <link href="styles/materialize.min.css" rel="stylesheet" />
+    <link href="styles/create-all.css" rel="stylesheet" />
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/materialize.min.js"></script>
+    <script src="scripts/bootstrap.js"></script>
+    <link href="styles/animate.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="customize-qr">
+        <div class="conten-div">
+            <h3 class="page-title">Thiết Kế QR Code</h3>
+            <div class="menu">
+                <ul class="tab-menu nav nav-tabs">
+                    <li>
+                        <a data-toggle="tab" class="waves-effect waves-gray" href="#tem">
+                            <i class="fa fa-th-large" aria-hidden="true"></i>
+                            <p>Templates</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-toggle="tab" class="waves-effect waves-gray" href="#eyes">
+                            <i class="fa fa-qrcode"></i>
+                            <p>Eyes</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-toggle="tab" class="waves-effect waves-gray" href="#logo">
+                            <i class="fa fa-file-image-o" aria-hidden="true"></i>
+                            <p>Logo</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-toggle="tab" class="waves-effect waves-gray" href="#data">
+                            <i class="fa fa-puzzle-piece" aria-hidden="true"></i>
+                            <p>Data</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-toggle="tab" class="waves-effect waves-gray" href="#bg">
+                            <i class="fa fa-square" aria-hidden="true"></i>
+                            <p>Background</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-toggle="tab" class="waves-effect waves-gray" href="#frame">
+                            <i class="fa fa-windows" aria-hidden="true"></i>
+                            <p>Frame</p>
+                        </a>
+                    </li>
+                </ul>
+                <ul></ul>
+            </div>
+            <!--</table>-->
+            <div class="customize-pannel ">
+                <div class="left-pannel">
+                    <div class="tab-content">
+                        <div id="tem" class="tab-pane active">
+                            <h2 class="text-title">Chọn mẫu QR Code</h2>
+                            <ul class="temp-list clearfix">
+                                <li *ngFor="let temp of tempList">
+                                    <a href="javascript:void(0)" title="template" (click)="onTempChange($event)">
+                                        <img src="images/newcreate/template/temp1.png">
+                                    </a>
+                                </li>
+
+                                <li *ngFor="let temp of tempList">
+                                    <a href="javascript:void(0)" title="template" (click)="onTempChange($event)">
+                                        <img src="images/newcreate/template/temp2.png">
+                                    </a>
+                                </li>
+
+                                <li *ngFor="let temp of tempList">
+                                    <a href="javascript:void(0)" title="template" (click)="onTempChange($event)">
+                                        <img src="images/newcreate/template/temp3.png">
+                                    </a>
+                                </li>
+                                <li *ngFor="let temp of tempList">
+                                    <a href="javascript:void(0)" title="template" (click)="onTempChange($event)">
+                                        <img src="images/newcreate/template/temp4.png">
+                                    </a>
+                                </li>
+                                <li *ngIf="admin">
+                                    <a href="javascript:void(0)" title="template" (click)="onTempChange($event)">
+                                        <img src="./assets/img/image/template/temp_mira.PNG" alt="" id="miratemplate">
+                                    </a>
+                                </li>
+                                <li *ngIf="admin">
+                                    <a href="javascript:void(0)" title="template" (click)="onTempChange($event)">
+                                        <img src="./assets/img/image/template/tempDefault_1.PNG" alt="" id="instituteTemplate">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="eyes" class="tab-pane">
+                            <h2 class="text-title">Chọn màu mắt QR Code</h2>
+                            <ul class="eyes-color">
+                                <li>External eye colors</li>
+                                <li>Internal eye colors</li>
+                                <li>
+                                    <i class="icon-eye-shape-1"></i>
+                                    <div class="input-group colorpicker-component">
+                                        <input type="text" data-eye="1" data-eye-fill="ex" class="form-control" />
+                                        <span class="input-group-addon"><i></i></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="icon-eye-shape-2"></i>
+                                    <div class="input-group colorpicker-component">
+                                        <input type="text" data-eye="1" data-eye-fill="in" class="form-control" />
+                                        <span class="input-group-addon"><i></i></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="icon-eye-shape-3"></i>
+                                    <div class="input-group colorpicker-component">
+                                        <input type="text" data-eye="2" data-eye-fill="ex" class="form-control" />
+                                        <span class="input-group-addon"><i></i></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="icon-eye-shape-4"></i>
+                                    <div class="input-group colorpicker-component">
+                                        <input type="text" data-eye="2" data-eye-fill="in" class="form-control" />
+                                        <span class="input-group-addon"><i></i></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="icon-eye-shape-5"></i>
+                                    <div class="input-group colorpicker-component">
+                                        <input type="text" data-eye="3" data-eye-fill="ex" class="form-control" />
+                                        <span class="input-group-addon"><i></i></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="icon-eye-shape-6"></i>
+                                    <div class="input-group colorpicker-component">
+                                        <input type="text" data-eye="3" data-eye-fill="in" class="form-control" />
+                                        <span class="input-group-addon"><i></i></span>
+                                    </div>
+                                </li>
+                            </ul>
+                            <h2 class="text-title">Chọn kiểu mắt QR Code</h2>
+                            <ul class="list-eyes">
+                                <li>
+                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                        <img src="images/newcreate/svg/eyes/01.svg" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                        <img src="images/newcreate/svg/eyes/02.svg" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                        <img src="images/newcreate/svg/eyes/03.svg" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                        <img src="images/newcreate/svg/eyes/04.svg" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                        <img src="images/newcreate/svg/eyes/05.svg" />
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                        <img src="images/newcreate/svg/eyes/06.svg" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                        <img src="images/newcreate/svg/eyes/07.svg" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                        <img src="images/newcreate/svg/eyes/08.svg" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                        <img src="images/newcreate/svg/eyes/09.svg" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                        <img src="images/newcreate/svg/eyes/10.svg" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                        <img src="images/newcreate/svg/eyes/11.svg" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                        <img src="images/newcreate/svg/eyes/12.svg" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                        <img src="images/newcreate/svg/eyes/13.svg" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                        <img src="images/newcreate/svg/eyes/14.svg" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                        <img src="images/newcreate/svg/eyes/15.svg" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                        <img src="images/newcreate/svg/eyes/16.svg" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                        <img src="images/newcreate/svg/eyes/17.svg" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                        <img src="images/newcreate/svg/eyes/18.svg" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                        <img src="images/newcreate/svg/eyes/19.svg" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                        <img src="images/newcreate/svg/eyes/20.svg" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                        <img src="images/newcreate/svg/eyes/21.svg" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                        <img src="images/newcreate/svg/eyes/22.svg" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                        <img src="images/newcreate/svg/eyes/23.svg" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                        <img src="images/newcreate/svg/eyes/24.svg" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                        <img src="images/newcreate/svg/eyes/25.svg" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                        <img src="images/newcreate/svg/eyes/26.svg" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                        <img src="images/newcreate/svg/eyes/27.svg" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                        <img src="images/newcreate/svg/eyes/28.svg" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                        <img src="images/newcreate/svg/eyes/29.svg" />
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+
+
+                        <div id="logo" class="tab-pane">
+                            <h2 class="text-title">Thêm logo(PNG, JPG, JPEG)</h2>
+                            <i class="noted-text">Thêm logo có thể làm ảnh hưởng đến chất lượng QR Code. Vui lòng quét lại trước khi lưu.</i>
+                            <!--<button href="#" queryParamsHandling="preserve" class="btn btn-success animated fadeInLeft btn-addlogo">ADD NEW LOGO</button>-->
+                            <!--<label class="upload-button" style="margin-top:20px;">
+                                <input type="file" ngFileSelect (uploadOutput)="onUploadOutput($event, 'image')" [uploadInput]="uploadInput" multiple>
+                            </label>-->
+                            <div class="file-field input-field custom-input clearfix">
+                                <div class="btn-material waves-effect waves-light">
+                                    <i class="fa fa-upload" aria-hidden="true"></i>
+                                    <input type="file" ngFileSelect (uploadOutput)="onUploadOutput($event, 'image')" [uploadInput]="uploadInput" accept=".png,.jpeg,.svg,.jpg" multiple>
+                                </div>
+                                <div class="file-path-wrapper">
+                                    <input class="file-path validate material-input" type="text">
+                                </div>
+                                <div>
+                                    <a href="javascript:void(0)" class="btn-material waves-effect waves-gray" id="removeLogo" (click)="onRemoveLogoClick()">Xóa Logo</a>
+                                </div>
+                            </div>
+                            <div>
+                                <!-- Dropdown Trigger -->
+                                <button class='dropdown-button btn-material waves-effect waves-light' data-activates='listLogo' id="logoDrop">
+                                    <Span>Kiểu Logo</Span>
+                                    <a href="javascript:void(0)" class="waves-effect waves-circle waves-gray"><i class="fa fa-sort-down" aria-hidden="true"></i></a>
+                                </button>
+                                <!-- Dropdown Structure -->
+                                <ul id='listLogo' class='dropdown-content'>
+                                    <li><a href="javascript:void(0)" class="active" logo-type="square">Hình Vuông</a></li>
+                                    <li><a href="javascript:void(0)" logo-type="circle">Bo Tròn</a></li>
+                                </ul>
+                            </div>
+                            <ul class="logo-list clearfix">
+                                <li id="logoUp">
+                                    <a href="javascript:void(0)" (click)="onLogoClick($event)">
+
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div id="data" class="tab-pane">
+                            <h2 class="text-title">Chọn data QR Code</h2>
+                            <p>Màu data:</p>
+                            <div class="input-group colorpicker-component colorpick">
+                                <input type="text" class="form-control" />
+                                <span class="input-group-addon"><i></i></span>
+                            </div>
+                            <p>Kiểu data:</p>
+                            <ul class="list-data">
+                                <li *ngFor="let shape of dataPattern">
+                                    <a href="javascript:void(0)" (click)="onChangeData($event)">
+
+                                        <img src="images/newcreate/svg/patterns/data-1.png" />
+                                    </a>
+                                </li>
+                                <li *ngFor="let shape of dataPattern">
+                                    <a href="javascript:void(0)" (click)="onChangeData($event)">
+                                        <img src="images/newcreate/svg/patterns/data-2.png" />
+                                    </a>
+                                </li>
+                                <li *ngFor="let shape of dataPattern">
+                                    <a href="javascript:void(0)" (click)="onChangeData($event)">
+                                        <img src="images/newcreate/svg/patterns/data-5.png" />
+                                    </a>
+                                </li>
+                                <li *ngFor="let shape of dataPattern">
+                                    <a href="javascript:void(0)" (click)="onChangeData($event)">
+                                        <img src="images/newcreate/svg/patterns/data-6.png" />
+                                    </a>
+                                </li>
+                                <li *ngFor="let shape of dataPattern">
+                                    <a href="javascript:void(0)" (click)="onChangeData($event)">
+                                        <img src="images/newcreate/svg/patterns/data-7.png" />
+                                    </a>
+                                </li>
+                                <li *ngFor="let shape of dataPattern">
+                                    <a href="javascript:void(0)" (click)="onChangeData($event)">
+                                        <img src="images/newcreate/svg/patterns/data-8.png" />
+                                    </a>
+                                </li>
+                                <li *ngFor="let shape of dataPattern">
+                                    <a href="javascript:void(0)" (click)="onChangeData($event)">
+                                        <img src="images/newcreate/svg/patterns/data-9.png" />
+                                    </a>
+                                </li>
+                                <li *ngFor="let shape of dataPattern">
+                                    <a href="javascript:void(0)" (click)="onChangeData($event)">
+                                        <img src="images/newcreate/svg/patterns/data-11.png" />
+                                    </a>
+                                </li>
+                                <li *ngFor="let shape of dataPattern">
+                                    <a href="javascript:void(0)" (click)="onChangeData($event)">
+                                        <img src="images/newcreate/svg/patterns/data-12.png" />
+                                    </a>
+                                </li>
+                                <li *ngFor="let shape of dataPattern">
+                                    <a href="javascript:void(0)" (click)="onChangeData($event)">
+                                        <img src="images/newcreate/svg/patterns/data-14.png" />
+                                    </a>
+                                </li>
+                                <li *ngFor="let shape of dataPattern">
+                                    <a href="javascript:void(0)" (click)="onChangeData($event)">
+                                        <img src="images/newcreate/svg/patterns/data-15.png" />
+                                    </a>
+                                </li>
+                                <li *ngFor="let shape of dataPattern">
+                                    <a href="javascript:void(0)" (click)="onChangeData($event)">
+                                        <img src="images/newcreate/svg/patterns/data-16.png" />
+                                    </a>
+                                </li>
+                                <li *ngFor="let shape of dataPattern">
+                                    <a href="javascript:void(0)" (click)="onChangeData($event)">
+                                        <img src="images/newcreate/svg/patterns/data-17.png" />
+                                    </a>
+                                </li>
+                                <li *ngFor="let shape of dataPattern">
+                                    <a href="javascript:void(0)" (click)="onChangeData($event)">
+                                        <img src="images/newcreate/svg/patterns/data-18.png" />
+                                    </a>
+                                </li>
+                                <li *ngFor="let shape of dataPattern">
+                                    <a href="javascript:void(0)" (click)="onChangeData($event)">
+                                        <img src="images/newcreate/svg/patterns/data-19.png" />
+                                    </a>
+                                </li>
+                                <li *ngFor="let shape of dataPattern">
+                                    <a href="javascript:void(0)" (click)="onChangeData($event)">
+                                        <img src="images/newcreate/svg/patterns/data-20.png" />
+                                    </a>
+                                </li>
+                                <li *ngFor="let shape of dataPattern">
+                                    <a href="javascript:void(0)" (click)="onChangeData($event)">
+                                        <img src="images/newcreate/svg/patterns/data-21.png" />
+                                    </a>
+                                </li>
+                                <li *ngFor="let shape of dataPattern">
+                                    <a href="javascript:void(0)" (click)="onChangeData($event)">
+                                        <img src="images/newcreate/svg/patterns/data-23.png" />
+                                    </a>
+                                </li>
+                                <li *ngFor="let shape of dataPattern">
+                                    <a href="javascript:void(0)" (click)="onChangeData($event)">
+                                        <img src="images/newcreate/svg/patterns/data-24.png" />
+                                    </a>
+                                </li>
+                                <li *ngFor="let shape of dataPattern">
+                                    <a href="javascript:void(0)" (click)="onChangeData($event)">
+                                        <img src="images/newcreate/svg/patterns/data-25.png" />
+                                    </a>
+                                </li>
+                                <li *ngFor="let shape of dataPattern">
+                                    <a href="javascript:void(0)" (click)="onChangeData($event)">
+                                        <img src="images/newcreate/svg/patterns/data-26.png" />
+                                    </a>
+                                </li>
+                            </ul>
+
+
+                        </div>
+
+                        <div id="bg" class="tab-pane">
+                            <h2 class="text-title">Chỉnh sửa nền QR Code</h2>
+                            <span>Màu nền:</span>
+                            <div class="input-group colorpicker-component colorpick">
+                                <input type="text" class="form-control" />
+                                <span class="input-group-addon"><i></i></span>
+                            </div>
+                        </div>
+
+                        <div id="frame" class="tab-pane">
+                            <h2 class="text-title">Chỉnh sửa Frame</h2>
+                            <!--<button href="#" queryParamsHandling="preserve" class="btn btn-success animated fadeInLeft btn-update">UPLOAD FILE</button>-->
+                            <div class="clearfix remove-frame">
+                                <button href="javascript:void(0)" class="waves-effect waves-light btn-material" title="Xóa Frame" (click)="removeFrame()">Xóa Frame</button>
+                            </div>
+                            <div class="fr-option disabled-frame">
+                                <h2 class="text-title">Tùy chọn</h2>
+                                <div>
+                                    <label>Khung viền</label>
+                                    <div class="check">
+                                        <input type="checkbox" class="filled-in" id="outline-check" checked="checked" (change)="onCheckboxChange($event)" />
+                                        <label for="outline-check"></label>
+                                    </div>
+                                </div>
+                                <div class="opacity-ranger">
+                                    <label>Độ trong suốt:</label>
+                                    <div>
+                                        <div id="opacityRange"></div>
+                                        <input type="text" class="form-control" [(ngModel)]="opacityValue" (ngModelChange)="onOpacityChange($event)" id="opacity-val" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fr-category">
+                                <select id="frameCat" (change)="onFilterChange($event)">
+                                    <option value="1">Phổ Biến</option>
+                                    <option value="0">Tất Cả</option>
+                                    <option value="2">App</option>
+                                    <option value="3">PDF</option>
+                                    <option value="4">Scan me</option>
+                                    <option value="5">Facebook</option>
+                                    <option value="6">Vcard</option>
+                                </select>
+                            </div>
+                            <div class="masonry-layout">
+                                <div class="item" *ngFor="let frame of frameList">
+                                    <a href="javascript:void(0)" (click)=onFrameChange($event)>
+
+                                        <img src="images/newcreate/frame/fr_1.jpg" />
+                                    </a>
+                                </div>
+
+                                <div class="item" *ngFor="let frame of frameList">
+                                    <a href="javascript:void(0)" (click)=onFrameChange($event)>
+
+                                        <img src="images/newcreate/frame/fr_app_1.png" />
+                                    </a>
+                                </div>
+
+                                <div class="item" *ngFor="let frame of frameList">
+                                    <a href="javascript:void(0)" (click)=onFrameChange($event)>
+                                        <img src="images/newcreate/frame/fr_fb_1.png" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-pannel">
+                    <div>
+                        <a class="tooltipped" id="errorQR" data-position="bottom" data-delay="50" data-tooltip="">
+                            <i class="fa fa-warning" aria-hidden="true"></i>
+                        </a>
+                        <div class="qr-image">
+                            <div class="qr-iframe"></div>
+                            <div id="bgColor">
+                                <div id="editLogo" class="logo-box">
+                                    <div id="dragableLogo">
+                                        <img alt="" src="" id="logoCustomize">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix btn-group" id="edit-frame" *ngIf="frame==true">
+                            <div class="col-xs-6 btn-left">
+                                <a href="javascript:void(0)" class="waves-effect waves-light btn-material" id="fr-edit" title="" (click)="editFrame()">Chỉnh Sửa Frame</a>
+                                <a href="javascript:void(0)" class="waves-effect waves-light btn-material" style="display:none" id="fr-cancel" title="" (click)="cancleEditFrame()">Hủy Bỏ</a>
+                            </div>
+                            <div class="col-xs-6 btn-right">
+                                <a href="javascript:void(0)" class="waves-effect waves-light btn-material disabled" (click)="removeEditFrameMode()" id="fr-save" title="">Hoàn thành</a>
+                            </div>
+                        </div>
+                        <div class="clearfix btn-group link-group btn-action">
+                            <a href="javascript:void(0)" class="" title="Làm mới thiết kế" (click)="resetDesign()">Làm mới Thiết Kế</a>
+                            <span> | </span>
+                            <a href="javascript:void(0)" class="disabled" title="Lưu lại làm Templates">Lưu làm Templates</a>
+                        </div>
+                        <div class="clearfix btn-group btn-action">
+                            <div class="col-xs-6 btn-left">
+                                <a href="javascript:void(0)" class="btn-float waves-effect waves-gray" title="" (click)="Update()">Lưu Thiết Kế</a>
+                            </div>
+                            <div class="col-xs-6 btn-right">
+                                <a href="javascript:void(0)" class="dropdown-button btn-float btn-green waves-effect waves-light" role="button" data-activates='downloadOptions' title="Tải QR code về">Tải Thiết Kế</a>
+                                <ul id='downloadOptions' class='dropdown-content download-content'>
+                                    <li><a href="javascript:void(0)" (click)="exportQRCode('svg')">Tải về dưới dạng SVG</a></li>
+                                    <li><a href="javascript:void(0)" (click)="exportQRCode('png')">Tải về dưới dạng PNG</a></li>
+                                    <li><a href="javascript:void(0)" (click)="exportQRCode('jpg')">Tải về dưới dạng JPG</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box-visible">
+                <div class="visible-element" id="orgigin"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
