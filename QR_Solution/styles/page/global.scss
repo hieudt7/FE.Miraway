@@ -1,33 +1,44 @@
-﻿@font-face {
+﻿$font-path: "../../fonts/";
+@font-face {
     font-family: 'helveticaneue';
-    src: url('../fonts/helveticaneue.ttf') format('truetype');
+    src: url('#{$font-path}helveticaneue.ttf') format('truetype');
 }
-
+@font-face {
+    font-family: 'helveticaneue';
+    src: url('#{$font-path}helveticaneue.ttf') format('truetype');
+}
 @font-face {
     font-family: 'helveticaneuebold';
-    src: url('../fonts/helveticaneuebold.ttf') format('truetype');
+    src: url('#{$font-path}helveticaneuebold.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'helveticaneueitalic';
-    src: url('../fonts/helveticaneueitalic.ttf') format('truetype');
+    src: url('#{$font-path}helveticaneueitalic.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'helveticaneuelight';
-    src: url('../fonts/helveticaneuelight.ttf') format('truetype');
+    src: url('#{$font-path}helveticaneuelight.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'helveticaneuemedium';
-    src: url('../fonts/helveticaneuemedium.ttf') format('truetype');
+    src: url('#{$font-path}helveticaneuemedium.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'helveticaneueultralight';
-    src: url('../fonts/helveticaneueultralight.ttf') format('truetype');
+    src: url('#{$font-path}helveticaneueultralight.ttf') format('truetype');
 }
-
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('#{$font-path}Roboto/Roboto-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Roboto-Light';
+    src: url('#{$font-path}Roboto/Roboto-Light.ttf') format('truetype');
+}
 body, html {
     font-family: 'helveticaneue';
 }
