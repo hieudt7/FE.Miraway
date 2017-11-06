@@ -1,17 +1,23 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <title>Tạo QR Code</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="styles/bootstrap.css" rel="stylesheet" />
-    <link href="styles/font-awesome.min.css" rel="stylesheet" />
-    <link href="styles/materialize.min.css" rel="stylesheet" />
-    <link href="styles/create-all.css" rel="stylesheet" />
+    <link href="styles/lib.css" rel="stylesheet" />
+    <link href="styles/styles.css" rel="stylesheet" />
     <script src="scripts/jquery.js"></script>
-    <script src="scripts/materialize.min.js"></script>
     <script src="scripts/bootstrap.js"></script>
-    <link href="styles/animate.css" rel="stylesheet" />
+    <script src="scripts/bootstrap-colorpicker.min.js"></script>
+    <script src="scripts/html2canvas.js"></script>
+    <script src="scripts/canvg.js"></script>
+    <script src="scripts/d3.v4.min.js"></script>
+    <script src="scripts/toastr.min.js"></script>
+    <script src="scripts/jquery-ui.js"></script>
+    <script src="scripts/jquery.ui.rotatable.min.js"></script>
+    <script src="scripts/materialize.min.js"></script>
+    <script src="scripts/nouislider.js"></script>
+    <script src="scripts/common.js"></script>
 </head>
 <body>
     <div class="customize-qr">
@@ -19,7 +25,7 @@
             <h3 class="page-title">Thiết Kế QR Code</h3>
             <div class="menu">
                 <ul class="tab-menu nav nav-tabs">
-                    <li>
+                    <li class="active">
                         <a data-toggle="tab" class="waves-effect waves-gray" href="#tem">
                             <i class="fa fa-th-large" aria-hidden="true"></i>
                             <p>Templates</p>
@@ -62,87 +68,115 @@
             <div class="customize-pannel ">
                 <div class="left-pannel">
                     <div class="tab-content">
+                        <!--template-->
                         <div id="tem" class="tab-pane active">
                             <h2 class="text-title">Chọn mẫu QR Code</h2>
+                            <i class="warning-text">Bạn cần <a href="http://mirascan.vn:31000/app/#/auth/login">Đăng Nhập </a> để chọn mẫu QR Code</i>
                             <ul class="temp-list clearfix">
-                                <li *ngFor="let temp of tempList">
-                                    <a href="javascript:void(0)" title="template" (click)="onTempChange($event)">
+                                <li>
+                                    <a href="javascript:void(0)" title="template">
                                         <img src="images/newcreate/template/temp1.png">
                                     </a>
                                 </li>
 
-                                <li *ngFor="let temp of tempList">
-                                    <a href="javascript:void(0)" title="template" (click)="onTempChange($event)">
+                                <li>
+                                    <a href="javascript:void(0)" title="template">
                                         <img src="images/newcreate/template/temp2.png">
                                     </a>
                                 </li>
 
-                                <li *ngFor="let temp of tempList">
-                                    <a href="javascript:void(0)" title="template" (click)="onTempChange($event)">
+                                <li>
+                                    <a href="javascript:void(0)" title="template">
                                         <img src="images/newcreate/template/temp3.png">
                                     </a>
                                 </li>
-                                <li *ngFor="let temp of tempList">
-                                    <a href="javascript:void(0)" title="template" (click)="onTempChange($event)">
+                                <li>
+                                    <a href="javascript:void(0)" title="template">
                                         <img src="images/newcreate/template/temp4.png">
                                     </a>
                                 </li>
-                                <li *ngIf="admin">
-                                    <a href="javascript:void(0)" title="template" (click)="onTempChange($event)">
-                                        <img src="./assets/img/image/template/temp_mira.PNG" alt="" id="miratemplate">
+                                <li>
+                                    <a href="javascript:void(0)" title="template">
+                                        <img src="images/newcreate/template/temp5.PNG" />
                                     </a>
                                 </li>
-                                <li *ngIf="admin">
-                                    <a href="javascript:void(0)" title="template" (click)="onTempChange($event)">
-                                        <img src="./assets/img/image/template/tempDefault_1.PNG" alt="" id="instituteTemplate">
+                                <li>
+                                    <a href="javascript:void(0)" title="template">
+                                        <img src="images/newcreate/template/temp6.PNG" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" title="template">
+                                        <img src="images/newcreate/template/temp7.PNG" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" title="template">
+                                        <img src="images/newcreate/template/temp8.PNG" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" title="template">
+                                        <img src="images/newcreate/template/temp9.PNG" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" title="template">
+                                        <img src="images/newcreate/template/temp10.PNG" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" title="template">
+                                        <img src="images/newcreate/template/temp11.PNG" />
                                     </a>
                                 </li>
                             </ul>
                         </div>
+                        <!--eye-->
                         <div id="eyes" class="tab-pane">
                             <h2 class="text-title">Chọn màu mắt QR Code</h2>
                             <ul class="eyes-color">
-                                <li>External eye colors</li>
-                                <li>Internal eye colors</li>
+                                <li>Màu mắt bên ngoài</li>
+                                <li>Màu mắt bên trong</li>
                                 <li>
                                     <i class="icon-eye-shape-1"></i>
-                                    <div class="input-group colorpicker-component">
-                                        <input type="text" data-eye="1" data-eye-fill="ex" class="form-control" />
+                                    <div class="input-group colorpicker-component eye-picker">
+                                        <input type="text" data-eye="1" data-eye-fill="ex" class="form-control" id="eye1Out" />
                                         <span class="input-group-addon"><i></i></span>
                                     </div>
                                 </li>
                                 <li>
                                     <i class="icon-eye-shape-2"></i>
-                                    <div class="input-group colorpicker-component">
-                                        <input type="text" data-eye="1" data-eye-fill="in" class="form-control" />
+                                    <div class="input-group colorpicker-component eye-picker">
+                                        <input type="text" data-eye="1" data-eye-fill="in" class="form-control" id="eye1In" />
                                         <span class="input-group-addon"><i></i></span>
                                     </div>
                                 </li>
                                 <li>
                                     <i class="icon-eye-shape-3"></i>
-                                    <div class="input-group colorpicker-component">
-                                        <input type="text" data-eye="2" data-eye-fill="ex" class="form-control" />
+                                    <div class="input-group colorpicker-component eye-picker">
+                                        <input type="text" data-eye="2" data-eye-fill="ex" class="form-control" id="eye2Out" />
                                         <span class="input-group-addon"><i></i></span>
                                     </div>
                                 </li>
                                 <li>
                                     <i class="icon-eye-shape-4"></i>
-                                    <div class="input-group colorpicker-component">
-                                        <input type="text" data-eye="2" data-eye-fill="in" class="form-control" />
+                                    <div class="input-group colorpicker-component eye-picker">
+                                        <input type="text" data-eye="2" data-eye-fill="in" class="form-control" id="eye2In" />
                                         <span class="input-group-addon"><i></i></span>
                                     </div>
                                 </li>
                                 <li>
                                     <i class="icon-eye-shape-5"></i>
-                                    <div class="input-group colorpicker-component">
-                                        <input type="text" data-eye="3" data-eye-fill="ex" class="form-control" />
+                                    <div class="input-group colorpicker-component eye-picker">
+                                        <input type="text" data-eye="3" data-eye-fill="ex" class="form-control" id="eye3Out" />
                                         <span class="input-group-addon"><i></i></span>
                                     </div>
                                 </li>
                                 <li>
                                     <i class="icon-eye-shape-6"></i>
-                                    <div class="input-group colorpicker-component">
-                                        <input type="text" data-eye="3" data-eye-fill="in" class="form-control" />
+                                    <div class="input-group colorpicker-component eye-picker">
+                                        <input type="text" data-eye="3" data-eye-fill="in" class="form-control" id="eye3In" />
                                         <span class="input-group-addon"><i></i></span>
                                     </div>
                                 </li>
@@ -150,175 +184,156 @@
                             <h2 class="text-title">Chọn kiểu mắt QR Code</h2>
                             <ul class="list-eyes">
                                 <li>
-                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                    <a href="javascript:void(0)" class="eye-shape" data-shape="01">
                                         <img src="images/newcreate/svg/eyes/01.svg" />
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                    <a href="javascript:void(0)" class="eye-shape" data-shape="02">
                                         <img src="images/newcreate/svg/eyes/02.svg" />
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                    <a href="javascript:void(0)" class="eye-shape" data-shape="03">
                                         <img src="images/newcreate/svg/eyes/03.svg" />
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                    <a href="javascript:void(0)" class="eye-shape" data-shape="04">
                                         <img src="images/newcreate/svg/eyes/04.svg" />
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                    <a href="javascript:void(0)" class="eye-shape" data-shape="05">
                                         <img src="images/newcreate/svg/eyes/05.svg" />
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                    <a href="javascript:void(0)" class="eye-shape" data-shape="06">
                                         <img src="images/newcreate/svg/eyes/06.svg" />
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                    <a href="javascript:void(0)" class="eye-shape" data-shape="07">
                                         <img src="images/newcreate/svg/eyes/07.svg" />
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                    <a href="javascript:void(0)" class="eye-shape" data-shape="08">
                                         <img src="images/newcreate/svg/eyes/08.svg" />
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                    <a href="javascript:void(0)" class="eye-shape" data-shape="09">
                                         <img src="images/newcreate/svg/eyes/09.svg" />
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                    <a href="javascript:void(0)" class="eye-shape" data-shape="10">
                                         <img src="images/newcreate/svg/eyes/10.svg" />
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                    <a href="javascript:void(0)" class="eye-shape" data-shape="11">
                                         <img src="images/newcreate/svg/eyes/11.svg" />
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                    <a href="javascript:void(0)" class="eye-shape" data-shape="12">
                                         <img src="images/newcreate/svg/eyes/12.svg" />
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                    <a href="javascript:void(0)" class="eye-shape" data-shape="13">
                                         <img src="images/newcreate/svg/eyes/13.svg" />
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                    <a href="javascript:void(0)" class="eye-shape" data-shape="14">
                                         <img src="images/newcreate/svg/eyes/14.svg" />
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                    <a href="javascript:void(0)" class="eye-shape" data-shape="15">
                                         <img src="images/newcreate/svg/eyes/15.svg" />
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
-                                        <img src="images/newcreate/svg/eyes/16.svg" />
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                    <a href="javascript:void(0)" class="eye-shape" data-shape="17">
                                         <img src="images/newcreate/svg/eyes/17.svg" />
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                    <a href="javascript:void(0)" class="eye-shape" data-shape="18">
                                         <img src="images/newcreate/svg/eyes/18.svg" />
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                    <a href="javascript:void(0)" class="eye-shape" data-shape="19">
                                         <img src="images/newcreate/svg/eyes/19.svg" />
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                    <a href="javascript:void(0)" class="eye-shape" data-shape="20">
                                         <img src="images/newcreate/svg/eyes/20.svg" />
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                    <a href="javascript:void(0)" class="eye-shape" data-shape="21">
                                         <img src="images/newcreate/svg/eyes/21.svg" />
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                    <a href="javascript:void(0)" class="eye-shape" data-shape="22">
                                         <img src="images/newcreate/svg/eyes/22.svg" />
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                    <a href="javascript:void(0)" class="eye-shape" data-shape="23">
                                         <img src="images/newcreate/svg/eyes/23.svg" />
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                    <a href="javascript:void(0)" class="eye-shape" data-shape="24">
                                         <img src="images/newcreate/svg/eyes/24.svg" />
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                    <a href="javascript:void(0)" class="eye-shape" data-shape="25">
                                         <img src="images/newcreate/svg/eyes/25.svg" />
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                    <a href="javascript:void(0)" class="eye-shape" data-shape="26">
                                         <img src="images/newcreate/svg/eyes/26.svg" />
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                    <a href="javascript:void(0)" class="eye-shape" data-shape="27">
                                         <img src="images/newcreate/svg/eyes/27.svg" />
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                    <a href="javascript:void(0)" class="eye-shape" data-shape="28">
                                         <img src="images/newcreate/svg/eyes/28.svg" />
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0)" (click)="changeEyeDesign($event)">
+                                    <a href="javascript:void(0)" class="eye-shape" data-shape="29">
                                         <img src="images/newcreate/svg/eyes/29.svg" />
                                     </a>
                                 </li>
-
                             </ul>
                         </div>
-
-
+                        <!--logo-->
                         <div id="logo" class="tab-pane">
                             <h2 class="text-title">Thêm logo(PNG, JPG, JPEG)</h2>
                             <i class="noted-text">Thêm logo có thể làm ảnh hưởng đến chất lượng QR Code. Vui lòng quét lại trước khi lưu.</i>
-                            <!--<button href="#" queryParamsHandling="preserve" class="btn btn-success animated fadeInLeft btn-addlogo">ADD NEW LOGO</button>-->
-                            <!--<label class="upload-button" style="margin-top:20px;">
-                                <input type="file" ngFileSelect (uploadOutput)="onUploadOutput($event, 'image')" [uploadInput]="uploadInput" multiple>
-                            </label>-->
-                            <div class="file-field input-field custom-input clearfix">
-                                <div class="btn-material waves-effect waves-light">
-                                    <i class="fa fa-upload" aria-hidden="true"></i>
-                                    <input type="file" ngFileSelect (uploadOutput)="onUploadOutput($event, 'image')" [uploadInput]="uploadInput" accept=".png,.jpeg,.svg,.jpg" multiple>
-                                </div>
-                                <div class="file-path-wrapper">
-                                    <input class="file-path validate material-input" type="text">
-                                </div>
-                                <div>
-                                    <a href="javascript:void(0)" class="btn-material waves-effect waves-gray" id="removeLogo" (click)="onRemoveLogoClick()">Xóa Logo</a>
-                                </div>
-                            </div>
+                            <a class="btn-material waves-effect waves-light btn-round" href="#uploadPopup">
+                                <i class="fa fa-upload" aria-hidden="true"></i>
+                            </a>
+                            <a href="javascript:void(0)" class="btn-material waves-effect waves-gray" id="removeLogo" (click)="onRemoveLogoClick()">Xóa Logo</a>
                             <div>
                                 <!-- Dropdown Trigger -->
                                 <button class='dropdown-button btn-material waves-effect waves-light' data-activates='listLogo' id="logoDrop">
@@ -332,143 +347,138 @@
                                 </ul>
                             </div>
                             <ul class="logo-list clearfix">
-                                <li id="logoUp">
-                                    <a href="javascript:void(0)" (click)="onLogoClick($event)">
-
-                                    </a>
+                                <li>
+                                    <a href="javascript:void(0)" id="logoUp"></a>
                                 </li>
                             </ul>
                         </div>
-
+                        <!--data partern-->
                         <div id="data" class="tab-pane">
                             <h2 class="text-title">Chọn data QR Code</h2>
                             <p>Màu data:</p>
-                            <div class="input-group colorpicker-component colorpick">
+                            <div class="input-group colorpicker-component colorpick" id="dataColorInput">
                                 <input type="text" class="form-control" />
                                 <span class="input-group-addon"><i></i></span>
                             </div>
                             <p>Kiểu data:</p>
                             <ul class="list-data">
-                                <li *ngFor="let shape of dataPattern">
-                                    <a href="javascript:void(0)" (click)="onChangeData($event)">
-
+                                <li>
+                                    <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-01">
                                         <img src="images/newcreate/svg/patterns/data-1.png" />
                                     </a>
                                 </li>
-                                <li *ngFor="let shape of dataPattern">
-                                    <a href="javascript:void(0)" (click)="onChangeData($event)">
+                                <li>
+                                    <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-02">
                                         <img src="images/newcreate/svg/patterns/data-2.png" />
                                     </a>
                                 </li>
-                                <li *ngFor="let shape of dataPattern">
-                                    <a href="javascript:void(0)" (click)="onChangeData($event)">
+                                <li>
+                                    <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-05">
                                         <img src="images/newcreate/svg/patterns/data-5.png" />
                                     </a>
                                 </li>
-                                <li *ngFor="let shape of dataPattern">
-                                    <a href="javascript:void(0)" (click)="onChangeData($event)">
+                                <li>
+                                    <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-06">
                                         <img src="images/newcreate/svg/patterns/data-6.png" />
                                     </a>
                                 </li>
-                                <li *ngFor="let shape of dataPattern">
-                                    <a href="javascript:void(0)" (click)="onChangeData($event)">
+                                <li>
+                                    <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-07">
                                         <img src="images/newcreate/svg/patterns/data-7.png" />
                                     </a>
                                 </li>
-                                <li *ngFor="let shape of dataPattern">
-                                    <a href="javascript:void(0)" (click)="onChangeData($event)">
+                                <li>
+                                    <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-08">
                                         <img src="images/newcreate/svg/patterns/data-8.png" />
                                     </a>
                                 </li>
-                                <li *ngFor="let shape of dataPattern">
-                                    <a href="javascript:void(0)" (click)="onChangeData($event)">
+                                <li>
+                                    <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-09">
                                         <img src="images/newcreate/svg/patterns/data-9.png" />
                                     </a>
                                 </li>
-                                <li *ngFor="let shape of dataPattern">
-                                    <a href="javascript:void(0)" (click)="onChangeData($event)">
+                                <li>
+                                    <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-11">
                                         <img src="images/newcreate/svg/patterns/data-11.png" />
                                     </a>
                                 </li>
-                                <li *ngFor="let shape of dataPattern">
-                                    <a href="javascript:void(0)" (click)="onChangeData($event)">
+                                <li>
+                                    <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-12">
                                         <img src="images/newcreate/svg/patterns/data-12.png" />
                                     </a>
                                 </li>
-                                <li *ngFor="let shape of dataPattern">
-                                    <a href="javascript:void(0)" (click)="onChangeData($event)">
+                                <li>
+                                    <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-14">
                                         <img src="images/newcreate/svg/patterns/data-14.png" />
                                     </a>
                                 </li>
-                                <li *ngFor="let shape of dataPattern">
-                                    <a href="javascript:void(0)" (click)="onChangeData($event)">
+                                <li>
+                                    <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-15">
                                         <img src="images/newcreate/svg/patterns/data-15.png" />
                                     </a>
                                 </li>
-                                <li *ngFor="let shape of dataPattern">
-                                    <a href="javascript:void(0)" (click)="onChangeData($event)">
+                                <li>
+                                    <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-16">
                                         <img src="images/newcreate/svg/patterns/data-16.png" />
                                     </a>
                                 </li>
-                                <li *ngFor="let shape of dataPattern">
-                                    <a href="javascript:void(0)" (click)="onChangeData($event)">
+                                <li>
+                                    <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-17">
                                         <img src="images/newcreate/svg/patterns/data-17.png" />
                                     </a>
                                 </li>
-                                <li *ngFor="let shape of dataPattern">
-                                    <a href="javascript:void(0)" (click)="onChangeData($event)">
+                                <li>
+                                    <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-18">
                                         <img src="images/newcreate/svg/patterns/data-18.png" />
                                     </a>
                                 </li>
-                                <li *ngFor="let shape of dataPattern">
-                                    <a href="javascript:void(0)" (click)="onChangeData($event)">
+                                <li>
+                                    <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-19">
                                         <img src="images/newcreate/svg/patterns/data-19.png" />
                                     </a>
                                 </li>
-                                <li *ngFor="let shape of dataPattern">
-                                    <a href="javascript:void(0)" (click)="onChangeData($event)">
+                                <li>
+                                    <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-20">
                                         <img src="images/newcreate/svg/patterns/data-20.png" />
                                     </a>
                                 </li>
-                                <li *ngFor="let shape of dataPattern">
-                                    <a href="javascript:void(0)" (click)="onChangeData($event)">
+                                <li>
+                                    <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-21">
                                         <img src="images/newcreate/svg/patterns/data-21.png" />
                                     </a>
                                 </li>
-                                <li *ngFor="let shape of dataPattern">
-                                    <a href="javascript:void(0)" (click)="onChangeData($event)">
+                                <li>
+                                    <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-23">
                                         <img src="images/newcreate/svg/patterns/data-23.png" />
                                     </a>
                                 </li>
-                                <li *ngFor="let shape of dataPattern">
-                                    <a href="javascript:void(0)" (click)="onChangeData($event)">
+                                <li>
+                                    <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-24">
                                         <img src="images/newcreate/svg/patterns/data-24.png" />
                                     </a>
                                 </li>
-                                <li *ngFor="let shape of dataPattern">
-                                    <a href="javascript:void(0)" (click)="onChangeData($event)">
+                                <li>
+                                    <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-19,pattern-20" data-type="mix-double">
                                         <img src="images/newcreate/svg/patterns/data-25.png" />
                                     </a>
                                 </li>
-                                <li *ngFor="let shape of dataPattern">
-                                    <a href="javascript:void(0)" (click)="onChangeData($event)">
+                                <li>
+                                    <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-19,pattern-02" data-type="mix-double">
                                         <img src="images/newcreate/svg/patterns/data-26.png" />
                                     </a>
                                 </li>
                             </ul>
-
-
                         </div>
-
+                        <!--bg-->
                         <div id="bg" class="tab-pane">
                             <h2 class="text-title">Chỉnh sửa nền QR Code</h2>
                             <span>Màu nền:</span>
-                            <div class="input-group colorpicker-component colorpick">
-                                <input type="text" class="form-control" />
+                            <div id="bgColorInput" class="input-group colorpicker-component colorpick">
+                                <input type="text" value="#00AABB" class="form-control" />
                                 <span class="input-group-addon"><i></i></span>
                             </div>
                         </div>
-
+                        <!--frame-->
                         <div id="frame" class="tab-pane">
                             <h2 class="text-title">Chỉnh sửa Frame</h2>
                             <!--<button href="#" queryParamsHandling="preserve" class="btn btn-success animated fadeInLeft btn-update">UPLOAD FILE</button>-->
@@ -488,7 +498,7 @@
                                     <label>Độ trong suốt:</label>
                                     <div>
                                         <div id="opacityRange"></div>
-                                        <input type="text" class="form-control" [(ngModel)]="opacityValue" (ngModelChange)="onOpacityChange($event)" id="opacity-val" />
+                                        <input type="text" class="form-control" value="100" id="opacity-val" />
                                     </div>
                                 </div>
                             </div>
@@ -504,23 +514,324 @@
                                 </select>
                             </div>
                             <div class="masonry-layout">
-                                <div class="item" *ngFor="let frame of frameList">
-                                    <a href="javascript:void(0)" (click)=onFrameChange($event)>
-
-                                        <img src="images/newcreate/frame/fr_1.jpg" />
+                                <div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_1.jpg" class="img-frame" src="images/newcreate/frame/fr_1_temp.jpg" data-category="1">
+                                    </a>
+                                </div><div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_3.png" class="img-frame" src="images/newcreate/frame/fr_3.png" data-category="1">
+                                    </a>
+                                </div><div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_6.jpg" class="img-frame" src="images/newcreate/frame/fr_6_temp.jpg" data-category="1">
+                                    </a>
+                                </div><div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_7.jpg" class="img-frame" src="images/newcreate/frame/fr_7_temp.jpg" data-category="1">
+                                    </a>
+                                </div><div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_8.jpg" class="img-frame" src="images/newcreate/frame/fr_8_temp.jpg" data-category="1">
+                                    </a>
+                                </div><div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_11.jpg" class="img-frame" src="images/newcreate/frame/fr_11_temp.jpg" data-category="1">
+                                    </a>
+                                </div><div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_12.jpg" class="img-frame" src="images/newcreate/frame/fr_12_temp.png" data-category="1">
+                                    </a>
+                                </div><div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_13.JPG" class="img-frame" src="images/newcreate/frame/fr_13_temp.jpg" data-category="1">
+                                    </a>
+                                </div><div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_app_1.png" class="img-frame" src="images/newcreate/frame/fr_app_1.png" data-category="2">
+                                    </a>
+                                </div><div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_app_2.png" class="img-frame" src="images/newcreate/frame/fr_app_2.png" data-category="2">
+                                    </a>
+                                </div><div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_app_3.png" class="img-frame" src="images/newcreate/frame/fr_app_3.png" data-category="2">
+                                    </a>
+                                </div><div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_app_4.png" class="img-frame" src="images/newcreate/frame/fr_app_4.png" data-category="2">
+                                    </a>
+                                </div><div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_app_5.png" class="img-frame" src="images/newcreate/frame/fr_app_5.png" data-category="2">
                                     </a>
                                 </div>
-
-                                <div class="item" *ngFor="let frame of frameList">
-                                    <a href="javascript:void(0)" (click)=onFrameChange($event)>
-
-                                        <img src="images/newcreate/frame/fr_app_1.png" />
+                                <div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_app_6.png" class="img-frame" src="images/newcreate/frame/fr_app_6.png" data-category="2">
                                     </a>
                                 </div>
-
-                                <div class="item" *ngFor="let frame of frameList">
-                                    <a href="javascript:void(0)" (click)=onFrameChange($event)>
-                                        <img src="images/newcreate/frame/fr_fb_1.png" />
+                                <div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_app_7.png" class="img-frame" src="images/newcreate/frame/fr_app_7.png" data-category="2">
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_app_8.png" class="img-frame" src="images/newcreate/frame/fr_app_8.png" data-category="2">
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_app_9.png" class="img-frame" src="images/newcreate/frame/fr_app_9.png" data-category="2">
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_app_10.png" class="img-frame" src="images/newcreate/frame/fr_app_10.png" data-category="2">
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_app_11.png" class="img-frame" src="images/newcreate/frame/fr_app_11.png" data-category="2">
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_app_12.png" class="img-frame" src="images/newcreate/frame/fr_app_12.png" data-category="2">
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_app_13.png" class="img-frame" src="images/newcreate/frame/fr_app_13.png" data-category="2">
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_app_14.png" class="img-frame" src="images/newcreate/frame/fr_app_14.png" data-category="2">
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_app_15.png" class="img-frame" src="images/newcreate/frame/fr_app_15.png" data-category="2">
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_app_16.png" class="img-frame" src="images/newcreate/frame/fr_app_16.png" data-category="2">
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_app_17.png" class="img-frame" src="images/newcreate/frame/fr_app_17.png" data-category="2">
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_fb_1.png" class="img-frame" src="images/newcreate/frame/fr_fb_1.png" data-category="5">
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_fb_2.png" class="img-frame" src="images/newcreate/frame/fr_fb_2.png" data-category="5">
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_fb_3.png" class="img-frame" src="images/newcreate/frame/fr_fb_3.png" data-category="5">
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_fb_4.png" class="img-frame" src="images/newcreate/frame/fr_fb_4.png" data-category="5">
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_fb_5.png" class="img-frame" src="images/newcreate/frame/fr_fb_5.png" data-category="5">
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_fb_6.png" class="img-frame" src="images/newcreate/frame/fr_fb_6.png" data-category="5">
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_fb_7.png" class="img-frame" src="images/newcreate/frame/fr_fb_7.png" data-category="5">
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_fb_8.png" class="img-frame" src="images/newcreate/frame/fr_fb_8.png" data-category="5">
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_fb_9.png" class="img-frame" src="images/newcreate/frame/fr_fb_9.png" data-category="5">
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_fb_10.png" class="img-frame" src="images/newcreate/frame/fr_fb_10.png" data-category="5">
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_fb_11.png" class="img-frame" src="images/newcreate/frame/fr_fb_11.png" data-category="5">
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_fb_12.png" class="img-frame" src="images/newcreate/frame/fr_fb_12.png" data-category="5">
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_pdf_1.png" class="img-frame" src="images/newcreate/frame/fr_pdf_1.png" data-category="3">
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_pdf_2.png" class="img-frame" src="images/newcreate/frame/fr_pdf_2.png" data-category="3">
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_pdf_3.png" class="img-frame" src="images/newcreate/frame/fr_pdf_3.png" data-category="3">
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_pdf_4.png" class="img-frame" src="images/newcreate/frame/fr_pdf_4.png" data-category="3">
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_pdf_5.png" class="img-frame" src="images/newcreate/frame/fr_pdf_5.png" data-category="3">
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_pdf_6.png" class="img-frame" src="images/newcreate/frame/fr_pdf_6.png" data-category="3">
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_pdf_7.png" class="img-frame" src="images/newcreate/frame/fr_pdf_7.png" data-category="3">
+                                    </a>
+                                </div><div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_pdf_8.png" class="img-frame" src="images/newcreate/frame/fr_pdf_8.png" data-category="3">
+                                    </a>
+                                </div><div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_pdf_9.png" class="img-frame" src="images/newcreate/frame/fr_pdf_9.png" data-category="3">
+                                    </a>
+                                </div><div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_pdf_10.png" class="img-frame" src="images/newcreate/frame/fr_pdf_10.png" data-category="3">
+                                    </a>
+                                </div><div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_pdf_11.png" class="img-frame" src="images/newcreate/frame/fr_pdf_11.png" data-category="3">
+                                    </a>
+                                </div><div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_pdf_12.png" class="img-frame" src="images/newcreate/frame/fr_pdf_12.png" data-category="3">
+                                    </a>
+                                </div><div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_scan_me_1.png" class="img-frame" src="images/newcreate/frame/fr_scan_me_1.png" data-category="4">
+                                    </a>
+                                </div><div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_scan_me_2.png" class="img-frame" src="images/newcreate/frame/fr_scan_me_2.png" data-category="4">
+                                    </a>
+                                </div><div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_scan_me_3.png" class="img-frame" src="images/newcreate/frame/fr_scan_me_3.png" data-category="4">
+                                    </a>
+                                </div><div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_scan_me_4.png" class="img-frame" src="images/newcreate/frame/fr_scan_me_4.png" data-category="4">
+                                    </a>
+                                </div><div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_scan_me_5.png" class="img-frame" src="images/newcreate/frame/fr_scan_me_5.png" data-category="4">
+                                    </a>
+                                </div><div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_scan_me_6.png" class="img-frame" src="images/newcreate/frame/fr_scan_me_6.png" data-category="4">
+                                    </a>
+                                </div><div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_scan_me_7.png" class="img-frame" src="images/newcreate/frame/fr_scan_me_7.png" data-category="4">
+                                    </a>
+                                </div><div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_scan_me_8.png" class="img-frame" src="images/newcreate/frame/fr_scan_me_8.png" data-category="4">
+                                    </a>
+                                </div><div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_scan_me_9.png" class="img-frame" src="images/newcreate/frame/fr_scan_me_9.png" data-category="4">
+                                    </a>
+                                </div><div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_scan_me_10.png" class="img-frame" src="images/newcreate/frame/fr_scan_me_10.png" data-category="4">
+                                    </a>
+                                </div><div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_scan_me_11.png" class="img-frame" src="images/newcreate/frame/fr_scan_me_11.png" data-category="4">
+                                    </a>
+                                </div><div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_vcard_1.png" class="img-frame" src="images/newcreate/frame/fr_vcard_1.png" data-category="6">
+                                    </a>
+                                </div><div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_vcard_2.png" class="img-frame" src="images/newcreate/frame/fr_vcard_2.png" data-category="6">
+                                    </a>
+                                </div><div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_vcard_3.png" class="img-frame" src="images/newcreate/frame/fr_vcard_3.png" data-category="6">
+                                    </a>
+                                </div><div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_vcard_4.png" class="img-frame" src="images/newcreate/frame/fr_vcard_4.png" data-category="6">
+                                    </a>
+                                </div><div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_vcard_5.png" class="img-frame" src="images/newcreate/frame/fr_vcard_5.png" data-category="6">
+                                    </a>
+                                </div><div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_vcard_6.png" class="img-frame" src="images/newcreate/frame/fr_vcard_6.png" data-category="6">
+                                    </a>
+                                </div><div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_vcard_7.png" class="img-frame" src="images/newcreate/frame/fr_vcard_7.png" data-category="6">
+                                    </a>
+                                </div><div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_vcard_8.png" class="img-frame" src="images/newcreate/frame/fr_vcard_8.png" data-category="6">
+                                    </a>
+                                </div><div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_vcard_9.png" class="img-frame" src="images/newcreate/frame/fr_vcard_9.png" data-category="6">
+                                    </a>
+                                </div><div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_vcard_10.png" class="img-frame" src="images/newcreate/frame/fr_vcard_10.png" data-category="6">
+                                    </a>
+                                </div><div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_vcard_11.png" class="img-frame" src="images/newcreate/frame/fr_vcard_11.png" data-category="6">
+                                    </a>
+                                </div><div class="item">
+                                    <a href="javascript:void(0)">
+                                        <img alt="fr_vcard_12.png" class="img-frame" src="images/newcreate/frame/fr_vcard_12.png" data-category="6">
                                     </a>
                                 </div>
                             </div>
@@ -529,7 +840,7 @@
                 </div>
                 <div class="right-pannel">
                     <div>
-                        <a class="tooltipped" id="errorQR" data-position="bottom" data-delay="50" data-tooltip="">
+                        <a class="tooltipped" id="errorQR" data-position="bottom" data-delay="50" data-tooltip="Màu sắc bạn chọn có thể làm QR code không quét được. Vui lòng quét thử trước khi lưu">
                             <i class="fa fa-warning" aria-hidden="true"></i>
                         </a>
                         <div class="qr-image">
@@ -544,8 +855,8 @@
                         </div>
                         <div class="clearfix btn-group" id="edit-frame" *ngIf="frame==true">
                             <div class="col-xs-6 btn-left">
-                                <a href="javascript:void(0)" class="waves-effect waves-light btn-material" id="fr-edit" title="" (click)="editFrame()">Chỉnh Sửa Frame</a>
-                                <a href="javascript:void(0)" class="waves-effect waves-light btn-material" style="display:none" id="fr-cancel" title="" (click)="cancleEditFrame()">Hủy Bỏ</a>
+                                <a href="javascript:void(0)" class="waves-effect waves-light btn-material" id="fr-edit" title="">Chỉnh Sửa Frame</a>
+                                <a href="javascript:void(0)" class="waves-effect waves-light btn-material" style="display:none" id="fr-cancel" title="">Hủy Bỏ</a>
                             </div>
                             <div class="col-xs-6 btn-right">
                                 <a href="javascript:void(0)" class="waves-effect waves-light btn-material disabled" (click)="removeEditFrameMode()" id="fr-save" title="">Hoàn thành</a>
@@ -558,7 +869,7 @@
                         </div>
                         <div class="clearfix btn-group btn-action">
                             <div class="col-xs-6 btn-left">
-                                <a href="javascript:void(0)" class="btn-float waves-effect waves-gray" title="" (click)="Update()">Lưu Thiết Kế</a>
+                                <a href="javascript:void(0)" class="btn-float waves-effect waves-gray disabled" title="">Lưu Thiết Kế</a>
                             </div>
                             <div class="col-xs-6 btn-right">
                                 <a href="javascript:void(0)" class="dropdown-button btn-float btn-green waves-effect waves-light" role="button" data-activates='downloadOptions' title="Tải QR code về">Tải Thiết Kế</a>
@@ -577,5 +888,32 @@
             </div>
         </div>
     </div>
+    <div id="uploadPopup" class="modal modal-material modal-xs">
+        <div class="modal-content">
+            <h4>Thêm logo</h4>
+            <a class="modal-action modal-close close-header" title="Hủy">
+                <i class="fa fa-remove" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label class="col-xs-12 control-label" for="fname">
+                            Nhập link ảnh<span> *</span>
+                        </label>
+                        <div class="col-xs-12">
+                            <input id="urlLogo" name="fullname" type="text" placeholder="link ảnh" class="form-control">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="modal-action modal-close waves-effect waves-light btn-material btn-default">Hủy</button>
+                <button type="button" class="modal-action waves-effect waves-light btn-material btn-primary" id="popSave">Lưu</button>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/page-customize.js"></script>
 </body>
 </html>

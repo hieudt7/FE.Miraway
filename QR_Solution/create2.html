@@ -3,15 +3,21 @@
 <head>
     <title></title>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="styles/bootstrap.css" rel="stylesheet" />
-    <link href="styles/font-awesome.min.css" rel="stylesheet" />
-    <link href="styles/materialize.min.css" rel="stylesheet" />
-    <link href="styles/create-all.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <link href="styles/lib.css" rel="stylesheet" />
+    <link href="styles/styles.css" rel="stylesheet" />
     <script src="scripts/jquery.js"></script>
-    <script src="scripts/materialize.min.js"></script>
     <script src="scripts/bootstrap.js"></script>
-    <link href="styles/animate.css" rel="stylesheet" />
+    <script src="scripts/bootstrap-colorpicker.min.js"></script>
+    <script src="scripts/html2canvas.js"></script>
+    <script src="scripts/canvg.js"></script>
+    <script src="scripts/d3.v4.min.js"></script>
+    <script src="scripts/toastr.min.js"></script>
+    <script src="scripts/jquery-ui.js"></script>
+    <script src="scripts/jquery.ui.rotatable.min.js"></script>
+    <script src="scripts/materialize.min.js"></script>
+    <script src="scripts/nouislider.js"></script>
+    <script src="scripts/common.js"></script>
 </head>
 <body>
     <div class="new-create">
@@ -19,7 +25,6 @@
             <div class="container">
                 <h3 class="title-light">CHỌN LOẠI QR CODE</h3>
             </div>
-
             <div class="dp-body">
                 <div class="">
                     <div class="container">
@@ -54,11 +59,11 @@
                                 <a data-toggle="tab" class="btn btn-default btn-group  qr-option" href="#email">
                                     <i aria-hidden="true" class="fa fa-envelope" style="font-size:20px;"></i>Email
                                 </a>
-                            </li>
-                            <li class="col-md-2" >
-                                <a data-toggle="tab" class="btn btn-default btn-group  qr-option" href="#wifi" disabled>
-                                    <span><i class="qr-type qr-type-ico_2"></i></span>
-                                    <span>WIFI</span>
+                            </li>                            
+                            <li class="col-md-2">
+                                <a data-toggle="tab" class="btn btn-default btn-group  qr-option" href="#menu1">
+                                    <span><i class="qr-type qr-type-ico_11"></i></span>
+                                    <span>Map</span>
                                 </a>
                             </li>
                             <li class="col-md-2">
@@ -86,9 +91,9 @@
                                 </a>
                             </li>
                             <li class="col-md-2">
-                                <a data-toggle="tab" class="btn btn-default btn-group  qr-option" href="#menu1">
-                                    <span><i class="qr-type qr-type-ico_11"></i></span>
-                                    <span>Map</span>
+                                <a data-toggle="tab" class="btn btn-default btn-group  qr-option" href="#wifi" disabled>
+                                    <span><i class="qr-type qr-type-ico_2"></i></span>
+                                    <span>WIFI</span>
                                 </a>
                             </li>
                             <li class="col-md-2">
@@ -97,7 +102,6 @@
                                     <span>Vcard</span>
                                 </a>
                             </li>
-
                         </ul>
                     </div>
                     <section class="display">
@@ -111,12 +115,9 @@
                                                 <p>Để tạo QR code có chứa đựng thông tin mong muốn,<br /> bạn có thể nhập nội dung tại đây:</p>
                                                 <input autocomplete="off" class="form-control" id="text" name="text" type="text" required minlength="4" maxlength="100" [ngModel]="text.contentText" (ngModelChange)="onTextChange($event)" #text="ngModel" placeholder="Gõ text ..." />
                                             </div>
-
-
                                         </div>
                                     </div>
                                 </div>
-
                                 <div id="url" data-type="url" class="tab-pane active">
                                     <div class="qr-generic-form">
                                         <div class="animated fadeInLeft display-form">
@@ -128,11 +129,8 @@
                                                 </div>
                                             </div>
                                         </div>
-
-
                                     </div>
                                 </div>
-
                                 <div id="phone" data-type="phone" class="tab-pane fade">
                                     <div class="qr-generic-form">
                                         <div class="animated fadeInLeft display-form">
@@ -142,11 +140,8 @@
                                                 <input autocomplete="off" class="form-control numeric" id="phone" type="phone" [ngModel]="phone_number.number" (ngModelChange)="onContentChange($event)" placeholder="Số điện thoại" maxlength="11" />
                                             </div>
                                         </div>
-
-
                                     </div>
                                 </div>
-
                                 <div id="sms" data-type="sms" class="tab-pane fade">
                                     <div class="qr-generic-form">
                                         <div class="animated fadeInLeft display-form">
@@ -157,8 +152,6 @@
                                                 <textarea autocomplete="off" class="form-control" id="smscontent" style="width:100%;" minlength="4" maxlength="1000" [ngModel]="sms.content" (ngModelChange)="onContentSmsChange($event)" placeholder="Nội dung tin nhắn"></textarea>
                                             </div>
                                         </div>
-
-
                                     </div>
                                 </div>
                                 <div id="email" data-type="email" class="tab-pane fade">
@@ -168,13 +161,8 @@
                                             <p>Để tạo QR Code có chứa địa chỉ email của bạn,<br /> hãy cập nhật thông tin email tại đây:</p>
                                             <input autocomplete="off" class="form-control" id="email" [ngModel]="email.content" (ngModelChange)="onContentEmailChange($event)" placeholder="Địa chỉ mail" />
                                         </div>
-
-
                                     </div>
                                 </div>
-
-                                
-
                                 <p class="label-group" id="qrCodeType">
                                     <input class="with-gap active" formControlName="mode" name="mode" type="radio" id="test5" value="static" checked="true" />
                                     <label for="test5">Static</label>
@@ -183,7 +171,7 @@
                                 </p>
                                 <div class="animated fadeInLeft  qr-btn-submit">
                                     <!-- <button queryParamsHandling="preserve" class="waves-effect waves-light btn-material " (click)="typeform == excel ? Show() : CreateExcel()">TẠO QR CODE</button> -->
-                                    <button queryParamsHandling="preserve" class="waves-effect waves-light btn-material ">TẠO QR CODE</button>
+                                    <button class="waves-effect waves-light btn-material" id="createQR">TẠO QR CODE</button>
                                 </div>
                             </div>
                             <div class="col-md-4 display-qrcode">
@@ -195,15 +183,7 @@
                                 </div>
                             </div>
                         </div>
-
-
                     </section>
-
-
-
-
-
-
                 </div>
             </div>
         </section>

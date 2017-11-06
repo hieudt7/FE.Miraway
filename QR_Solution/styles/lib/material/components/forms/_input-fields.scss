@@ -9,18 +9,18 @@
 
 /* Text inputs */
 
-input:not([type]),
-input[type=text]:not(.browser-default),
-input[type=password]:not(.browser-default),
-input[type=email]:not(.browser-default),
-input[type=url]:not(.browser-default),
-input[type=time]:not(.browser-default),
-input[type=date]:not(.browser-default),
-input[type=datetime]:not(.browser-default),
-input[type=datetime-local]:not(.browser-default),
-input[type=tel]:not(.browser-default),
-input[type=number]:not(.browser-default),
-input[type=search]:not(.browser-default),
+input:not([type]).material-input,
+input[type=text]:not(.browser-default).material-input,
+input[type=password]:not(.browser-default).material-input,
+input[type=email]:not(.browser-default).material-input,
+input[type=url]:not(.browser-default).material-input,
+input[type=time]:not(.browser-default).material-input,
+input[type=date]:not(.browser-default).material-input,
+input[type=datetime]:not(.browser-default).material-input,
+input[type=datetime-local]:not(.browser-default).material-input,
+input[type=tel]:not(.browser-default).material-input,
+input[type=number]:not(.browser-default).material-input,
+input[type=search]:not(.browser-default).material-input,
 textarea.materialize-textarea {
 
   // General Styles
@@ -142,7 +142,7 @@ textarea.materialize-textarea {
 
 
 // Styling for input field wrapper
-.input-field {
+.input-field.material-input {
   // Inline styles
   &.inline {
     display: inline-block;
@@ -230,7 +230,7 @@ textarea.materialize-textarea {
 
 /* Search Field */
 
-.input-field input[type=search] {
+.input-field input[type=search].material-input {
   display: block;
   line-height: inherit;
 
@@ -272,10 +272,8 @@ textarea.materialize-textarea {
 }
 
 
-/* Textarea */
-
 // Default textarea
-textarea {
+textarea.material-input {
   width: 100%;
   height: $input-height;
   background-color: transparent;
