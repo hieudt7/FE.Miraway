@@ -250,10 +250,10 @@
 
             h3 {
                 color: #333;
-                font-size: 30px;
+                font-size: 22px;
                 text-transform: uppercase;
                 position: relative;
-                padding-bottom: 20px;
+                padding-bottom: 10px;
 
                 &:before {
                     content: "";
@@ -262,12 +262,13 @@
                     left: 0;
                     width: 200px;
                     height: 3px;
-                    background-color: #e7e7e7;
+                    background-color: #f58220;
                 }
             }
 
             p {
-                font-size: 18px;
+                font-size: 14px;
+                margin-bottom:30px;
             }
         }
     }
@@ -302,6 +303,7 @@
                 font-size: 20px;
                 font-family: 'helveticaneuemedium';
                 text-transform: uppercase;
+                color: #fff;
             }
 
             p {
@@ -338,6 +340,7 @@
                     font-size: 15px;
                     font-family: 'helveticaneuemedium';
                     text-transform: uppercase;
+                    color: #fff;
 
                     @include device-1 {
                         margin-bottom: 10px;
@@ -434,7 +437,7 @@
                     }
 
                     &:nth-child(3) {
-                        margin-right: 20px;
+                        /*margin-right: 20px;*/
                     }
 
                     @include device-1 {

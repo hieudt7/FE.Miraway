@@ -469,7 +469,13 @@
 }
 
 .grid {
+    width: 100%;
+
+    .element-item {
+        width: 25%;
+    }
+
     img {
-        max-width: 100%;
+        width: 100%;
     }
 }
