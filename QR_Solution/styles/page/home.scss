@@ -250,10 +250,10 @@
 
             h3 {
                 color: #333;
-                font-size: 30px;
+                font-size: 22px;
                 text-transform: uppercase;
                 position: relative;
-                padding-bottom: 20px;
+                padding-bottom: 10px;
 
                 &:before {
                     content: "";
@@ -262,12 +262,13 @@
                     left: 0;
                     width: 200px;
                     height: 3px;
-                    background-color: #e7e7e7;
+                    background-color: #f58220;
                 }
             }
 
             p {
-                font-size: 18px;
+                font-size: 14px;
+                margin-bottom: 30px;
             }
         }
     }
@@ -284,7 +285,7 @@
         .content {
             @include desktop {
                 position: absolute;
-                top: 50%;
+                top: 40%;
                 left: 50%;
                 transform: translate(-50%,-50%);
             }
@@ -302,6 +303,7 @@
                 font-size: 20px;
                 font-family: 'helveticaneuemedium';
                 text-transform: uppercase;
+                color: #fff;
             }
 
             p {
@@ -338,6 +340,7 @@
                     font-size: 15px;
                     font-family: 'helveticaneuemedium';
                     text-transform: uppercase;
+                    color: #fff;
 
                     @include device-1 {
                         margin-bottom: 10px;
@@ -351,8 +354,9 @@
         }
 
         iframe {
-            width: 100% !important;
-            height: 360px !important;
+            width: 850px;
+            height: 450px;
+            
         }
 
         .parallax-container {
@@ -434,7 +438,7 @@
                     }
 
                     &:nth-child(3) {
-                        margin-right: 20px;
+                        /*margin-right: 20px;*/
                     }
 
                     @include device-1 {
@@ -481,5 +485,49 @@
     .rating {
         background: #fbfafc;
         padding-top: 10px;
+    }
+
+    .slick-slide {
+        text-align: center;
+    }
+
+    .slick-dots li button {
+        font-size: 0;
+        line-height: 0;
+        display: block;
+        width: 10px;
+        height: 10px;
+        padding: 5px;
+        cursor: pointer;
+        color: transparent;
+        border: 0;
+        outline: none;
+        background: #e6e6e6;
+        border-radius: 50%;
+    }
+
+    .slick-dots {
+        position: absolute;
+        display: block;
+        width: 100%;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+    }
+
+    .slick-dots li {
+        position: relative;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        margin: 0 5px;
+        padding: 0;
+        cursor: pointer;
+
+        &.slick-active {
+            button {
+                background-color: #f58220;
+            }
+        }
     }
 }
