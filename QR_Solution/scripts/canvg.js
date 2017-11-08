@@ -3037,17 +3037,17 @@
 	}
 })();
 
-if (typeof(CanvasRenderingContext2D) != 'undefined') {
-	CanvasRenderingContext2D.prototype.drawSvg = function(s, dx, dy, dw, dh) {
-		canvg(this.canvas, s, {
-			ignoreMouse: true,
-			ignoreAnimation: true,
-			ignoreDimensions: true,
-			ignoreClear: true,
-			offsetX: dx,
-			offsetY: dy,
-			scaleWidth: dw,
-			scaleHeight: dh
-		});
-	}
-}
+if (typeof (CanvasRenderingContext2D) != 'undefined') {
+    CanvasRenderingContext2D.prototype.drawSvg = function (s, dx, dy, dw, dh) {
+        canvg(this.canvas, s, {
+            ignoreMouse: true,
+            ignoreAnimation: true,
+            ignoreDimensions: true,
+            ignoreClear: true,
+            offsetX: dx,
+            offsetY: dy,
+            scaleWidth: dw,
+            scaleHeight: dh
+        });
+    }
+};

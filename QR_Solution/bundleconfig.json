@@ -1,0 +1,38 @@
+[
+  {
+    "outputFileName": "scripts/common.min.js",
+    "inputFiles": [
+      "scripts/common.js"
+    ]
+  },
+  {
+    "outputFileName": "scripts/create-qrcode.min.js",
+    "inputFiles": [
+      "scripts/create-qrcode.js"
+    ]
+  },
+  {
+    "outputFileName": "scripts/page-customize.min.js",
+    "inputFiles": [
+      "scripts/page-customize.js"
+    ]
+  },
+  {
+    "outputFileName": "scripts/lib.min.js",
+    "inputFiles": [
+      "scripts/lib.js"
+    ]
+  },
+  {
+    "outputFileName": "scripts/html2canvas.min.js",
+    "inputFiles": [
+      "scripts/html2canvas.js"
+    ]
+  },
+  {
+    "outputFileName": "scripts/canvg.min.js",
+    "inputFiles": [
+      "scripts/canvg.js"
+    ]
+  }
+]

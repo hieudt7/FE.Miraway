@@ -1,5 +1,5 @@
 ﻿var common = new CommonFunction();
-$(document).ready(function () {
+$(document).ready(function () {    
     $('.modal').modal();
     $('.tooltipped').tooltip({ delay: 50 })
     toastr.options = {
@@ -13,51 +13,14 @@ $(document).ready(function () {
         "showDuration": "300",
         "hideDuration": "1000",
         "timeOut": "6000",
-        "extendedTimeOut": "1000",
+        "extendedTimeOut": "3500",
         "showEasing": "swing",
         "hideEasing": "linear",
         "showMethod": "fadeIn",
         "hideMethod": "fadeOut"
     };
-    $('#createQR').on('click', function () {
-        var inputType = $('.tab-content').find('.active').attr('data-type'),
-            inputContent = $('.tab-content').find('.active').find('input').val();
-        var postData = {
-            name: "qrcode",
-            type: inputType,
-            mode: "static",
-            template: null,
-            taget_scan: "0",
-            data: {
-                content: inputContent
-            }
-        };        
-        $.ajax({
-            url: 'http://mirascan.vn:32000/api/qrcode-api/create',
-            type: 'POST',
-            data: JSON.stringify(postData),
-            dataType: "json",
-            success: function (result) {
-                if (result.status == "success") {
-                    //lưu thành công rederiect
-                    var qrId = result.data.id;
-                    window.location = 'customize.html?id=' + qrId;
-                    console.log(result);
-                } else {
-                    //ko lưu được
-                    console.log('save error');
-                    return;
-                }
-            },
-            error: function (xhr, ajaxOptions, thrownError) {
-                //có lỗi xảy ra vui lòng tạo lại
-                console.log(thrownError);
-                console.log('something error')
-            }
-        });
-    })
+    //validate   
 })
-
 function CommonFunction() {
     this.OnlyNumeric = function (e) {
         if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 ||
@@ -284,9 +247,9 @@ function CommonFunction() {
     };
     this.fillEyeColor = function (box, iner, outer) {
         var $element = $(box);
-        $element.children(':nth-child(1)').css('fill', outer);    
+        $element.children(':nth-child(1)').css('fill', outer);
         $element.children(':nth-child(2)').css('fill', iner);
-    };    
+    };
     this.generateQRCodeData = function (qrSize, imgSrc) {
         var $this = this;
         var dataPartern,
@@ -426,7 +389,7 @@ function CommonFunction() {
             })
             $('#orgigin #dataShapeObj2').load(function () {
                 var shape = common.getObjectChild('#dataShapeObj2').html();
-                $('#qr-mira >.data-pattern g:nth-child(2n)').html(shape);                
+                $('#qr-mira >.data-pattern g:nth-child(2n)').html(shape);
                 $('#orgigin #dataShapeObj2').remove();
             })
         };
@@ -453,9 +416,13 @@ function CommonFunction() {
                     return result;
                 })
                 .attr('class', function (d, index) { return 'svg-eye box-' + (index + 1); });
-            $this.loadEyeShape('#eyeShapeObj');          
+            $this.loadEyeShape('#eyeShapeObj');
             $("#orgigin #eyeShapeObj").remove();
-        });               
+        });
+        //logo
+        $('#editLogo').css({
+            height: logoSize + '%',
+        }).hide();
     };
     this.eyeToCanvas = function () {
         //generate              
@@ -613,7 +580,7 @@ function CommonFunction() {
                 $('.box-2').find('svg').children().css('fill', color);
             }
         })
-    };    
+    };
     this.previewScreenMobile = function (qrType) {
         $('#preview-body').html('');
 
@@ -635,7 +602,7 @@ function CommonFunction() {
                 break;
             case 'sms':
                 $('#preview-body').append('<div class="preview-sms"><p id="prvContent"></p><div class="sms-content-box"><div class="sms-content-cell"><div class id="sms_content"></div></div></div></div>');
-                $('#preview-body').append('<img class="previe-sms-image" src="./assets/img/pv_sms.jpg">');
+                $('#preview-body').append('<img class="previe-sms-image" src="images/newcreate/preview/pv_sms.jpg">');
                 $(document).on('keyup', '#smscontent', function (e) {
                     var smsContent = $('#smscontent').val();
                     smsContent = smsContent.replace(/\r?\n/g, '<br />');
@@ -644,7 +611,7 @@ function CommonFunction() {
                 break;
             case 'email':
                 $('#preview-body').append('<p class="preview-email" id="prvContent"></p>');
-                $('#preview-body').append('<img class="previe-sms-image" src="./assets/img/prv_email.jpg">');
+                $('#preview-body').append('<img class="previe-sms-image" src="images/newcreate/preview/prv_email.jpg">');
                 break;
             case 'social':
                 $('#preview-body').append('<h3>Mạng xã hội của tôi</h3><a href="#" class="social-btn facebook"><i></i><span id="facebook_text"></span></a>');
@@ -655,15 +622,26 @@ function CommonFunction() {
                 })
                 break;
             case 'pdf':
-                $('#preview-body').append('<img class="previe-pdf-image" src="./assets/img/prv_pdf.jpg">');
+                $('#preview-body').append('<img class="previe-pdf-image" src="images/newcreate/preview/prv_pdf.jpg">');
                 break;
             case 'audio':
-                $('#preview-body').append('<img class="previe-audio-image" src="./assets/img/prv_audio.jpg">');
+                $('#preview-body').append('<img class="previe-audio-image" src="images/newcreate/preview/prv_audio.jpg">');
                 break;
             case 'geo':
-                $('#preview-body').append('<img class="previe-full-image" src="./assets/img/prv_map.jpg">');
+                $('#preview-body').append('<img class="previe-full-image" src="images/newcreate/preview/prv_map.jpg">');
                 break;
         }
+    };
+    this.HoverPreviewMode = function () {
+        $(".qr-option").hover(
+            function () {
+                var image = $(this).attr('data-type');
+                $('#preview-body').append('<img class="previe-full-image preview-mode" src="images/newcreate/preview/' + image + '.jpg">')
+            },
+            function () {
+                $('#preview-body').find('.preview-mode').remove();
+            }
+        );
     };
     this.FillterByCategory = function (value) {
         if (value == '0') {
@@ -677,17 +655,6 @@ function CommonFunction() {
                 }
             });
         }
-    };    
-    this.HoverPreviewMode = function () {
-        $(".qr-option").hover(
-            function () {
-                var image = $(this).attr('data-type');
-                $('#preview-body').append('<img class="previe-full-image preview-mode" src="./assets/img/image/preview/' + image + '.jpg">')
-            },
-            function () {
-                $('#preview-body').find('.preview-mode').remove();
-            }
-        );
     };    
     this.loadEyeShape = function (obj) {
         var eyeShape = $($(obj)[0].contentDocument.children).html();
@@ -737,9 +704,6 @@ function CommonFunction() {
             .attr('width', logoWidth)
             .attr('height', logoHeight)
             .attr("xlink:href", base64Src);
-    };
-    this.createSvgFrame = function () {
-
     };
     this.convertToCanvas = function () {
         $this = this;
@@ -825,9 +789,10 @@ function CommonFunction() {
             }
         });
     };
-}
+};
 function FEValidation() {
     this.StringRequired = function (element, elementName, isWarning) {
+        toastr.remove();
         var disabledStatus = $(element).attr('disabled');
         if (disabledStatus !== undefined && disabledStatus === 'disabled') {
             return false;
@@ -838,11 +803,10 @@ function FEValidation() {
         if (value == null || value.trim() == '') {
             showError = true;
             message = elementName + ' không được bỏ trống.';
-        }
+        }        
         if (showError) {
             $(element).addClass("errInput");
             $(".errInput:first input:not('.date-picker')").focus();
-            toastr.remove();
             if (isWarning) {
                 toastr.warning(message);
             } else {
@@ -853,8 +817,9 @@ function FEValidation() {
             $(element).removeClass("errInput");
         }
         return showError;
-    };    
+    };
     this.EmailValidate = function (element, elementName, isRequired, isWarning) {
+        toastr.remove();
         var disabledStatus = $(element).attr('disabled');
         if (disabledStatus !== undefined && disabledStatus === 'disabled') {
             return false;
@@ -895,6 +860,7 @@ function FEValidation() {
         return showError;
     };
     this.DateCompare = function (element1, element2, elementName1, elementName2, isGreat, isWarning) {
+        toastr.remove();
         var disabledStatus = $(element1).attr('disabled');
         if (disabledStatus !== undefined && disabledStatus === 'disabled') {
             return false;
@@ -929,6 +895,7 @@ function FEValidation() {
         return showError;
     };
     this.DateCompareRequired = function (element1, element2, elementName1, elementName2, isGreat, isWarning) {
+        toastr.remove();
         var disabledStatus = $(element1).attr('disabled');
         if (disabledStatus !== undefined && disabledStatus === 'disabled') {
             return false;
@@ -969,6 +936,7 @@ function FEValidation() {
         return showError;
     };
     this.DateRequired = function (element, elementName, isWarning) {
+        toastr.remove();
         var disabledStatus = $(element).attr('disabled');
         if (disabledStatus !== undefined && disabledStatus === 'disabled') {
             return false;
@@ -995,6 +963,7 @@ function FEValidation() {
         return showError;
     };
     this.URLValidate = function (element, elementName, isWarning) {
+        toastr.remove();
         var disabledStatus = $(element).attr('disabled');
         if (disabledStatus !== undefined && disabledStatus === 'disabled') {
             return false;
@@ -1026,8 +995,9 @@ function FEValidation() {
             $(element).removeClass("errInput");
         }
         return showError;
-    }
+    };
     this.LengthVlidate = function (element, elementName, maxlength, minlength, isWarning) {
+        toastr.remove();
         var disabledStatus = $(element).attr('disabled');
         if (disabledStatus !== undefined && disabledStatus === 'disabled') {
             return false;
@@ -1063,8 +1033,9 @@ function FEValidation() {
             $(element).removeClass("errInput");
         }
         return showError;
-    }
+    };
     this.RadioGroupRequired = function (element, message) {
+        toastr.remove();
         var value = $(element).val();
         var showError = false,
             isBreak = false;
@@ -1087,8 +1058,9 @@ function FEValidation() {
             toastr.clear();
         }
         return showError;
-    }
+    };
     this.ValidateSocialLink = function (element, elementName) {
+        toastr.remove();
         var disabledStatus = $(element).attr('disabled');
         if (disabledStatus !== undefined && disabledStatus === 'disabled') {
             return false;
@@ -1131,8 +1103,9 @@ function FEValidation() {
             $(element).removeClass("errInput");
         }
         return showError;
-    }
+    };
     this.ValidateMatch = function (element1, element1Name, element2, message, isRequired) {
+        toastr.remove();
         var disabledStatus = $(element1).attr('disabled');
         var disabledStatus2 = $(element2).attr('disabled');
         if (disabledStatus !== undefined && disabledStatus === 'disabled' && disabledStatus2 !== undefined && disabledStatus2 === 'disabled') {
@@ -1171,7 +1144,7 @@ function FEValidation() {
         }
         return showError;
     };
-}
+};
 //call numeric function
 $(document).on('keydown', '.numeric', function (e) {
     common.OnlyNumeric(e);

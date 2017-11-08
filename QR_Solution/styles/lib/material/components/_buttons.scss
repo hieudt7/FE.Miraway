@@ -43,11 +43,9 @@
 .btn-material-floating,
 .btn-material-large,
 .btn-material-flat {
-  font-size: $button-font-size;
   outline: 0;
 
   i {
-    font-size: $button-icon-font-size;
     line-height: inherit;
   }
 }
@@ -132,7 +130,6 @@
     display: inline-block;
     text-align: center;
     color: $button-floating-color;
-    font-size: $button-large-icon-font-size;
     line-height: $button-floating-size;
   }
 }

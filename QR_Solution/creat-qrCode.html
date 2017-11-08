@@ -1,11 +1,11 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <title>Tạo QR Code</title>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
-    <link href="styles/lib.css" rel="stylesheet" />
-    <link href="styles/styles.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/lib.min.css" rel="stylesheet" />
+    <link href="styles/styles.min.css" rel="stylesheet" />
     <script src="scripts/jquery.js"></script>
     <script src="scripts/bootstrap.js"></script>
     <script src="scripts/bootstrap-colorpicker.min.js"></script>
@@ -17,7 +17,9 @@
     <script src="scripts/jquery.ui.rotatable.min.js"></script>
     <script src="scripts/materialize.min.js"></script>
     <script src="scripts/nouislider.js"></script>
-    <script src="scripts/common.js"></script>
+    <script src="scripts/slick.js"></script>
+    <script src="scripts/common.min.js"></script>
+    <script src="scripts/create-qrcode.js"></script>
 </head>
 <body>
     <div class="new-create">
@@ -26,78 +28,77 @@
                 <h3 class="title-light">CHỌN LOẠI QR CODE</h3>
             </div>
             <div class="dp-body">
-                <div class="">
-                    <div class="container">
-                        <ul class="nav nav-tabs">
+                    <div class="container">                        
+                        <ul class="nav nav-tabs menu-list">
                             <li class="col-md-2 active">
-                                <a data-toggle="tab" class="btn btn-default btn-group  qr-option" href="#url">
+                                <a data-toggle="tab" class="btn btn-default btn-group  qr-option" href="#url" data-type="prevew_web_link">
                                     <span>
                                         <i class="qr-type qr-type-ico_10"></i>
                                     </span><span>Web Link</span>
                                 </a>
                             </li>
                             <li class="col-md-2">
-                                <a data-toggle="tab" class="btn btn-default btn-group  qr-option" href="#text">
+                                <a data-toggle="tab" class="btn btn-default btn-group  qr-option" href="#text" data-type="prevew_text">
                                     <span><i class="qr-type qr-type-ico_9"></i></span>
                                     <span>Text</span>
                                 </a>
                             </li>
                             <li class="col-md-2">
-                                <a data-toggle="tab" class="btn btn-default btn-group  qr-option" href="#phone">
+                                <a data-toggle="tab" class="btn btn-default btn-group  qr-option" href="#phone" data-type="prevew_phone">
                                     <span>
                                         <i class="qr-type qr-type-ico_15"></i>
                                     </span><span>Phone</span>
                                 </a>
                             </li>
                             <li class="col-md-2">
-                                <a data-toggle="tab" class="btn btn-default btn-group  qr-option" href="#sms">
+                                <a data-toggle="tab" class="btn btn-default btn-group  qr-option" href="#sms" data-type="prevew_sms">
                                     <span><i class="qr-type qr-type-ico_16"></i></span>
                                     <span>SMS</span>
                                 </a>
                             </li>
                             <li class="col-md-2">
-                                <a data-toggle="tab" class="btn btn-default btn-group  qr-option" href="#email">
+                                <a data-toggle="tab" class="btn btn-default btn-group  qr-option menu-fa" href="#email" data-type="prevew_email">
                                     <i aria-hidden="true" class="fa fa-envelope" style="font-size:20px;"></i>Email
                                 </a>
-                            </li>                            
+                            </li>
                             <li class="col-md-2">
-                                <a data-toggle="tab" class="btn btn-default btn-group  qr-option" href="#menu1">
+                                <a data-toggle="tab" class="btn btn-default btn-group  qr-option" href="#mapPannel" data-type="prevew_map">
                                     <span><i class="qr-type qr-type-ico_11"></i></span>
                                     <span>Map</span>
                                 </a>
                             </li>
                             <li class="col-md-2">
-                                <a data-toggle="tab" class="btn btn-default btn-group  qr-option" href="#menu7">
+                                <a data-toggle="tab" class="btn btn-default btn-group  qr-option" href="#register" data-type="prevew_pdf">
                                     <span><i class="qr-type qr-type-ico_12"></i></span>
                                     <span>PDF</span>
                                 </a>
                             </li>
                             <li class="col-md-2">
-                                <a data-toggle="tab" class="btn btn-default btn-group  qr-option" href="#menu1">
+                                <a data-toggle="tab" class="btn btn-default btn-group  qr-option" href="#register" data-type="prevew_audio">
                                     <span><i class="qr-type qr-type-ico_1"></i></span>
                                     <span>Audio</span>
                                 </a>
                             </li>
                             <li class="col-md-2">
-                                <a data-toggle="tab" class="btn btn-default btn-group  qr-option" href="#menu1">
+                                <a data-toggle="tab" class="btn btn-default btn-group  qr-option" href="#register" data-type="prevew_social_media">
                                     <span><i class="qr-type qr-type-ico_3"></i></span>
                                     <span>Social Media</span>
                                 </a>
                             </li>
                             <li class="col-md-2">
-                                <a data-toggle="tab" class="btn btn-default btn-group  qr-option" href="#menu1">
+                                <a data-toggle="tab" class="btn btn-default btn-group  qr-option" href="#register" data-type="prevew_image">
                                     <span><i class="qr-type qr-type-ico_13"></i></span>
                                     <span>Image</span>
                                 </a>
                             </li>
                             <li class="col-md-2">
-                                <a data-toggle="tab" class="btn btn-default btn-group  qr-option" href="#wifi" disabled>
+                                <a data-toggle="tab" class="btn btn-default btn-group  qr-option" data-type="prevew_wifi" disabled>
                                     <span><i class="qr-type qr-type-ico_2"></i></span>
                                     <span>WIFI</span>
                                 </a>
                             </li>
                             <li class="col-md-2">
-                                <a data-toggle="tab" class="btn btn-default btn-group  qr-option" href="#menu1">
+                                <a data-toggle="tab" class="btn btn-default btn-group  qr-option" href="#register" data-type="prevew_vcard">
                                     <span><i class="qr-type qr-type-ico_14"></i></span>
                                     <span>Vcard</span>
                                 </a>
@@ -113,7 +114,7 @@
                                             <div class="animated fadeInLeft display-form">
                                                 <h3>TEXT QR CODE</h3>
                                                 <p>Để tạo QR code có chứa đựng thông tin mong muốn,<br /> bạn có thể nhập nội dung tại đây:</p>
-                                                <input autocomplete="off" class="form-control" id="text" name="text" type="text" required minlength="4" maxlength="100" [ngModel]="text.contentText" (ngModelChange)="onTextChange($event)" #text="ngModel" placeholder="Gõ text ..." />
+                                                <input class="form-control" id="textInput" name="text" type="text" minlength="4" maxlength="100" placeholder="Gõ text ..." />
                                             </div>
                                         </div>
                                     </div>
@@ -125,7 +126,7 @@
                                                 <h3>URL QR CODE</h3>
                                                 <div>
                                                     <p>Để tạo QR code có chứa link URL,<br /> bạn có thể copy đường link URL vào đây:</p>
-                                                    <input pattern="https?://.+" title="Include http://" type="url" id="url" class="form-control" required name="url" [ngModel]="link.url" (ngModelChange)="onContentChange($event)" #url="ngModel">
+                                                    <input type="url" id="urlInput" class="form-control" name="url">
                                                 </div>
                                             </div>
                                         </div>
@@ -137,7 +138,7 @@
                                             <div class="animated fadeInLeft">
                                                 <h3>PHONE QR CODE</h3>
                                                 <p>Khi có người quét Phone QR Code,<br />họ có gọi được số điện thoai mà bạn đã tạo</p>
-                                                <input autocomplete="off" class="form-control numeric" id="phone" type="phone" [ngModel]="phone_number.number" (ngModelChange)="onContentChange($event)" placeholder="Số điện thoại" maxlength="11" />
+                                                <input class="form-control numeric" id="phoneInput" placeholder="Số điện thoại" maxlength="11" />
                                             </div>
                                         </div>
                                     </div>
@@ -148,33 +149,55 @@
                                             <div class="animated fadeInLeft">
                                                 <h3>SMS QR CODE</h3>
                                                 <p>Để tạo QR Code có chứa thông điệp tin nhắn của bạn gửi tới 1 phần mềm nào đó,bạn hãy viết nội dung đó tại đây:</p>
-                                                <input autocomplete="off" class="form-control numeric" id="smsphone" type="phone" [ngModel]="sms.smsto" (ngModelChange)="onSmsChange($event)" placeholder="Số điện thoại" maxlength="11" />
-                                                <textarea autocomplete="off" class="form-control" id="smscontent" style="width:100%;" minlength="4" maxlength="1000" [ngModel]="sms.content" (ngModelChange)="onContentSmsChange($event)" placeholder="Nội dung tin nhắn"></textarea>
+                                                <input class="form-control numeric" id="smsphone" placeholder="Số điện thoại" maxlength="11" />
+                                                <textarea class="form-control" id="smscontent" style="width:100%;" minlength="4" maxlength="1000" placeholder="Nội dung tin nhắn"></textarea>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div id="email" data-type="email" class="tab-pane fade">
                                     <div class="qr-generic-form">
-                                        <div class="animated fadeInLeft">
+                                        <div class="animated fadeInLeft display-form">
                                             <h3>EMAIL QR CODE</h3>
                                             <p>Để tạo QR Code có chứa địa chỉ email của bạn,<br /> hãy cập nhật thông tin email tại đây:</p>
-                                            <input autocomplete="off" class="form-control" id="email" [ngModel]="email.content" (ngModelChange)="onContentEmailChange($event)" placeholder="Địa chỉ mail" />
+                                            <input class="form-control" id="emailInput" placeholder="Địa chỉ mail" />
                                         </div>
                                     </div>
                                 </div>
-                                <p class="label-group" id="qrCodeType">
-                                    <input class="with-gap active" formControlName="mode" name="mode" type="radio" id="test5" value="static" checked="true" />
-                                    <label for="test5">Static</label>
-                                    <input class="with-gap" formControlName="mode" name="mode" type="radio" id="test4" value="dynamic" />
-                                    <label for="test4">Dynamic</label>
-                                </p>
-                                <div class="animated fadeInLeft  qr-btn-submit">
-                                    <!-- <button queryParamsHandling="preserve" class="waves-effect waves-light btn-material " (click)="typeform == excel ? Show() : CreateExcel()">TẠO QR CODE</button> -->
-                                    <button class="waves-effect waves-light btn-material" id="createQR">TẠO QR CODE</button>
+                                <div id="mapPannel" data-type="geo" class="tab-pane fade">
+                                    <div class="animated fadeInLeft">
+                                        <h3>Map QR CODE</h3>
+                                        <p class="text-center">Để tạo QR Code có chứa thông tin địa chỉ của bạn,<br /> bạn có thể nhập thông tin địa chỉ của bạn tại đây:</p>
+                                        <div class="map-location">
+                                            <input id="pac-input" class="controls" type="text" placeholder="Search Box" value="Hà Nội, Việt Nam">
+                                            <div id="map"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="register" data-type="register" class="tab-pane fade">
+                                    <div>
+                                        <div class="animated">
+                                            <h3 style="font-size:28px">Hãy đăng ký để tạo QR Code loại này</h3>
+                                        </div>
+                                        <div class="qr-btn-submit text-center">
+                                            <a class="waves-effect waves-light btn-material " href="http://mirascan.vn:31000/app/#/auth/login" style="text-decoration:none; color: #fff;display:inline-block;" target="_blank">Đăng ký ngay</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="group-create-btn">
+                                    <p class="label-group" id="qrCodeType">
+                                        <input class="with-gap active" name="mode" type="radio" id="test5" value="static" checked />
+                                        <label for="test5">Static</label>
+                                        <input class="with-gap" name="mode" type="radio" id="test4" value="dynamic" />
+                                        <label for="test4">Dynamic</label>
+                                    </p>
+                                    <div class="animated fadeInLeft  qr-btn-submit">
+                                        <!-- <button queryParamsHandling="preserve" class="waves-effect waves-light btn-material " (click)="typeform == excel ? Show() : CreateExcel()">TẠO QR CODE</button> -->
+                                        <button class="waves-effect waves-light btn-material" id="createQR">TẠO QR CODE</button>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 display-qrcode">
+                            <div class="col-md-4 display-qrcode hidden-mobile">
                                 <div class=preview-box>
                                     <img src="images/iphone.png" />
                                     <div class="preview-screen">
@@ -184,9 +207,34 @@
                             </div>
                         </div>
                     </section>
-                </div>
             </div>
         </section>
     </div>
+    <script type="text/javascript">
+        if (window.screen.width < 1024) {
+            $('.menu-list').slick({
+                infinite: false,
+                speed: 300,
+                slidesToShow: 4,
+                slidesToScroll: 4,
+                responsive: [
+                  {
+                      breakpoint: 767,
+                      settings: {
+                          slidesToShow: 3,
+                          slidesToScroll: 3
+                      }
+                  },
+                  {
+                      breakpoint: 321,
+                      settings: {
+                          slidesToShow: 1,
+                          slidesToScroll: 1
+                      }
+                  }
+                ]
+            });
+        };
+    </script>
 </body>
 </html>
