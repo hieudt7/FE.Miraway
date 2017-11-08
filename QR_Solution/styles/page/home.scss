@@ -268,7 +268,7 @@
 
             p {
                 font-size: 14px;
-                margin-bottom:30px;
+                margin-bottom: 30px;
             }
         }
     }
@@ -285,7 +285,7 @@
         .content {
             @include desktop {
                 position: absolute;
-                top: 50%;
+                top: 40%;
                 left: 50%;
                 transform: translate(-50%,-50%);
             }
@@ -354,8 +354,9 @@
         }
 
         iframe {
-            width: 100% !important;
-            height: 360px !important;
+            width: 850px;
+            height: 450px;
+            
         }
 
         .parallax-container {
@@ -484,5 +485,49 @@
     .rating {
         background: #fbfafc;
         padding-top: 10px;
+    }
+
+    .slick-slide {
+        text-align: center;
+    }
+
+    .slick-dots li button {
+        font-size: 0;
+        line-height: 0;
+        display: block;
+        width: 10px;
+        height: 10px;
+        padding: 5px;
+        cursor: pointer;
+        color: transparent;
+        border: 0;
+        outline: none;
+        background: #e6e6e6;
+        border-radius: 50%;
+    }
+
+    .slick-dots {
+        position: absolute;
+        display: block;
+        width: 100%;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+    }
+
+    .slick-dots li {
+        position: relative;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        margin: 0 5px;
+        padding: 0;
+        cursor: pointer;
+
+        &.slick-active {
+            button {
+                background-color: #f58220;
+            }
+        }
     }
 }
