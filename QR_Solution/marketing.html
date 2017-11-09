@@ -4,10 +4,6 @@
     <title></title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="styles/bootstrap.css" rel="stylesheet" />
-    <link href="styles/font-awesome.min.css" rel="stylesheet" />
-    <link href="styles/materialize.min.css" rel="stylesheet" />
-    <link href="styles/animate.css" rel="stylesheet" />
     <link href="styles/lib.css" rel="stylesheet" />
     <link href="styles/styles.css" rel="stylesheet" />
     <script src="scripts/jquery.js"></script>
@@ -15,6 +11,7 @@
     <script src="scripts/materialize.min.js"></script>
     <script src="scripts/isotope.pkgd.js"></script>
     <script src="scripts/slick.js"></script>
+    <script src="scripts/page-script.js"></script>
 </head>
 <body>
     <div class="qr-mkt">
@@ -50,7 +47,9 @@
                         <a href="javacsript:void(0)" class="btn-flat  btn-orange">Tạo QR Code Ngay<img src="images/next-arr.png" /></a>
                     </div>
                     <div class="col-md-6 hidden-mobile">
-                        <iframe width="100%" height="300px;" src="https://www.youtube.com/embed/5WNgrC5_IrI" frameborder="0" allowfullscreen></iframe>
+                        <a class="youtube-thumb" href="javascript:void(0)" data-src="https://www.youtube.com/embed/JrkDHPq3P2I" data-height="315">
+                            <span class="ytp-large-play-button ytp-button" aria-label="Play"><svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%"><path class="ytp-large-play-button-bg" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#212121" fill-opacity="0.8"></path><path d="M 45,24 27,14 27,34" fill="#fff"></path></svg></span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -98,7 +97,7 @@
             <h2 class="under-title ">nội dung qr code</h2>
             <p class="des">Lựa chọn nội dung QR Code phù hợp để mang lại sự Tiện lợi và Trải nghiệm thú vị cho khách hàng của bạn</p>
             <div id="exTab1" class="container">
-                <ul class="tabs">
+                <ul class="tabs qr-tab">
                     <li class="tab active">
                         <a class="active" href="#1a" data-toggle="tab"><span class="mkt-icon"><i class="sprite sprite-type9-2"></i></span>Website</a>
                     </li>
@@ -127,7 +126,6 @@
                         <a href="#9a" data-toggle="tab"><span class="mkt-icon"><i class="sprite sprite-type3"></i></span>Plain Text</a>
                     </li>
                 </ul>
-
                 <div class="tab-content clearfix">
                     <div class="tab-pane active animated fadeIn" id="1a">
                         <div class="qr-content row clearfix">
@@ -177,9 +175,9 @@
             <h2 class="under-title ">Công nghệ & tính năng</h2>
             <p class="des">Lựa chọn nội dung QR Code phù hợp để mang lại sự Tiện lợi và Trải nghiệm thú vị cho khách hàng của bạn</p>
             <div id="exTab1" class="container">
-                <ul class="tabs">
+                <ul class="tabs qr-tab">
                     <li class="tab active">
-                        <a class="active" href="#1b" data-toggle="tab"><span class="mkt-icon"><i class="sprite sprite-type9-2"></i></span>Website</a>
+                        <a class="active" title="Website" href="#1b" data-toggle="tab"><span class="mkt-icon"><i class="sprite sprite-type9-2"></i></span>Website Website Website</a>
                     </li>
                     <li class="tab">
                         <a href="#2b" data-toggle="tab"><span class="mkt-icon"><i class="sprite sprite-type5-1"></i></span>PDF</a>
@@ -206,7 +204,6 @@
                         <a href="#9b" data-toggle="tab"><span class="mkt-icon"><i class="sprite sprite-type3"></i></span>Plain Text</a>
                     </li>
                 </ul>
-
                 <div class="tab-content clearfix">
                     <div class="tab-pane active" id="1b">
                         <div class="qr-content row clearfix">
@@ -259,5 +256,10 @@
             </div>
         </section>
     </div>
+    <script type="text/javascript">
+        var common = new commonFunction();
+        common.initYoutubeVideo();
+        common.slickMobile();
+    </script>
 </body>
 </html>

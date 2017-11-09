@@ -342,7 +342,7 @@
 
         .tabs {
             text-align: center;
-            height: 80px;
+            min-height: 80px;
             margin: 15px 0;
 
             @include device-1 {

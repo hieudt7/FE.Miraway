@@ -4,9 +4,9 @@
     <title>Trang chủ</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="styles/bootstrap.css" rel="stylesheet" />
+    <!--<link href="styles/bootstrap.css" rel="stylesheet" />
     <link href="styles/font-awesome.min.css" rel="stylesheet" />
-    <link href="styles/materialize.min.css" rel="stylesheet" />
+    <link href="styles/materialize.min.css" rel="stylesheet" />-->
     <link href="styles/lib.css" rel="stylesheet" />
     <link href="styles/styles.css" rel="stylesheet" />
     <script src="scripts/jquery.js"></script>
@@ -43,7 +43,7 @@
                     <div class="first-item col-md-5 col-md-offset-1">
                         <h3>qr code chống giả</h3>
                         <p>Giải pháp chống giả ưu việt nhất hiện nay – sử dụng công nghệ MÃ XÁC THỰC DUY NHẤT của sản phẩm, giúp việc làm giả trở nên vô hiệu.</p>
-                    <a href="javacsript:void(0)" class="btn-flat btn-orange">Xem thêm<img src="images/next-arr.png" /></a>
+                        <a href="javacsript:void(0)" class="btn-flat btn-orange">Xem thêm<img src="images/next-arr.png" /></a>
                     </div>
                     <div class="col-md-4 col-md-offset-1 last-item">
                         <img src="images/ipad.png" />
@@ -68,14 +68,13 @@
                         <h3>QR CODE QUẢN LÝ TÀI SẢN</h3>
                         <p>Tra cứu, thống kê tài sản nhanh chóng, tiết kiệm thời gian, đảm bảo thông tin minh bạch về số lượng & chất lượng sản phẩm của tổ chức, doanh nghiệp.</p>
                         <a href="javacsript:void(0)" class="btn-flat btn-orange">Xem thêm<img src="images/next-arr.png" /></a>
-                    
+
                     </div>
                     <div class="col-md-4 last-item col-md-offset-1">
                         <img src="images/ipad.png" />
                     </div>
                 </div>
             </div>
-
         </section>
         <section class="home-about">
             <div class="parallax-container hidden-mobile ">
@@ -85,7 +84,7 @@
                 <h2 class="under-title white-title">video về mirascan</h2>
                 <div class="container">
                     <!--<div id="myCarousel" class="carousel slide" data-ride="carousel">
-               
+
                         <div class="carousel-inner">
                             <div class="item active">
                                 <div class="row">
@@ -116,9 +115,8 @@
                                 </div>
                             </div>
                         </div>
-                    
-                    </div>-->
 
+                    </div>-->
                     <div class="slider single-item">
                         <div><iframe width="560" height="315" src="https://www.youtube.com/embed/5WNgrC5_IrI" frameborder="0" allowfullscreen></iframe></div>
                         <div><iframe width="560" height="315" src="https://www.youtube.com/embed/5WNgrC5_IrI" frameborder="0" allowfullscreen></iframe></div>
@@ -127,27 +125,27 @@
                         <div><h3>5</h3></div>
                         <div><h3>6</h3></div>
                     </div>
-                    
+
                 </div>
             </div>
         </section>
         <section class="home-app">
             <h2 class="under-title">tính ứng dụng của qr code</h2>
-            <div class="container content">
+            <div class="container content" style="background-image: url(../images/ico_4.png);" id="slideCircle">
                 <div class="row clearfix">
                     <div class="col-sm-6 no-pad">
                         <ul class="ul-left">
-                            <li>
+                            <li data-slide="6">
                                 <h3>qr code thông tin name card</h3>
                                 <p>Giải quyết các vấn đề kinh doanh và quản lý trong doanh nghiệp</p>
                                 <img src="images/ico_5.png" />
                             </li>
-                            <li>
+                            <li data-slide="5">
                                 <h3>qr code truy xuất dữ liệu</h3>
                                 <p>Giải quyết các vấn đề kinh doanh và quản lý trong doanh nghiệp</p>
                                 <img src="images/ico_6.png" />
                             </li>
-                            <li>
+                            <li data-slide="4">
                                 <h3>qr code đọc sách</h3>
                                 <p>Giải quyết các vấn đề kinh doanh và quản lý trong doanh nghiệp</p>
                                 <img src="images/ico_7.png" />
@@ -156,17 +154,17 @@
                     </div>
                     <div class="col-sm-6 no-pad">
                         <ul class="ul-right">
-                            <li>
+                            <li class="active" data-slide="1">
                                 <h3>qr code gọi món</h3>
                                 <p>Giải quyết các vấn đề kinh doanh và quản lý trong doanh nghiệp</p>
                                 <img src="images/ico_8.png" />
                             </li>
-                            <li>
+                            <li data-slide="2">
                                 <h3>qr code khuyến mại</h3>
                                 <p>Giải quyết các vấn đề kinh doanh và quản lý trong doanh nghiệp</p>
                                 <img src="images/ico_9.png" />
                             </li>
-                            <li>
+                            <li data-slide="3">
                                 <h3>qr code thuê hàng</h3>
                                 <p>Giải quyết các vấn đề kinh doanh và quản lý trong doanh nghiệp</p>
                                 <img src="images/ico_10.png" />
@@ -185,13 +183,28 @@
             $('.parallax').parallax();
         });
     </script>
-
     <script>
         $('.single-item').slick({
-            dots:true,
+            dots: true,
         });
+        //slide slick
+        var slideTime = 3000;
+        var count = 0;
+        var $element = $('#slideCircle');     
+        setInterval(function () {
+            var lenght = $element.find('li').length;
+            var order = parseInt($element.find('li.active').attr('data-slide'));
+            var nextSlide = order + 1;
+            if (order == lenght) {
+                nextSlide = 1;
+            }
+            console.log(lenght)
+            console.log(order)
+            $element.find('li.active').removeClass('active');
+            $element.find('li[data-slide="' + nextSlide + '"]').addClass('active');
+
+        }, slideTime);
     </script>
 
-				
 </body>
 </html>

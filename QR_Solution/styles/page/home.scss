@@ -356,7 +356,6 @@
         iframe {
             width: 850px;
             height: 450px;
-            
         }
 
         .parallax-container {
@@ -373,7 +372,6 @@
         }
 
         .content {
-            background-image: url('../images/ico_4.png');
             background-repeat: no-repeat;
             background-position: center;
             background-position-y: 0%;
@@ -391,6 +389,12 @@
             li {
                 position: relative;
                 margin-bottom: 100px;
+
+                &.active {
+                    h3, p {
+                        color: #f58220 !important;
+                    }
+                }
             }
 
             h3 {

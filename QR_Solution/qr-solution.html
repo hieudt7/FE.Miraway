@@ -189,29 +189,101 @@
                         </div>
                     </div>
                     <div class="grid">
-                        <div class="element-item transition round" data-category="transition">
-                            <img src="images/imghome/sp1.png" />
+                        <div class="element-item transition round overlay-scale-in" data-category="transition">
+                            <a class="overlay-link">
+                                <img src="images/imghome/sp1.png" />
+                                <span class="overlay-info">
+                                    <span>
+                                        <span>
+                                            TEM TRÒN                                            
+                                        </span>
+                                    </span>
+                                </span>
+                            </a>
                         </div>
                         <div class="element-item square " data-category="metalloid">
-                            <img src="images/imghome/sp2.png" />
+                            <a class="overlay-link">
+                                <img src="images/imghome/sp2.png" />
+                                <span class="overlay-info">
+                                    <span>
+                                        <span>
+                                            TEM VUÔNG
+                                        </span>
+                                    </span>
+                                </span>
+                            </a>
                         </div>
-                        <div class="element-item post-transition rect " data-category="post-transition">
-                            <img src="images/imghome/sp3.png" />
+                        <div class="element-item rect ">
+                            <a class="overlay-link">
+                                <img src="images/imghome/sp3.png" />
+                                <span class="overlay-info">
+                                    <span>
+                                        <span>
+                                            TEM DÀI
+                                        </span>
+                                    </span>
+                                </span>
+                            </a>
                         </div>
-                        <div class="element-item post-transition square " data-category="post-transition">
-                            <img src="images/imghome/sp4.png" />
+                        <div class="element-item square ">
+                            <a class="overlay-link">
+                                <img src="images/imghome/sp4.png" />
+                                <span class="overlay-info">
+                                    <span>
+                                        <span>
+                                            TEM TRÒN
+                                        </span>
+                                    </span>
+                                </span>
+                            </a>
                         </div>
-                        <div class="element-item transition square " data-category="transition">
-                            <img src="images/imghome/sp5.png" />
+                        <div class="element-item square ">
+                            <a class="overlay-link">
+                                <img src="images/imghome/sp5.png" />
+                                <span class="overlay-info">
+                                    <span>
+                                        <span>
+                                            TEM DÀI
+                                        </span>
+                                    </span>
+                                </span>
+                            </a>
                         </div>
-                        <div class="element-item alkali rect " data-category="alkali">
-                            <img src="images/imghome/sp6.png" />
+                        <div class="element-item rect ">
+                            <a class="overlay-link">
+                                <img src="images/imghome/sp6.png" />
+                                <span class="overlay-info">
+                                    <span>
+                                        <span>
+                                            TEM TRÒN
+                                        </span>
+                                    </span>
+                                </span>
+                            </a>
                         </div>
-                        <div class="element-item alkali round " data-category="alkali">
-                            <img src="images/imghome/sp7.png" />
+                        <div class="element-item round ">
+                            <a class="overlay-link">
+                                <img src="images/imghome/sp7.png" />
+                                <span class="overlay-info">
+                                    <span>
+                                        <span>
+                                            TEM VUÔNG
+                                        </span>
+                                    </span>
+                                </span>
+                            </a>
                         </div>
-                        <div class="element-item transition round " data-category="transition">
-                            <img src="images/imghome/sp8.png" />
+                        <div class="element-item round ">
+                            <a class="overlay-link">
+                                <img src="images/imghome/sp8.png" />
+                                <span class="overlay-info">
+                                    <span>
+                                        <span>
+                                            TEM TRÒN
+                                        </span>
+                                    </span>
+                                </span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -229,28 +301,24 @@
                             <div class="text1">
                                 <h3>CÔNG NGHỆ QR CODE</h3>
                                 <p>Mirascan có công nghệ QR Code hiện đại và tốt nhất</p>
-
                             </div>
                         </div>
                         <div class="col-md-6 app-item item-2">
                             <div class="text1">
                                 <h3>TƯ VẤN HỖ TRỢ</h3>
                                 <p>Dịch vụ tư vấn và triển khai nhanh chóng, tận tình</p>
-
                             </div>
                         </div>
                         <div class="col-md-6 app-item item-3">
                             <div class="text1">
                                 <h3>DỊCH VỤ CHĂM SÓC</h3>
                                 <p>Dịch vụ chăm sóc và hỗ trợ trong suốt quá trình sử dụng</p>
-
                             </div>
                         </div>
                         <div class="col-md-6 app-item item-4">
                             <div class="text1">
                                 <h3>CHI PHỐI TỐI ƯU</h3>
                                 <p>Đến với Mirascan quý khách sẽ tối ưu được chi phí phát sinh.</p>
-
                             </div>
                         </div>
                     </div>
@@ -259,8 +327,8 @@
         </section>
     </div>
     <script type="text/javascript">
-        $(document).ready(function () {
-            if (window.screen.width > 1024) {
+        if (window.screen.width > 1024) {
+            $(window).on('load', function () {
                 var $grid = $('.grid').isotope({
                     itemSelector: '.element-item',
                     layoutMode: 'fitRows',
@@ -302,32 +370,32 @@
                         $(this).addClass('is-checked');
                     });
                 });
-            }
-            else {
-                $('.grid').slick({                    
-                    infinite: false,
-                    speed: 300,
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    responsive: [                  
-                      {
-                          breakpoint: 600,
-                          settings: {
-                              slidesToShow: 2,
-                              slidesToScroll: 2
-                          }
-                      },
-                      {
-                          breakpoint: 480,
-                          settings: {
-                              slidesToShow: 1,
-                              slidesToScroll: 1
-                          }
+            })
+        }
+        else {
+            $('.grid').slick({
+                infinite: false,
+                speed: 300,
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                responsive: [
+                  {
+                      breakpoint: 600,
+                      settings: {
+                          slidesToShow: 2,
+                          slidesToScroll: 2
                       }
-                    ]
-                });
-            }
-        })
+                  },
+                  {
+                      breakpoint: 480,
+                      settings: {
+                          slidesToShow: 1,
+                          slidesToScroll: 1
+                      }
+                  }
+                ]
+            });
+        }
     </script>
 </body>
 </html>
