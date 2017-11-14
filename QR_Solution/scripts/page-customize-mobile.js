@@ -1,4 +1,4 @@
-﻿if (window.screen.width < 1024) {
+﻿if ($(window).width() < 1024) {
     $('.menu-list').slick({
         infinite: false,
         speed: 300,

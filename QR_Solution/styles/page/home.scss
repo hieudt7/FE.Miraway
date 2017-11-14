@@ -375,9 +375,22 @@
             background-repeat: no-repeat;
             background-position: center;
             background-position-y: 0%;
+            position: relative;
 
             @include device-1 {
                 background: none;
+            }
+
+            #imageShow {
+                img {
+                    position: absolute;
+                    width: 246px;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                    margin-top: 66px;
+                    left: -7px;
+                }
             }
         }
 
@@ -532,6 +545,16 @@
             button {
                 background-color: #f58220;
             }
+        }
+    }
+
+    .slide-roud-image {
+        display: none;
+    }
+
+    .slide-item {
+        li {
+            cursor: pointer;
         }
     }
 }

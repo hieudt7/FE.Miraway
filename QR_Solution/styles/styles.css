@@ -371,10 +371,19 @@ body, html {
   .home-page .home-app .content {
     background-repeat: no-repeat;
     background-position: center;
-    background-position-y: 0%; }
+    background-position-y: 0%;
+    position: relative; }
     @media screen and (max-width: 1023px) {
       .home-page .home-app .content {
         background: none; } }
+    .home-page .home-app .content #imageShow img {
+      position: absolute;
+      width: 246px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      margin-top: 66px;
+      left: -7px; }
   .home-page .home-app ul {
     list-style: none;
     padding: 0;
@@ -480,6 +489,12 @@ body, html {
   cursor: pointer; }
   .home-page .slick-dots li.slick-active button {
     background-color: #f58220; }
+
+.home-page .slide-roud-image {
+  display: none; }
+
+.home-page .slide-item li {
+  cursor: pointer; }
 
 .qr-bulk .text-title {
   padding: 0 195px;

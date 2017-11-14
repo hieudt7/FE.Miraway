@@ -83,40 +83,6 @@
             <div class="content">
                 <h2 class="under-title white-title">video về mirascan</h2>
                 <div class="container">
-                    <!--<div id="myCarousel" class="carousel slide" data-ride="carousel">
-
-                        <div class="carousel-inner">
-                            <div class="item active">
-                                <div class="row">
-                                    <div class="col-sm-5 text">
-                                        <h2>tính năng qr code marketing</h2>
-                                        <p>Giải quyết các vấn đề kinh doanh và quản lý trong doanh nghiệp</p>
-                                        <ul>
-                                            <li>
-                                                <i><img src="images/ico_1.png" /></i>
-                                                <h3>tính năng qr code marketing</h3>
-                                                <p>Giải quyết các vấn đề kinh doanh và quản lý trong doanh nghiệp</p>
-                                            </li>
-                                            <li>
-                                                <i><img src="images/ico_2.png" /></i>
-                                                <h3>messenger</h3>
-                                                <p>Giải quyết các vấn đề kinh doanh và quản lý trong doanh nghiệp</p>
-                                            </li>
-                                            <li>
-                                                <i><img src="images/ico_3.png" /></i>
-                                                <h3>mua hàng trực tuyến</h3>
-                                                <p>Giải quyết các vấn đề kinh doanh và quản lý trong doanh nghiệp</p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-sm-7">
-                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/5WNgrC5_IrI" frameborder="0" allowfullscreen></iframe>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>-->
                     <div class="slider single-item">
                         <div><iframe width="560" height="315" src="https://www.youtube.com/embed/5WNgrC5_IrI" frameborder="0" allowfullscreen></iframe></div>
                         <div><iframe width="560" height="315" src="https://www.youtube.com/embed/5WNgrC5_IrI" frameborder="0" allowfullscreen></iframe></div>
@@ -132,9 +98,20 @@
         <section class="home-app">
             <h2 class="under-title">tính ứng dụng của qr code</h2>
             <div class="container content" style="background-image: url(../images/ico_4.png);" id="slideCircle">
+                <div id="imageShow">
+                    <img src="images/mkt/screen-03.jpg">
+                </div>
+                <div class="slide-roud-image" id="slideImg">
+                    <img src="images/mkt/screen-03.jpg" data-image="1"/>
+                    <img src="images/mkt/screen-04.jpg" data-image="5" />
+                    <img src="images/mkt/screen-05.jpg" data-image="2" />
+                    <img src="images/mkt/screen-06.jpg" data-image="4" />
+                    <img src="images/mkt/screen-07.jpg" data-image="6" />
+                    <img src="images/mkt/screen-08.jpg" data-image="3" />
+                </div>
                 <div class="row clearfix">
                     <div class="col-sm-6 no-pad">
-                        <ul class="ul-left">
+                        <ul class="ul-left slide-item">
                             <li data-slide="6">
                                 <h3>qr code thông tin name card</h3>
                                 <p>Giải quyết các vấn đề kinh doanh và quản lý trong doanh nghiệp</p>
@@ -153,7 +130,7 @@
                         </ul>
                     </div>
                     <div class="col-sm-6 no-pad">
-                        <ul class="ul-right">
+                        <ul class="ul-right slide-item">
                             <li class="active" data-slide="1">
                                 <h3>qr code gọi món</h3>
                                 <p>Giải quyết các vấn đề kinh doanh và quản lý trong doanh nghiệp</p>
@@ -187,8 +164,13 @@
         $('.single-item').slick({
             dots: true,
         });
+        function changeSlide(number) {
+            
+            var imgURL = $('#slideImg').find('img[data-image="' + number + '"]').attr('src');            
+            $('#imageShow img').attr('src', imgURL);
+        }
         //slide slick
-        var slideTime = 3000;
+        var slideTime = 5000;
         var count = 0;
         var $element = $('#slideCircle');     
         setInterval(function () {
@@ -198,12 +180,18 @@
             if (order == lenght) {
                 nextSlide = 1;
             }
-            console.log(lenght)
-            console.log(order)
+            changeSlide(nextSlide);
             $element.find('li.active').removeClass('active');
             $element.find('li[data-slide="' + nextSlide + '"]').addClass('active');
 
         }, slideTime);
+        //on click to slide
+        $(document).on('click', '.slide-item li', function () {
+            $('.slide-item li').removeClass('active');
+            $(this).addClass('active');
+            var current = $(this).attr('data-slide');
+            changeSlide(current);
+        })
     </script>
 
 </body>

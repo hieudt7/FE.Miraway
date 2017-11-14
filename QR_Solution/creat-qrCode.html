@@ -55,18 +55,19 @@
                                     <span><i class="qr-type qr-type-ico_16"></i></span>
                                     <span>SMS</span>
                                 </a>
-                            </li>
-                            <li class="col-md-2">
-                                <a data-toggle="tab" class="btn btn-default btn-group  qr-option menu-fa" href="#email" data-type="prevew_email">
-                                    <i aria-hidden="true" class="fa fa-envelope" style="font-size:20px;"></i>Email
-                                </a>
-                            </li>
+                            </li>                          
                             <li class="col-md-2">
                                 <a data-toggle="tab" class="btn btn-default btn-group  qr-option" href="#mapPannel" data-type="prevew_map">
                                     <span><i class="qr-type qr-type-ico_11"></i></span>
                                     <span>Map</span>
                                 </a>
-                            </li>
+                            </li>       
+                            <li class="col-md-2">
+                                <a data-toggle="tab" class="btn btn-default btn-group  qr-option menu-fa" href="#email" data-type="prevew_email">
+                                    <span><i aria-hidden="true" class="fa fa-envelope" style="font-size:20px;"></i></span>
+                                    <span>Email</span>
+                                </a>
+                            </li>                 
                             <li class="col-md-2">
                                 <a data-toggle="tab" class="btn btn-default btn-group  qr-option" href="#register" data-type="prevew_pdf">
                                     <span><i class="qr-type qr-type-ico_12"></i></span>
@@ -211,28 +212,12 @@
         </section>
     </div>
     <script type="text/javascript">
-        if (window.screen.width < 1024) {
+        if ($(window).width() < 1024) {
             $('.menu-list').slick({
+                slidesPerRow: 3,
+                rows: 2,
                 infinite: false,
                 speed: 300,
-                slidesToShow: 4,
-                slidesToScroll: 4,
-                responsive: [
-                  {
-                      breakpoint: 767,
-                      settings: {
-                          slidesToShow: 3,
-                          slidesToScroll: 3
-                      }
-                  },
-                  {
-                      breakpoint: 321,
-                      settings: {
-                          slidesToShow: 1,
-                          slidesToScroll: 1
-                      }
-                  }
-                ]
             });
         };
     </script>
