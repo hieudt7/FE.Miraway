@@ -420,6 +420,8 @@
                 }
             }
 
+
+
             &.ul-left {
                 text-align: right;
                 padding-right: 175px;
@@ -430,8 +432,102 @@
                     text-align: left;
                 }
 
+                li {
+                    &.active {
+                        .app-icon {
+                            position: absolute;
+                            top: 0;
+                            right: 2px;
+                            width: 75px;
+
+                            @include device-1 {
+                                display: none;
+                            }
+
+
+
+                            span {
+                                position: relative;
+                                width: 75px;
+                                height: 75px;
+                                text-align: center;
+                                line-height: 75px;
+                                z-index: 1;
+                                border-radius: 50%;
+                                background-color: #fff;
+                                border: 2px solid #f58220;
+                                color: #fff;
+                                display: block;
+
+                                &:before {
+                                    content: "";
+                                    width: 67px;
+                                    /* line-height: 65px; */
+                                    position: absolute;
+                                    pointer-events: none;
+                                    background-color: #f58220;
+                                    border: 1px solid #f58220;
+                                    left: 2px;
+                                    top: 2px;
+                                    height: 67px;
+                                    border-radius: 50%;
+                                }
+
+                                i {
+                                    position: relative;
+                                }
+                            }
+                        }
+                    }
+                }
+
                 img {
                     right: 0;
+                }
+
+                .app-icon {
+                    position: absolute;
+                    top: 0;
+
+                    @include device-1 {
+                        display: none;
+                    }
+
+                    right: 0;
+                    width: 75px;
+
+                    span {
+                        position: relative;
+                        width: 75px;
+                        height: 75px;
+                        text-align: center;
+                        line-height: 75px;
+                        z-index: 1;
+                        border-radius: 50%;
+                        background-color: #fff;
+                        border: 2px solid #b1b1b1;
+                        color: #b1b1b1;
+                        display: block;
+
+                        &:before {
+                            content: "";
+                            width: 67px;
+                            /* line-height: 65px; */
+                            position: absolute;
+                            pointer-events: none;
+                            /* background-color: #f58220; */
+                            /* border: 1px solid #f58220; */
+                            left: 2px;
+                            top: 2px;
+                            height: 67px;
+                            border-radius: 50%;
+                        }
+
+                        i {
+                            position: relative;
+                            font-size:24px;
+                        }
+                    }
                 }
 
                 li {
@@ -462,8 +558,102 @@
                     text-align: left;
                 }
 
+                li {
+                    &.active {
+                        .app-icon {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 75px;
+
+                            @include device-1 {
+                                display: none;
+                            }
+
+
+
+                            span {
+                                position: relative;
+                                width: 75px;
+                                height: 75px;
+                                text-align: center;
+                                line-height: 75px;
+                                z-index: 1;
+                                border-radius: 50%;
+                                background-color: #fff;
+                                border: 2px solid #f58220;
+                                color: #fff;
+                                display: block;
+
+                                &:before {
+                                    content: "";
+                                    width: 67px;
+                                    /* line-height: 65px; */
+                                    position: absolute;
+                                    pointer-events: none;
+                                    background-color: #f58220;
+                                    border: 1px solid #f58220;
+                                    left: 2px;
+                                    top: 2px;
+                                    height: 67px;
+                                    border-radius: 50%;
+                                }
+
+                                i {
+                                    position: relative;
+                                }
+                            }
+                        }
+                    }
+                }
+
                 img {
                     left: 0;
+                }
+
+                .app-icon {
+                    position: absolute;
+                    top: 0;
+
+                    @include device-1 {
+                        display: none;
+                    }
+
+                    left: 0;
+                    width: 75px;
+
+                    span {
+                        position: relative;
+                        width: 75px;
+                        height: 75px;
+                        text-align: center;
+                        line-height: 75px;
+                        z-index: 1;
+                        border-radius: 50%;
+                        background-color: #fff;
+                        border: 2px solid #b1b1b1;
+                        color: #b1b1b1;
+                        display: block;
+
+                        &:before {
+                            content: "";
+                            width: 67px;
+                            /* line-height: 65px; */
+                            position: absolute;
+                            pointer-events: none;
+                            /* background-color: #f58220; */
+                            /* border: 1px solid #f58220; */
+                            left: 2px;
+                            top: 2px;
+                            height: 67px;
+                            border-radius: 50%;
+                        }
+
+                        i {
+                            position: relative;
+                            font-size: 24px;
+                        }
+                    }
                 }
 
                 li {

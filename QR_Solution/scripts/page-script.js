@@ -15,10 +15,13 @@
         $(document).on('click', videoThumb, function () {
             var vidSrc = $(this).attr('data-src'),
                 vidHeight = $(this).attr('data-height'),
-                video_thumbnail = $('<iframe width="100%" height="' + vidHeight + '" src="' + vidSrc + '?autoplay=1" frameborder="0" allowfullscreen></iframe>');
-            $('.yt-thumb').hide();
-            $(this).append(video_thumbnail);
-            $('.ytp-button').hide();
+                video_thumbnail = $('<iframe class="frame-youtube" width="auto" height=""' + vidHeight + '" src="' + vidSrc + '?autoplay=1&enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allowfullscreen></iframe>');
+            if (vidSrc !== '' && vidSrc !== undefined) {
+                $(this).find('.yt-thumb').hide();
+                $(this).append(video_thumbnail);
+                $(this).find('.ytp-button').hide();
+                $(this).attr('data-src', '');
+            }
         })
     };
     this.initYoutubeVideo = function () {
