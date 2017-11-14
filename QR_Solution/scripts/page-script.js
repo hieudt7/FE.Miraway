@@ -15,13 +15,23 @@
         $(document).on('click', videoThumb, function () {
             var vidSrc = $(this).attr('data-src'),
                 vidHeight = $(this).attr('data-height'),
+<<<<<<< HEAD
                 video_thumbnail = $('<iframe class="frame-youtube" width="auto" height=""' + vidHeight + '" src="' + vidSrc + '?autoplay=1&enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allowfullscreen></iframe>');
+=======
+                video_thumbnail = $('<iframe class="frame-youtube" width="100%" height="' + vidHeight + '" src="' + vidSrc + '?autoplay=1&enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allowfullscreen></iframe>');
+>>>>>>> refs/remotes/origin/master
             if (vidSrc !== '' && vidSrc !== undefined) {
                 $(this).find('.yt-thumb').hide();
                 $(this).append(video_thumbnail);
                 $(this).find('.ytp-button').hide();
                 $(this).attr('data-src', '');
             }
+<<<<<<< HEAD
+=======
+            
+            //pause
+            //$('#id_1')[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
+>>>>>>> refs/remotes/origin/master
         })
     };
     this.initYoutubeVideo = function () {
