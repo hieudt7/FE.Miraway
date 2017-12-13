@@ -170,54 +170,54 @@
             <h2 class="under-title">khách hàng đánh giá mirascan</h2>
         </section>
     </div>
-    <script>
-        $(document).ready(function () {
-            $('.parallax').parallax();
-        });
-    </script>
-    <script>
-        $('.single-item').slick({
-            dots: true,
-        }).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-            if ($('.slick-active').find('.frame-youtube').length > 0) {
-                $('.slick-active').find('.frame-youtube')[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
-            }
-        });
-        function changeSlide(number) {
-            
-            var imgURL = $('#slideImg').find('img[data-image="' + number + '"]').attr('src');            
-            $('#imageShow img').attr('src', imgURL);
-        }
-        //slide slick
-        var slideTime = 5000;
-        var count = 0;
-        var $element = $('#slideCircle');
-        setInterval(function () {
-            var lenght = $element.find('li').length;
-            var order = parseInt($element.find('li.active').attr('data-slide'));
-            var nextSlide = order + 1;
-            if (order == lenght) {
-                nextSlide = 1;
-            }
-            changeSlide(nextSlide);
-            $element.find('li.active').removeClass('active');
-            $element.find('li[data-slide="' + nextSlide + '"]').addClass('active');
-
-        }, slideTime);
-        //on click to slide
-        $(document).on('click', '.slide-item li', function () {
-            $('.slide-item li').removeClass('active');
-            $(this).addClass('active');
-            var current = $(this).attr('data-slide');
-            changeSlide(current);
-        })
-    </script>
-  
     <script type="text/javascript">
+        $(document).ready(function () {
+            $('.single-item').slick({
+                dots: true,
+            }).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+                if ($('.slick-active').find('.frame-youtube').length > 0) {
+                    $('.slick-active').find('.frame-youtube')[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
+                }
+            });
+            $('.parallax').parallax();
+        
+
+        });
+
+        if ($(window).width() > 1024) {
+            function changeSlide(number) {
+
+                var imgURL = $('#slideImg').find('img[data-image="' + number + '"]').attr('src');
+                $('#imageShow img').attr('src', imgURL);
+            }
+            //slide slick
+            var slideTime = 5000;
+            var count = 0;
+            var $element = $('#slideCircle');
+            setInterval(function () {
+                var lenght = $element.find('li').length;
+                var order = parseInt($element.find('li.active').attr('data-slide'));
+                var nextSlide = order + 1;
+                if (order == lenght) {
+                    nextSlide = 1;
+                }
+                changeSlide(nextSlide);
+                $element.find('li.active').removeClass('active');
+                $element.find('li[data-slide="' + nextSlide + '"]').addClass('active');
+
+            }, slideTime);
+            //on click to slide
+            $(document).on('click', '.slide-item li', function () {
+                $('.slide-item li').removeClass('active');
+                $(this).addClass('active');
+                var current = $(this).attr('data-slide');
+                changeSlide(current);
+            })
+        }
+
         var common = new commonFunction();
         common.initYoutubeVideo();
         common.slickMobile();
     </script>
-
 </body>
 </html>
