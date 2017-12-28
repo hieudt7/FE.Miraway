@@ -1677,32 +1677,7 @@
     .logo-list li {
         display: none;
     }
-
-    @include device-1 {
-        .tab-pane {
-            .panel-content {
-                position: fixed;
-                display: none;
-
-                &.active {
-                    display: block;
-                }
-            }
-
-            .pannel-menu {
-                height: 60px;
-                opacity: .95;
-                background: #fff;
-                position: fixed;
-                width: 100%;
-                bottom: 0;
-                left: 0;
-                background-color: #fff;
-                border-top: 1px solid #ddd;
-                z-index: 999;
-            }
-        }
-    }
+    
 }
 
 .logo-group {

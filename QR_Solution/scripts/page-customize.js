@@ -338,7 +338,7 @@ function customizeQR() {
                 });
             }
         });
-        $('#removeLogo').on('click', function () {
+        $('.remove-logo').on('click', function () {
             $('#editLogo').fadeOut();
             $('#editLogo').find('img').attr('src', '');
         });

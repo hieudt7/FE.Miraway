@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/font-awesome.min.css" rel="stylesheet" />
+    <link href="styles/bootstrap.css" rel="stylesheet" />
+    <link href="styles/styles.css" rel="stylesheet" />
+    <script src="scripts/jquery.js"></script>
+</head>
+<body>
+    <header class="container">
+        <h1>
+            <img src="images/logo.PNG" alt="logo" />
+        </h1>
+    </header>
+    <div class="container wrapper">
+        <!--body-->
+        <section class="landing-audio">
+            <h3>YOURSONG.MP3</h3>
+            <div id="mp3Play"></div>            
+        </section>
+    </div>  
+    <!--/end body-->
+    <footer class="container">
+        <span>A Product by </span><h2> MIRASCAN</h2>
+    </footer>
+    <script type="text/javascript">
+        //ZwkzDMlGJ6Nw5J7XGbKR
+        $(window).load(function () {
+            var qrId = window.location.href.split('?id=')[1];
+            $.ajax({
+                url: 'http://mirascan.vn:31002/api/qrcode-api/get?id=' + qrId,
+                type: 'GET',
+                success: function (result) {
+                    if (result.status == "success") {
+                        debugger;
+                        console.log(result.data);
+                        var html = '<audio style="width:100%;" preload="auto" controls autoplay id="mySong">' +
+                                    '<source src="' + result.data.data.path + '" type="audio/mp3">' +
+                                    '<p>Trình duyệt của bạn không hỗ trợ HTML5 Audio</p></audio><a href="javascript:void(0)" class="audio-btn audi-play"></a>';
+                        $('#mp3Play').append(html);
+                        var myAudio = document.getElementById("mySong");
+                        myAudio.onpause = function () {
+                            $('.audio-btn').removeClass('audi-pause');
+                            $('.audio-btn').addClass('audi-play');
+                        };
+                        myAudio.onplay = function () {
+                            $('.audio-btn').removeClass('audi-play');
+                            $('.audio-btn').addClass('audi-pause');
+                        };
+                        $('.audio-btn').on('click', function () {
+                            if (myAudio.paused) {
+                                myAudio.play();
+                            } else {
+                                myAudio.pause();
+                            }
+                        })
+                    } else {
+                        console.log('fail');
+                    }
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    //có lỗi xảy ra vui lòng tạo lại
+                    console.log(thrownError);
+                    console.log('something error')
+                }
+            });
+        })
+    </script>
+</body>
+</html>

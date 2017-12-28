@@ -72,9 +72,9 @@
                         <!--template-->
                         <div id="tem" class="tab-pane active">
                             <div class="pannel-menu hidden-desktop">
-
+                                <i class="warning-text">Bạn cần <a href="http://mirascan.vn:31000/app/#/auth/login">Đăng Nhập </a> để chọn mẫu QR Code</i>
                             </div>
-                            <div class="panel-content">
+                            <div class="panel-content panel-edit">
                                 <h2 class="text-title">Chọn mẫu QR Code</h2>
                                 <i class="warning-text">Bạn cần <a href="http://mirascan.vn:31000/app/#/auth/login">Đăng Nhập </a> để chọn mẫu QR Code</i>
                                 <ul class="temp-list clearfix">
@@ -140,213 +140,257 @@
                         </div>
                         <!--eye-->
                         <div id="eyes" class="tab-pane">
-                            <div class="panel-content">
-                                <h2 class="text-title">Chọn màu mắt QR Code</h2>
-                                <ul class="eyes-color">
-                                    <li>Màu mắt bên ngoài</li>
-                                    <li>Màu mắt bên trong</li>
-                                    <li>
-                                        <i class="icon-eye-shape-1"></i>
-                                        <div class="input-group colorpicker-component eye-picker">
-                                            <input type="text" data-eye="1" data-eye-fill="ex" class="form-control" id="eye1Out" />
-                                            <span class="input-group-addon"><i></i></span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <i class="icon-eye-shape-2"></i>
-                                        <div class="input-group colorpicker-component eye-picker">
-                                            <input type="text" data-eye="1" data-eye-fill="in" class="form-control" id="eye1In" />
-                                            <span class="input-group-addon"><i></i></span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <i class="icon-eye-shape-3"></i>
-                                        <div class="input-group colorpicker-component eye-picker">
-                                            <input type="text" data-eye="2" data-eye-fill="ex" class="form-control" id="eye2Out" />
-                                            <span class="input-group-addon"><i></i></span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <i class="icon-eye-shape-4"></i>
-                                        <div class="input-group colorpicker-component eye-picker">
-                                            <input type="text" data-eye="2" data-eye-fill="in" class="form-control" id="eye2In" />
-                                            <span class="input-group-addon"><i></i></span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <i class="icon-eye-shape-5"></i>
-                                        <div class="input-group colorpicker-component eye-picker">
-                                            <input type="text" data-eye="3" data-eye-fill="ex" class="form-control" id="eye3Out" />
-                                            <span class="input-group-addon"><i></i></span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <i class="icon-eye-shape-6"></i>
-                                        <div class="input-group colorpicker-component eye-picker">
-                                            <input type="text" data-eye="3" data-eye-fill="in" class="form-control" id="eye3In" />
-                                            <span class="input-group-addon"><i></i></span>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <h2 class="text-title">Chọn kiểu mắt QR Code</h2>
-                                <ul class="list-eyes">
-                                    <li>
-                                        <a href="javascript:void(0)" class="eye-shape" data-shape="01">
-                                            <img src="images/newcreate/svg/eyes/01.svg" />
+                            <div class="pannel-menu hidden-desktop">
+                                <ul class="mobile-edit">
+                                    <li class="svg-tab" data-panel="eyeShape">
+                                        <a class="svg-pen">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve"><path d="M84.4,29.7c0-1.3-0.5-2.5-1.4-3.4l-9.7-9.7c-1.8-1.8-5-1.8-6.9,0l-7.1,7.1c-0.9-0.7-2.3-0.6-3.1,0.2l-2.7,2.7  c-0.5,0.5-0.7,1.1-0.7,1.7c0,0.6,0.3,1.2,0.7,1.7l0,0l-32,32c-0.1,0.1-0.1,0.1-0.1,0.2c0,0,0,0,0,0l-5.5,16.8c0,0,0,0,0,0l-1.1,3.4  L14.5,83c0,0.2-0.1,0.4-0.1,0.5c0,0.3,0,0.6,0.2,0.9c0.1,0.1,0.1,0.2,0.2,0.4c0.3,0.4,0.9,0.6,1.6,0.6c0.2,0,0.4,0,0.5,0  c0,0,0,0,0.1,0l0,0c0,0,0,0,0,0l3.6-1.2c0,0,0,0,0,0l16.8-5.5c0.1,0,0.2-0.1,0.3-0.1l32-32c0.4,0.3,0.9,0.5,1.5,0.5  c0.6,0,1.2-0.3,1.7-0.7l2.7-2.7c0.9-0.9,0.9-2.3,0.1-3.2l7.1-7.1C83.9,32.2,84.4,31,84.4,29.7z M54.3,31l6.8,6.8L29.5,69.4l-6.8-6.8  L54.3,31z M20.6,82.8L17,79.3l5.1-15.5l7,7c0,0,0,0,0,0s0,0,0,0l7,7L20.6,82.8z M16.6,84.1c0,0-0.1,0-0.2,0c-0.1,0-0.5,0-0.6-0.2  c-0.1-0.1-0.1-0.2-0.1-0.3c0-0.1,0-0.3,0-0.4l0.9-2.7l2.7,2.7L16.6,84.1C16.6,84.1,16.6,84.1,16.6,84.1z M37.2,77.1l-6.8-6.8  L62,38.7l6.8,6.8L37.2,77.1z M74.8,42.6L72,45.4c-0.4,0.4-1.2,0.4-1.7,0L54.2,29.2c-0.2-0.2-0.3-0.5-0.3-0.8s0.1-0.6,0.3-0.8  l2.7-2.7c0.2-0.2,0.5-0.3,0.8-0.3s0.6,0.1,0.8,0.3l0.2,0.2l0,0l6.3,6.3l9.7,9.7C75.3,41.4,75.3,42.2,74.8,42.6z M75,39.4L60.1,24.6  l7.1-7.1c1.4-1.4,3.8-1.4,5.1,0l9.7,9.7c0.7,0.7,1.1,1.6,1.1,2.6s-0.4,1.9-1.1,2.6L75,39.4z"></path></svg>
+                                            <span>Hình dáng</span>
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="eye-shape" data-shape="02">
-                                            <img src="images/newcreate/svg/eyes/02.svg" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="eye-shape" data-shape="03">
-                                            <img src="images/newcreate/svg/eyes/03.svg" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="eye-shape" data-shape="04">
-                                            <img src="images/newcreate/svg/eyes/04.svg" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="eye-shape" data-shape="05">
-                                            <img src="images/newcreate/svg/eyes/05.svg" />
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="javascript:void(0)" class="eye-shape" data-shape="06">
-                                            <img src="images/newcreate/svg/eyes/06.svg" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="eye-shape" data-shape="07">
-                                            <img src="images/newcreate/svg/eyes/07.svg" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="eye-shape" data-shape="08">
-                                            <img src="images/newcreate/svg/eyes/08.svg" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="eye-shape" data-shape="09">
-                                            <img src="images/newcreate/svg/eyes/09.svg" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="eye-shape" data-shape="10">
-                                            <img src="images/newcreate/svg/eyes/10.svg" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="eye-shape" data-shape="11">
-                                            <img src="images/newcreate/svg/eyes/11.svg" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="eye-shape" data-shape="12">
-                                            <img src="images/newcreate/svg/eyes/12.svg" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="eye-shape" data-shape="13">
-                                            <img src="images/newcreate/svg/eyes/13.svg" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="eye-shape" data-shape="14">
-                                            <img src="images/newcreate/svg/eyes/14.svg" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="eye-shape" data-shape="15">
-                                            <img src="images/newcreate/svg/eyes/15.svg" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="eye-shape" data-shape="17">
-                                            <img src="images/newcreate/svg/eyes/17.svg" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="eye-shape" data-shape="18">
-                                            <img src="images/newcreate/svg/eyes/18.svg" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="eye-shape" data-shape="19">
-                                            <img src="images/newcreate/svg/eyes/19.svg" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="eye-shape" data-shape="20">
-                                            <img src="images/newcreate/svg/eyes/20.svg" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="eye-shape" data-shape="21">
-                                            <img src="images/newcreate/svg/eyes/21.svg" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="eye-shape" data-shape="22">
-                                            <img src="images/newcreate/svg/eyes/22.svg" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="eye-shape" data-shape="23">
-                                            <img src="images/newcreate/svg/eyes/23.svg" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="eye-shape" data-shape="24">
-                                            <img src="images/newcreate/svg/eyes/24.svg" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="eye-shape" data-shape="25">
-                                            <img src="images/newcreate/svg/eyes/25.svg" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="eye-shape" data-shape="26">
-                                            <img src="images/newcreate/svg/eyes/26.svg" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="eye-shape" data-shape="27">
-                                            <img src="images/newcreate/svg/eyes/27.svg" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="eye-shape" data-shape="28">
-                                            <img src="images/newcreate/svg/eyes/28.svg" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="eye-shape" data-shape="29">
-                                            <img src="images/newcreate/svg/eyes/29.svg" />
+                                    <li class="svg-tab" data-panel="eyeColor">
+                                        <a class="svg-color">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 55 68.75" enable-background="new 0 0 55 55" xml:space="preserve"><g><g><path d="M27.5003185,51.0003662c-6.4648438,0-12.7119141-2.7055664-17.1386719-7.4233398    c-4.4887695-4.7832031-6.7304688-11.0375977-6.3125-17.6113281C4.7986584,14.1795654,14.2542248,4.7552495,26.042799,4.044312    c13.6328106-0.8300781,24.9575176,10.0151367,24.9575176,23.4560547c-0.0014648,0.940918-0.7231445,1.6513672-1.6435547,1.6513672    l0,0c-0.440918,0-0.8583984-0.1738281-1.1757813-0.4887695c-0.1948242-0.1933594-0.4023438-0.3774414-0.6206055-0.550293    c-1.4106445-1.1206055-3.2089844-1.7124023-5.2016602-1.7124023c-4.1625977,0-8.7636719,2.5332031-12.0073223,6.6113281    c-4.6289063,5.8154297-1.6289063,17.2241211-1.5981445,17.3388672c0.0395508,0.1469727,0.0102539,0.3037109-0.0800781,0.4262695    s-0.2314453,0.1972656-0.3833008,0.203125C28.2898693,50.9798584,27.7669201,51.0003662,27.5003185,51.0003662z     M27.5003185,5.0003667c-0.4633789,0-0.9277344,0.0136719-1.3969727,0.0419922    C14.8167248,5.7230229,5.764967,14.7454834,5.0471935,26.0291748c-0.4003906,6.2949219,1.7460938,12.2836914,6.043457,16.8632813    c4.3012695,4.5834961,10.1289063,7.1079102,16.409668,7.1079102c0.0405273,0,0.0869141-0.0004883,0.1367188-0.0014648    c-0.5864258-2.5341797-2.4228516-12.1391602,1.9321289-17.6098633c3.428709-4.3105469,8.3295879-6.9887695,12.7895489-6.9887695    c2.2207031,0,4.234375,0.6669922,5.8227539,1.9287109c0.2475586,0.1958008,0.4824219,0.4042969,0.7041016,0.6240234    c0.1650391,0.1640625,0.3476563,0.1987305,0.4711914,0.1987305l0,0c0.3115234,0,0.6430664-0.2167969,0.6435547-0.6181641    C50.0003166,15.0936279,39.9070549,5.0003667,27.5003185,5.0003667z" /></g><g><path d="M37.502758,21.0003662c-2.4814453,0-4.5-2.0185547-4.5-4.5s2.0185547-4.5,4.5-4.5s4.5,2.0185547,4.5,4.5    S39.9842033,21.0003662,37.502758,21.0003662z M37.502758,13.0003662c-1.9296875,0-3.5,1.5703125-3.5,3.5s1.5703125,3.5,3.5,3.5    s3.5-1.5703125,3.5-3.5S39.4324455,13.0003662,37.502758,13.0003662z" /></g><g><path d="M24.5027599,17.0003662c-2.4814453,0-4.5-2.0185547-4.5-4.5s2.0185547-4.5,4.5-4.5s4.5,2.0185547,4.5,4.5    S26.9842052,17.0003662,24.5027599,17.0003662z M24.5027599,9.0003662c-1.9296875,0-3.5,1.5703125-3.5,3.5s1.5703125,3.5,3.5,3.5    s3.5-1.5703125,3.5-3.5S26.4324474,9.0003662,24.5027599,9.0003662z" /></g><g><path d="M15.5027599,26.0003662c-2.4814453,0-4.5-2.0185547-4.5-4.5s2.0185547-4.5,4.5-4.5s4.5,2.0185547,4.5,4.5    S17.9842052,26.0003662,15.5027599,26.0003662z M15.5027599,18.0003662c-1.9296875,0-3.5,1.5703125-3.5,3.5s1.5703125,3.5,3.5,3.5    s3.5-1.5703125,3.5-3.5S17.4324474,18.0003662,15.5027599,18.0003662z" /></g><g><path d="M14.8572521,38.4168701c-2.4814453,0-4.5-2.0185547-4.5-4.5s2.0185547-4.5,4.5-4.5s4.5,2.0185547,4.5,4.5    S17.3386974,38.4168701,14.8572521,38.4168701z M14.8572521,30.4168701c-1.9296875,0-3.5,1.5703125-3.5,3.5s1.5703125,3.5,3.5,3.5    s3.5-1.5703125,3.5-3.5S16.7869396,30.4168701,14.8572521,30.4168701z" /></g></g></svg>
+                                            <span>Màu sắc</span>
                                         </a>
                                     </li>
                                 </ul>
                             </div>
+                            <div class="panel-content">
+                                <div class="panel-edit" id="eyeColor">
+                                    <h2 class="text-title">Chọn màu mắt QR Code</h2>
+                                    <ul class="eyes-color">
+                                        <li>Màu mắt bên ngoài</li>
+                                        <li>Màu mắt bên trong</li>
+                                        <li>
+                                            <i class="icon-eye-shape-1"></i>
+                                            <div class="input-group colorpicker-component eye-picker">
+                                                <input type="text" data-eye="1" data-eye-fill="ex" class="form-control" id="eye1Out" />
+                                                <span class="input-group-addon"><i></i></span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <i class="icon-eye-shape-2"></i>
+                                            <div class="input-group colorpicker-component eye-picker">
+                                                <input type="text" data-eye="1" data-eye-fill="in" class="form-control" id="eye1In" />
+                                                <span class="input-group-addon"><i></i></span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <i class="icon-eye-shape-3"></i>
+                                            <div class="input-group colorpicker-component eye-picker">
+                                                <input type="text" data-eye="2" data-eye-fill="ex" class="form-control" id="eye2Out" />
+                                                <span class="input-group-addon"><i></i></span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <i class="icon-eye-shape-4"></i>
+                                            <div class="input-group colorpicker-component eye-picker">
+                                                <input type="text" data-eye="2" data-eye-fill="in" class="form-control" id="eye2In" />
+                                                <span class="input-group-addon"><i></i></span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <i class="icon-eye-shape-5"></i>
+                                            <div class="input-group colorpicker-component eye-picker">
+                                                <input type="text" data-eye="3" data-eye-fill="ex" class="form-control" id="eye3Out" />
+                                                <span class="input-group-addon"><i></i></span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <i class="icon-eye-shape-6"></i>
+                                            <div class="input-group colorpicker-component eye-picker">
+                                                <input type="text" data-eye="3" data-eye-fill="in" class="form-control" id="eye3In" />
+                                                <span class="input-group-addon"><i></i></span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="panel-edit" id="eyeShape">
+                                    <h2 class="text-title">Chọn kiểu mắt QR Code</h2>
+                                    <ul class="list-eyes">
+                                        <li>
+                                            <a href="javascript:void(0)" class="eye-shape" data-shape="01">
+                                                <img src="images/newcreate/svg/eyes/01.svg" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="eye-shape" data-shape="02">
+                                                <img src="images/newcreate/svg/eyes/02.svg" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="eye-shape" data-shape="03">
+                                                <img src="images/newcreate/svg/eyes/03.svg" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="eye-shape" data-shape="04">
+                                                <img src="images/newcreate/svg/eyes/04.svg" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="eye-shape" data-shape="05">
+                                                <img src="images/newcreate/svg/eyes/05.svg" />
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="javascript:void(0)" class="eye-shape" data-shape="06">
+                                                <img src="images/newcreate/svg/eyes/06.svg" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="eye-shape" data-shape="07">
+                                                <img src="images/newcreate/svg/eyes/07.svg" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="eye-shape" data-shape="08">
+                                                <img src="images/newcreate/svg/eyes/08.svg" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="eye-shape" data-shape="09">
+                                                <img src="images/newcreate/svg/eyes/09.svg" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="eye-shape" data-shape="10">
+                                                <img src="images/newcreate/svg/eyes/10.svg" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="eye-shape" data-shape="11">
+                                                <img src="images/newcreate/svg/eyes/11.svg" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="eye-shape" data-shape="12">
+                                                <img src="images/newcreate/svg/eyes/12.svg" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="eye-shape" data-shape="13">
+                                                <img src="images/newcreate/svg/eyes/13.svg" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="eye-shape" data-shape="14">
+                                                <img src="images/newcreate/svg/eyes/14.svg" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="eye-shape" data-shape="15">
+                                                <img src="images/newcreate/svg/eyes/15.svg" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="eye-shape" data-shape="17">
+                                                <img src="images/newcreate/svg/eyes/17.svg" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="eye-shape" data-shape="18">
+                                                <img src="images/newcreate/svg/eyes/18.svg" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="eye-shape" data-shape="19">
+                                                <img src="images/newcreate/svg/eyes/19.svg" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="eye-shape" data-shape="20">
+                                                <img src="images/newcreate/svg/eyes/20.svg" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="eye-shape" data-shape="21">
+                                                <img src="images/newcreate/svg/eyes/21.svg" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="eye-shape" data-shape="22">
+                                                <img src="images/newcreate/svg/eyes/22.svg" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="eye-shape" data-shape="23">
+                                                <img src="images/newcreate/svg/eyes/23.svg" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="eye-shape" data-shape="24">
+                                                <img src="images/newcreate/svg/eyes/24.svg" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="eye-shape" data-shape="25">
+                                                <img src="images/newcreate/svg/eyes/25.svg" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="eye-shape" data-shape="26">
+                                                <img src="images/newcreate/svg/eyes/26.svg" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="eye-shape" data-shape="27">
+                                                <img src="images/newcreate/svg/eyes/27.svg" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="eye-shape" data-shape="28">
+                                                <img src="images/newcreate/svg/eyes/28.svg" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="eye-shape" data-shape="29">
+                                                <img src="images/newcreate/svg/eyes/29.svg" />
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                         <!--logo-->
                         <div id="logo" class="tab-pane">
+                            <div class="pannel-menu hidden-desktop">
+                                <ul class="mobile-edit">
+                                    <li class="svg-tab" data-panel="uploadPopup">
+                                        <a class="svg-logo-up">
+                                            <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" x="0px" y="0px" viewBox="0 0 100 125"><g transform="translate(0,-952.36218)"><path style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;opacity:1;color:#000000;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans" d="M 58 22 C 49.777021 22 42.627048 26.37489 38.5625 32.875 C 37.13601 32.33072 35.623066 32 34 32 C 27.737131 32 22.628479 36.4984 21.40625 42.40625 C 13.196808 44.07918 7 51.3074 7 60 C 7 69.9292 15.070716 78 25 78 L 75 78 C 84.929284 78 93 69.9292 93 60 C 93 52.1448 87.90882 45.51513 80.875 43.0625 C 79.883069 31.27886 70.033529 22 58 22 z M 58 24 C 69.19664 24 78.332348 32.71883 78.96875 43.75 A 1.0001 1.0001 0 0 0 79.6875 44.65625 C 86.241371 46.65285 91 52.7774 91 60 C 91 68.8484 83.848398 76 75 76 L 25 76 C 16.151602 76 9 68.8484 9 60 C 9 52.0623 14.747663 45.48988 22.3125 44.21875 A 1.0001 1.0001 0 0 0 23.15625 43.375 C 23.939554 38.06485 28.465937 34 34 34 C 35.609143 34 37.117373 34.3456 38.5 34.96875 A 1.0001 1.0001 0 0 0 39.78125 34.5625 C 43.402661 28.25017 50.191807 24 58 24 z M 49.8125 42 A 1.0001 1.0001 0 0 0 49.34375 42.21875 L 42.34375 48.21875 A 1.0083687 1.0083687 0 1 0 43.65625 49.75 L 49 45.15625 L 49 67 C 48.9925 67.5283 49.471635 68.03125 50 68.03125 C 50.528365 68.03125 51.007472 67.5283 51 67 L 51 45.15625 L 56.34375 49.75 A 1.0083687 1.0083687 0 1 0 57.65625 48.21875 L 50.65625 42.21875 A 1.0001 1.0001 0 0 0 49.8125 42 z " transform="translate(0,952.36218)" /></g></svg>
+                                            <span>Up logo</span>
+                                        </a>
+                                    </li>
+                                    <li class="svg-tab" data-panel="logoType">
+                                        <a class="svg-logo-type">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 125" x="0px" y="0px"><path d="M80,27.94H20a1,1,0,0,1,0-2H80a1,1,0,0,1,0,2Z" /><path d="M80,39H20a1,1,0,0,1,0-2H80a1,1,0,0,1,0,2Z" /><path d="M80,50H20a1,1,0,0,1,0-2H80a1,1,0,0,1,0,2Z" /><path d="M80,61H20a1,1,0,0,1,0-2H80a1,1,0,0,1,0,2Z" /><path d="M53.53,72.06H20a1,1,0,0,1,0-2H53.53a1,1,0,1,1,0,2Z" /></svg>
+                                            <span>Kiểu logo</span>
+                                        </a>                                        
+                                    </li>
+                                </ul>
+                            </div>
                             <div class="panel-content">
-                                <h2 class="text-title">Thêm logo(PNG, JPG, JPEG)</h2>
-                                <i class="noted-text">Thêm logo có thể làm ảnh hưởng đến chất lượng QR Code. Vui lòng quét lại trước khi lưu.</i>
-                                <div class="logo-group clearfix">
+                                <div class="logo-pannel">
+                                    <h2 class="text-title">Thêm logo(PNG, JPG, JPEG)</h2>
+                                    <i class="noted-text">Thêm logo có thể làm ảnh hưởng đến chất lượng QR Code. Vui lòng quét lại trước khi lưu.</i>
+                                    <a href="javascript:void(0)" class="btn-material waves-effect waves-gray hidden-desktop remove-logo" id="removeLogo">Xóa Logo</a>
+                                    <ul class="logo-list clearfix">
+                                        <li>
+                                            <a href="javascript:void(0)" id="logoUp"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="logo-group clearfix hidden-mobile">
                                     <a class="btn-material waves-effect waves-light btn-round" href="#uploadPopup">
                                         <i class="fa fa-upload" aria-hidden="true"></i>
                                     </a>
                                     <input readonly="readonly" class="file-path validate material-input" type="text">
-                                    <a href="javascript:void(0)" class="btn-material waves-effect waves-gray" id="removeLogo">Xóa Logo</a>
+                                    <a href="javascript:void(0)" class="btn-material waves-effect waves-gray remove-logo" id="removeLogo">Xóa Logo</a>
                                 </div>
-                                <div>
+                                <div class="panel-edit logo-type" id="logoType">
                                     <!-- Dropdown Trigger -->
                                     <button class='dropdown-button btn-material waves-effect waves-light' data-beloworigin="true" data-activates='listLogo' id="logoDrop">
                                         <Span>Kiểu Logo</Span>
@@ -358,136 +402,150 @@
                                         <li><a href="javascript:void(0)" logo-type="circle">Bo Tròn</a></li>
                                     </ul>
                                 </div>
-                                <ul class="logo-list clearfix">
-                                    <li>
-                                        <a href="javascript:void(0)" id="logoUp"></a>
-                                    </li>
-                                </ul>
+
                             </div>
                         </div>
                         <!--data partern-->
                         <div id="data" class="tab-pane">
-
-                            <div class="panel-content">
-                                <h2 class="text-title">Chọn data QR Code</h2>
-                                <p>Màu data:</p>
-                                <div class="input-group colorpicker-component colorpick" id="dataColorInput">
-                                    <input type="text" class="form-control" />
-                                    <span class="input-group-addon"><i></i></span>
-                                </div>
-                                <p>Kiểu data:</p>
-                                <ul class="list-data">
-                                    <li>
-                                        <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-01">
-                                            <img src="images/newcreate/svg/patterns/data-1.png" />
+                            <div class="pannel-menu hidden-desktop">
+                                <ul class="mobile-edit">
+                                    <li class="svg-tab" data-panel="dataShape">
+                                        <a class="svg-pen">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve"><path d="M84.4,29.7c0-1.3-0.5-2.5-1.4-3.4l-9.7-9.7c-1.8-1.8-5-1.8-6.9,0l-7.1,7.1c-0.9-0.7-2.3-0.6-3.1,0.2l-2.7,2.7  c-0.5,0.5-0.7,1.1-0.7,1.7c0,0.6,0.3,1.2,0.7,1.7l0,0l-32,32c-0.1,0.1-0.1,0.1-0.1,0.2c0,0,0,0,0,0l-5.5,16.8c0,0,0,0,0,0l-1.1,3.4  L14.5,83c0,0.2-0.1,0.4-0.1,0.5c0,0.3,0,0.6,0.2,0.9c0.1,0.1,0.1,0.2,0.2,0.4c0.3,0.4,0.9,0.6,1.6,0.6c0.2,0,0.4,0,0.5,0  c0,0,0,0,0.1,0l0,0c0,0,0,0,0,0l3.6-1.2c0,0,0,0,0,0l16.8-5.5c0.1,0,0.2-0.1,0.3-0.1l32-32c0.4,0.3,0.9,0.5,1.5,0.5  c0.6,0,1.2-0.3,1.7-0.7l2.7-2.7c0.9-0.9,0.9-2.3,0.1-3.2l7.1-7.1C83.9,32.2,84.4,31,84.4,29.7z M54.3,31l6.8,6.8L29.5,69.4l-6.8-6.8  L54.3,31z M20.6,82.8L17,79.3l5.1-15.5l7,7c0,0,0,0,0,0s0,0,0,0l7,7L20.6,82.8z M16.6,84.1c0,0-0.1,0-0.2,0c-0.1,0-0.5,0-0.6-0.2  c-0.1-0.1-0.1-0.2-0.1-0.3c0-0.1,0-0.3,0-0.4l0.9-2.7l2.7,2.7L16.6,84.1C16.6,84.1,16.6,84.1,16.6,84.1z M37.2,77.1l-6.8-6.8  L62,38.7l6.8,6.8L37.2,77.1z M74.8,42.6L72,45.4c-0.4,0.4-1.2,0.4-1.7,0L54.2,29.2c-0.2-0.2-0.3-0.5-0.3-0.8s0.1-0.6,0.3-0.8  l2.7-2.7c0.2-0.2,0.5-0.3,0.8-0.3s0.6,0.1,0.8,0.3l0.2,0.2l0,0l6.3,6.3l9.7,9.7C75.3,41.4,75.3,42.2,74.8,42.6z M75,39.4L60.1,24.6  l7.1-7.1c1.4-1.4,3.8-1.4,5.1,0l9.7,9.7c0.7,0.7,1.1,1.6,1.1,2.6s-0.4,1.9-1.1,2.6L75,39.4z"></path></svg>
+                                            <span>Hình dáng</span>
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-02">
-                                            <img src="images/newcreate/svg/patterns/data-2.png" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-05">
-                                            <img src="images/newcreate/svg/patterns/data-5.png" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-06">
-                                            <img src="images/newcreate/svg/patterns/data-6.png" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-07">
-                                            <img src="images/newcreate/svg/patterns/data-7.png" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-08">
-                                            <img src="images/newcreate/svg/patterns/data-8.png" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-09">
-                                            <img src="images/newcreate/svg/patterns/data-9.png" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-11">
-                                            <img src="images/newcreate/svg/patterns/data-11.png" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-12">
-                                            <img src="images/newcreate/svg/patterns/data-12.png" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-14">
-                                            <img src="images/newcreate/svg/patterns/data-14.png" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-15">
-                                            <img src="images/newcreate/svg/patterns/data-15.png" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-16">
-                                            <img src="images/newcreate/svg/patterns/data-16.png" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-17">
-                                            <img src="images/newcreate/svg/patterns/data-17.png" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-18">
-                                            <img src="images/newcreate/svg/patterns/data-18.png" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-19">
-                                            <img src="images/newcreate/svg/patterns/data-19.png" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-20">
-                                            <img src="images/newcreate/svg/patterns/data-20.png" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-21">
-                                            <img src="images/newcreate/svg/patterns/data-21.png" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-23">
-                                            <img src="images/newcreate/svg/patterns/data-23.png" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-24">
-                                            <img src="images/newcreate/svg/patterns/data-24.png" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-19,pattern-20" data-type="mix-double">
-                                            <img src="images/newcreate/svg/patterns/data-25.png" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-19,pattern-02" data-type="mix-double">
-                                            <img src="images/newcreate/svg/patterns/data-26.png" />
+                                    <li class="svg-tab" data-panel="dataColor">
+                                        <a class="svg-color">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 55 68.75" enable-background="new 0 0 55 55" xml:space="preserve"><g><g><path d="M27.5003185,51.0003662c-6.4648438,0-12.7119141-2.7055664-17.1386719-7.4233398    c-4.4887695-4.7832031-6.7304688-11.0375977-6.3125-17.6113281C4.7986584,14.1795654,14.2542248,4.7552495,26.042799,4.044312    c13.6328106-0.8300781,24.9575176,10.0151367,24.9575176,23.4560547c-0.0014648,0.940918-0.7231445,1.6513672-1.6435547,1.6513672    l0,0c-0.440918,0-0.8583984-0.1738281-1.1757813-0.4887695c-0.1948242-0.1933594-0.4023438-0.3774414-0.6206055-0.550293    c-1.4106445-1.1206055-3.2089844-1.7124023-5.2016602-1.7124023c-4.1625977,0-8.7636719,2.5332031-12.0073223,6.6113281    c-4.6289063,5.8154297-1.6289063,17.2241211-1.5981445,17.3388672c0.0395508,0.1469727,0.0102539,0.3037109-0.0800781,0.4262695    s-0.2314453,0.1972656-0.3833008,0.203125C28.2898693,50.9798584,27.7669201,51.0003662,27.5003185,51.0003662z     M27.5003185,5.0003667c-0.4633789,0-0.9277344,0.0136719-1.3969727,0.0419922    C14.8167248,5.7230229,5.764967,14.7454834,5.0471935,26.0291748c-0.4003906,6.2949219,1.7460938,12.2836914,6.043457,16.8632813    c4.3012695,4.5834961,10.1289063,7.1079102,16.409668,7.1079102c0.0405273,0,0.0869141-0.0004883,0.1367188-0.0014648    c-0.5864258-2.5341797-2.4228516-12.1391602,1.9321289-17.6098633c3.428709-4.3105469,8.3295879-6.9887695,12.7895489-6.9887695    c2.2207031,0,4.234375,0.6669922,5.8227539,1.9287109c0.2475586,0.1958008,0.4824219,0.4042969,0.7041016,0.6240234    c0.1650391,0.1640625,0.3476563,0.1987305,0.4711914,0.1987305l0,0c0.3115234,0,0.6430664-0.2167969,0.6435547-0.6181641    C50.0003166,15.0936279,39.9070549,5.0003667,27.5003185,5.0003667z" /></g><g><path d="M37.502758,21.0003662c-2.4814453,0-4.5-2.0185547-4.5-4.5s2.0185547-4.5,4.5-4.5s4.5,2.0185547,4.5,4.5    S39.9842033,21.0003662,37.502758,21.0003662z M37.502758,13.0003662c-1.9296875,0-3.5,1.5703125-3.5,3.5s1.5703125,3.5,3.5,3.5    s3.5-1.5703125,3.5-3.5S39.4324455,13.0003662,37.502758,13.0003662z" /></g><g><path d="M24.5027599,17.0003662c-2.4814453,0-4.5-2.0185547-4.5-4.5s2.0185547-4.5,4.5-4.5s4.5,2.0185547,4.5,4.5    S26.9842052,17.0003662,24.5027599,17.0003662z M24.5027599,9.0003662c-1.9296875,0-3.5,1.5703125-3.5,3.5s1.5703125,3.5,3.5,3.5    s3.5-1.5703125,3.5-3.5S26.4324474,9.0003662,24.5027599,9.0003662z" /></g><g><path d="M15.5027599,26.0003662c-2.4814453,0-4.5-2.0185547-4.5-4.5s2.0185547-4.5,4.5-4.5s4.5,2.0185547,4.5,4.5    S17.9842052,26.0003662,15.5027599,26.0003662z M15.5027599,18.0003662c-1.9296875,0-3.5,1.5703125-3.5,3.5s1.5703125,3.5,3.5,3.5    s3.5-1.5703125,3.5-3.5S17.4324474,18.0003662,15.5027599,18.0003662z" /></g><g><path d="M14.8572521,38.4168701c-2.4814453,0-4.5-2.0185547-4.5-4.5s2.0185547-4.5,4.5-4.5s4.5,2.0185547,4.5,4.5    S17.3386974,38.4168701,14.8572521,38.4168701z M14.8572521,30.4168701c-1.9296875,0-3.5,1.5703125-3.5,3.5s1.5703125,3.5,3.5,3.5    s3.5-1.5703125,3.5-3.5S16.7869396,30.4168701,14.8572521,30.4168701z" /></g></g></svg>
+                                            <span>Màu sắc</span>
                                         </a>
                                     </li>
                                 </ul>
                             </div>
+                            <div class="panel-content">
+                                <div class="panel-edit data-panel" id="dataColor">
+                                    <h2 class="text-title">Chọn  màu data QR Code</h2>
+                                    <div class="input-group colorpicker-component colorpick" id="dataColorInput">
+                                        <input type="text" class="form-control" />
+                                        <span class="input-group-addon"><i></i></span>
+                                    </div>
+                                </div>
+                                <div class="panel-edit" id="dataShape">
+                                    <h2 class="text-title">Chọn kiểu data QR Code</h2>
+                                    <ul class="list-data">
+                                        <li>
+                                            <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-01">
+                                                <img src="images/newcreate/svg/patterns/data-1.png" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-02">
+                                                <img src="images/newcreate/svg/patterns/data-2.png" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-05">
+                                                <img src="images/newcreate/svg/patterns/data-5.png" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-06">
+                                                <img src="images/newcreate/svg/patterns/data-6.png" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-07">
+                                                <img src="images/newcreate/svg/patterns/data-7.png" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-08">
+                                                <img src="images/newcreate/svg/patterns/data-8.png" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-09">
+                                                <img src="images/newcreate/svg/patterns/data-9.png" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-11">
+                                                <img src="images/newcreate/svg/patterns/data-11.png" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-12">
+                                                <img src="images/newcreate/svg/patterns/data-12.png" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-14">
+                                                <img src="images/newcreate/svg/patterns/data-14.png" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-15">
+                                                <img src="images/newcreate/svg/patterns/data-15.png" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-16">
+                                                <img src="images/newcreate/svg/patterns/data-16.png" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-17">
+                                                <img src="images/newcreate/svg/patterns/data-17.png" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-18">
+                                                <img src="images/newcreate/svg/patterns/data-18.png" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-19">
+                                                <img src="images/newcreate/svg/patterns/data-19.png" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-20">
+                                                <img src="images/newcreate/svg/patterns/data-20.png" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-21">
+                                                <img src="images/newcreate/svg/patterns/data-21.png" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-23">
+                                                <img src="images/newcreate/svg/patterns/data-23.png" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-24">
+                                                <img src="images/newcreate/svg/patterns/data-24.png" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-19,pattern-20" data-type="mix-double">
+                                                <img src="images/newcreate/svg/patterns/data-25.png" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="data-partern-shape" data-name="pattern-19,pattern-02" data-type="mix-double">
+                                                <img src="images/newcreate/svg/patterns/data-26.png" />
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                         <!--bg-->
                         <div id="bg" class="tab-pane">
-                            <div class="panel-content">
+                            <div class="panel-content panel-bg">
                                 <h2 class="text-title">Chỉnh sửa nền QR Code</h2>
                                 <span>Màu nền:</span>
                                 <div id="bgColorInput" class="input-group colorpicker-component colorpick">
@@ -498,360 +556,365 @@
                         </div>
                         <!--frame-->
                         <div id="frame" class="tab-pane">
+                            <div class="pannel-menu hidden-desktop">
+                                <i class="warning-text">Tính năng chọn Frame chưa support phiên bản mobile.</i>
+                            </div>
                             <div class="panel-content">
-                                <h2 class="text-title">Chỉnh sửa Frame</h2>
-                                <!--<button href="#" queryParamsHandling="preserve" class="btn btn-success animated fadeInLeft btn-update">UPLOAD FILE</button>-->
-                                <div class="clearfix remove-frame">
-                                    <button href="javascript:void(0)" class="waves-effect waves-light btn-material" title="Xóa Frame">Xóa Frame</button>
-                                </div>
-                                <div class="fr-option disabled-frame">
-                                    <h2 class="text-title">Tùy chọn</h2>
-                                    <div>
-                                        <label>Khung viền</label>
-                                        <div class="check">
-                                            <input type="checkbox" class="filled-in" id="outline-check" checked="checked" (change)="onCheckboxChange($event)" />
-                                            <label for="outline-check"></label>
-                                        </div>
+                                <div class="hidden-mobile">
+                                    <h2 class="text-title">Chỉnh sửa Frame</h2>
+                                    <!--<button href="#" queryParamsHandling="preserve" class="btn btn-success animated fadeInLeft btn-update">UPLOAD FILE</button>-->
+                                    <div class="clearfix remove-frame">
+                                        <button href="javascript:void(0)" class="waves-effect waves-light btn-material" title="Xóa Frame">Xóa Frame</button>
                                     </div>
-                                    <div class="opacity-ranger">
-                                        <label>Độ trong suốt:</label>
+                                    <div class="fr-option disabled-frame">
+                                        <h2 class="text-title">Tùy chọn</h2>
                                         <div>
-                                            <div id="opacityRange"></div>
-                                            <input type="text" class="form-control" value="100" id="opacity-val" />
+                                            <label>Khung viền</label>
+                                            <div class="check">
+                                                <input type="checkbox" class="filled-in" id="outline-check" checked="checked" (change)="onCheckboxChange($event)" />
+                                                <label for="outline-check"></label>
+                                            </div>
+                                        </div>
+                                        <div class="opacity-ranger">
+                                            <label>Độ trong suốt:</label>
+                                            <div>
+                                                <div id="opacityRange"></div>
+                                                <input type="text" class="form-control" value="100" id="opacity-val" />
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="fr-category">
-                                    <select id="frameCat" (change)="onFilterChange($event)">
-                                        <option value="1">Phổ Biến</option>
-                                        <option value="0">Tất Cả</option>
-                                        <option value="2">App</option>
-                                        <option value="3">PDF</option>
-                                        <option value="4">Scan me</option>
-                                        <option value="5">Facebook</option>
-                                        <option value="6">Vcard</option>
-                                    </select>
-                                </div>
-                                <div class="masonry-layout">
-                                    <div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_1.jpg" class="img-frame" src="images/newcreate/frame/fr_1_temp.jpg" data-category="1">
-                                        </a>
-                                    </div><div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_3.png" class="img-frame" src="images/newcreate/frame/fr_3.png" data-category="1">
-                                        </a>
-                                    </div><div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_6.jpg" class="img-frame" src="images/newcreate/frame/fr_6_temp.jpg" data-category="1">
-                                        </a>
-                                    </div><div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_7.jpg" class="img-frame" src="images/newcreate/frame/fr_7_temp.jpg" data-category="1">
-                                        </a>
-                                    </div><div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_8.jpg" class="img-frame" src="images/newcreate/frame/fr_8_temp.jpg" data-category="1">
-                                        </a>
-                                    </div><div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_11.jpg" class="img-frame" src="images/newcreate/frame/fr_11_temp.jpg" data-category="1">
-                                        </a>
-                                    </div><div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_12.jpg" class="img-frame" src="images/newcreate/frame/fr_12_temp.png" data-category="1">
-                                        </a>
-                                    </div><div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_13.JPG" class="img-frame" src="images/newcreate/frame/fr_13_temp.jpg" data-category="1">
-                                        </a>
-                                    </div><div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_app_1.png" class="img-frame" src="images/newcreate/frame/fr_app_1.png" data-category="2">
-                                        </a>
-                                    </div><div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_app_2.png" class="img-frame" src="images/newcreate/frame/fr_app_2.png" data-category="2">
-                                        </a>
-                                    </div><div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_app_3.png" class="img-frame" src="images/newcreate/frame/fr_app_3.png" data-category="2">
-                                        </a>
-                                    </div><div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_app_4.png" class="img-frame" src="images/newcreate/frame/fr_app_4.png" data-category="2">
-                                        </a>
-                                    </div><div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_app_5.png" class="img-frame" src="images/newcreate/frame/fr_app_5.png" data-category="2">
-                                        </a>
+                                    <div class="fr-category">
+                                        <select id="frameCat" (change)="onFilterChange($event)">
+                                            <option value="1">Phổ Biến</option>
+                                            <option value="0">Tất Cả</option>
+                                            <option value="2">App</option>
+                                            <option value="3">PDF</option>
+                                            <option value="4">Scan me</option>
+                                            <option value="5">Facebook</option>
+                                            <option value="6">Vcard</option>
+                                        </select>
                                     </div>
-                                    <div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_app_6.png" class="img-frame" src="images/newcreate/frame/fr_app_6.png" data-category="2">
-                                        </a>
-                                    </div>
-                                    <div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_app_7.png" class="img-frame" src="images/newcreate/frame/fr_app_7.png" data-category="2">
-                                        </a>
-                                    </div>
-                                    <div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_app_8.png" class="img-frame" src="images/newcreate/frame/fr_app_8.png" data-category="2">
-                                        </a>
-                                    </div>
-                                    <div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_app_9.png" class="img-frame" src="images/newcreate/frame/fr_app_9.png" data-category="2">
-                                        </a>
-                                    </div>
-                                    <div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_app_10.png" class="img-frame" src="images/newcreate/frame/fr_app_10.png" data-category="2">
-                                        </a>
-                                    </div>
-                                    <div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_app_11.png" class="img-frame" src="images/newcreate/frame/fr_app_11.png" data-category="2">
-                                        </a>
-                                    </div>
-                                    <div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_app_12.png" class="img-frame" src="images/newcreate/frame/fr_app_12.png" data-category="2">
-                                        </a>
-                                    </div>
-                                    <div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_app_13.png" class="img-frame" src="images/newcreate/frame/fr_app_13.png" data-category="2">
-                                        </a>
-                                    </div>
-                                    <div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_app_14.png" class="img-frame" src="images/newcreate/frame/fr_app_14.png" data-category="2">
-                                        </a>
-                                    </div>
-                                    <div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_app_15.png" class="img-frame" src="images/newcreate/frame/fr_app_15.png" data-category="2">
-                                        </a>
-                                    </div>
-                                    <div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_app_16.png" class="img-frame" src="images/newcreate/frame/fr_app_16.png" data-category="2">
-                                        </a>
-                                    </div>
-                                    <div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_app_17.png" class="img-frame" src="images/newcreate/frame/fr_app_17.png" data-category="2">
-                                        </a>
-                                    </div>
-                                    <div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_fb_1.png" class="img-frame" src="images/newcreate/frame/fr_fb_1.png" data-category="5">
-                                        </a>
-                                    </div>
-                                    <div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_fb_2.png" class="img-frame" src="images/newcreate/frame/fr_fb_2.png" data-category="5">
-                                        </a>
-                                    </div>
-                                    <div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_fb_3.png" class="img-frame" src="images/newcreate/frame/fr_fb_3.png" data-category="5">
-                                        </a>
-                                    </div>
-                                    <div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_fb_4.png" class="img-frame" src="images/newcreate/frame/fr_fb_4.png" data-category="5">
-                                        </a>
-                                    </div>
-                                    <div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_fb_5.png" class="img-frame" src="images/newcreate/frame/fr_fb_5.png" data-category="5">
-                                        </a>
-                                    </div>
-                                    <div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_fb_6.png" class="img-frame" src="images/newcreate/frame/fr_fb_6.png" data-category="5">
-                                        </a>
-                                    </div>
-                                    <div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_fb_7.png" class="img-frame" src="images/newcreate/frame/fr_fb_7.png" data-category="5">
-                                        </a>
-                                    </div>
-                                    <div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_fb_8.png" class="img-frame" src="images/newcreate/frame/fr_fb_8.png" data-category="5">
-                                        </a>
-                                    </div>
-                                    <div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_fb_9.png" class="img-frame" src="images/newcreate/frame/fr_fb_9.png" data-category="5">
-                                        </a>
-                                    </div>
-                                    <div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_fb_10.png" class="img-frame" src="images/newcreate/frame/fr_fb_10.png" data-category="5">
-                                        </a>
-                                    </div>
-                                    <div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_fb_11.png" class="img-frame" src="images/newcreate/frame/fr_fb_11.png" data-category="5">
-                                        </a>
-                                    </div>
-                                    <div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_fb_12.png" class="img-frame" src="images/newcreate/frame/fr_fb_12.png" data-category="5">
-                                        </a>
-                                    </div>
-                                    <div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_pdf_1.png" class="img-frame" src="images/newcreate/frame/fr_pdf_1.png" data-category="3">
-                                        </a>
-                                    </div>
-                                    <div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_pdf_2.png" class="img-frame" src="images/newcreate/frame/fr_pdf_2.png" data-category="3">
-                                        </a>
-                                    </div>
-                                    <div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_pdf_3.png" class="img-frame" src="images/newcreate/frame/fr_pdf_3.png" data-category="3">
-                                        </a>
-                                    </div>
-                                    <div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_pdf_4.png" class="img-frame" src="images/newcreate/frame/fr_pdf_4.png" data-category="3">
-                                        </a>
-                                    </div>
-                                    <div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_pdf_5.png" class="img-frame" src="images/newcreate/frame/fr_pdf_5.png" data-category="3">
-                                        </a>
-                                    </div>
-                                    <div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_pdf_6.png" class="img-frame" src="images/newcreate/frame/fr_pdf_6.png" data-category="3">
-                                        </a>
-                                    </div>
-                                    <div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_pdf_7.png" class="img-frame" src="images/newcreate/frame/fr_pdf_7.png" data-category="3">
-                                        </a>
-                                    </div><div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_pdf_8.png" class="img-frame" src="images/newcreate/frame/fr_pdf_8.png" data-category="3">
-                                        </a>
-                                    </div><div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_pdf_9.png" class="img-frame" src="images/newcreate/frame/fr_pdf_9.png" data-category="3">
-                                        </a>
-                                    </div><div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_pdf_10.png" class="img-frame" src="images/newcreate/frame/fr_pdf_10.png" data-category="3">
-                                        </a>
-                                    </div><div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_pdf_11.png" class="img-frame" src="images/newcreate/frame/fr_pdf_11.png" data-category="3">
-                                        </a>
-                                    </div><div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_pdf_12.png" class="img-frame" src="images/newcreate/frame/fr_pdf_12.png" data-category="3">
-                                        </a>
-                                    </div><div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_scan_me_1.png" class="img-frame" src="images/newcreate/frame/fr_scan_me_1.png" data-category="4">
-                                        </a>
-                                    </div><div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_scan_me_2.png" class="img-frame" src="images/newcreate/frame/fr_scan_me_2.png" data-category="4">
-                                        </a>
-                                    </div><div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_scan_me_3.png" class="img-frame" src="images/newcreate/frame/fr_scan_me_3.png" data-category="4">
-                                        </a>
-                                    </div><div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_scan_me_4.png" class="img-frame" src="images/newcreate/frame/fr_scan_me_4.png" data-category="4">
-                                        </a>
-                                    </div><div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_scan_me_5.png" class="img-frame" src="images/newcreate/frame/fr_scan_me_5.png" data-category="4">
-                                        </a>
-                                    </div><div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_scan_me_6.png" class="img-frame" src="images/newcreate/frame/fr_scan_me_6.png" data-category="4">
-                                        </a>
-                                    </div><div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_scan_me_7.png" class="img-frame" src="images/newcreate/frame/fr_scan_me_7.png" data-category="4">
-                                        </a>
-                                    </div><div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_scan_me_8.png" class="img-frame" src="images/newcreate/frame/fr_scan_me_8.png" data-category="4">
-                                        </a>
-                                    </div><div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_scan_me_9.png" class="img-frame" src="images/newcreate/frame/fr_scan_me_9.png" data-category="4">
-                                        </a>
-                                    </div><div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_scan_me_10.png" class="img-frame" src="images/newcreate/frame/fr_scan_me_10.png" data-category="4">
-                                        </a>
-                                    </div><div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_scan_me_11.png" class="img-frame" src="images/newcreate/frame/fr_scan_me_11.png" data-category="4">
-                                        </a>
-                                    </div><div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_vcard_1.png" class="img-frame" src="images/newcreate/frame/fr_vcard_1.png" data-category="6">
-                                        </a>
-                                    </div><div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_vcard_2.png" class="img-frame" src="images/newcreate/frame/fr_vcard_2.png" data-category="6">
-                                        </a>
-                                    </div><div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_vcard_3.png" class="img-frame" src="images/newcreate/frame/fr_vcard_3.png" data-category="6">
-                                        </a>
-                                    </div><div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_vcard_4.png" class="img-frame" src="images/newcreate/frame/fr_vcard_4.png" data-category="6">
-                                        </a>
-                                    </div><div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_vcard_5.png" class="img-frame" src="images/newcreate/frame/fr_vcard_5.png" data-category="6">
-                                        </a>
-                                    </div><div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_vcard_6.png" class="img-frame" src="images/newcreate/frame/fr_vcard_6.png" data-category="6">
-                                        </a>
-                                    </div><div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_vcard_7.png" class="img-frame" src="images/newcreate/frame/fr_vcard_7.png" data-category="6">
-                                        </a>
-                                    </div><div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_vcard_8.png" class="img-frame" src="images/newcreate/frame/fr_vcard_8.png" data-category="6">
-                                        </a>
-                                    </div><div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_vcard_9.png" class="img-frame" src="images/newcreate/frame/fr_vcard_9.png" data-category="6">
-                                        </a>
-                                    </div><div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_vcard_10.png" class="img-frame" src="images/newcreate/frame/fr_vcard_10.png" data-category="6">
-                                        </a>
-                                    </div><div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_vcard_11.png" class="img-frame" src="images/newcreate/frame/fr_vcard_11.png" data-category="6">
-                                        </a>
-                                    </div><div class="item">
-                                        <a href="javascript:void(0)">
-                                            <img alt="fr_vcard_12.png" class="img-frame" src="images/newcreate/frame/fr_vcard_12.png" data-category="6">
-                                        </a>
+                                    <div class="masonry-layout">
+                                        <div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_1.jpg" class="img-frame" src="images/newcreate/frame/fr_1_temp.jpg" data-category="1">
+                                            </a>
+                                        </div><div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_3.png" class="img-frame" src="images/newcreate/frame/fr_3.png" data-category="1">
+                                            </a>
+                                        </div><div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_6.jpg" class="img-frame" src="images/newcreate/frame/fr_6_temp.jpg" data-category="1">
+                                            </a>
+                                        </div><div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_7.jpg" class="img-frame" src="images/newcreate/frame/fr_7_temp.jpg" data-category="1">
+                                            </a>
+                                        </div><div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_8.jpg" class="img-frame" src="images/newcreate/frame/fr_8_temp.jpg" data-category="1">
+                                            </a>
+                                        </div><div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_11.jpg" class="img-frame" src="images/newcreate/frame/fr_11_temp.jpg" data-category="1">
+                                            </a>
+                                        </div><div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_12.jpg" class="img-frame" src="images/newcreate/frame/fr_12_temp.png" data-category="1">
+                                            </a>
+                                        </div><div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_13.JPG" class="img-frame" src="images/newcreate/frame/fr_13_temp.jpg" data-category="1">
+                                            </a>
+                                        </div><div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_app_1.png" class="img-frame" src="images/newcreate/frame/fr_app_1.png" data-category="2">
+                                            </a>
+                                        </div><div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_app_2.png" class="img-frame" src="images/newcreate/frame/fr_app_2.png" data-category="2">
+                                            </a>
+                                        </div><div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_app_3.png" class="img-frame" src="images/newcreate/frame/fr_app_3.png" data-category="2">
+                                            </a>
+                                        </div><div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_app_4.png" class="img-frame" src="images/newcreate/frame/fr_app_4.png" data-category="2">
+                                            </a>
+                                        </div><div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_app_5.png" class="img-frame" src="images/newcreate/frame/fr_app_5.png" data-category="2">
+                                            </a>
+                                        </div>
+                                        <div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_app_6.png" class="img-frame" src="images/newcreate/frame/fr_app_6.png" data-category="2">
+                                            </a>
+                                        </div>
+                                        <div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_app_7.png" class="img-frame" src="images/newcreate/frame/fr_app_7.png" data-category="2">
+                                            </a>
+                                        </div>
+                                        <div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_app_8.png" class="img-frame" src="images/newcreate/frame/fr_app_8.png" data-category="2">
+                                            </a>
+                                        </div>
+                                        <div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_app_9.png" class="img-frame" src="images/newcreate/frame/fr_app_9.png" data-category="2">
+                                            </a>
+                                        </div>
+                                        <div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_app_10.png" class="img-frame" src="images/newcreate/frame/fr_app_10.png" data-category="2">
+                                            </a>
+                                        </div>
+                                        <div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_app_11.png" class="img-frame" src="images/newcreate/frame/fr_app_11.png" data-category="2">
+                                            </a>
+                                        </div>
+                                        <div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_app_12.png" class="img-frame" src="images/newcreate/frame/fr_app_12.png" data-category="2">
+                                            </a>
+                                        </div>
+                                        <div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_app_13.png" class="img-frame" src="images/newcreate/frame/fr_app_13.png" data-category="2">
+                                            </a>
+                                        </div>
+                                        <div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_app_14.png" class="img-frame" src="images/newcreate/frame/fr_app_14.png" data-category="2">
+                                            </a>
+                                        </div>
+                                        <div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_app_15.png" class="img-frame" src="images/newcreate/frame/fr_app_15.png" data-category="2">
+                                            </a>
+                                        </div>
+                                        <div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_app_16.png" class="img-frame" src="images/newcreate/frame/fr_app_16.png" data-category="2">
+                                            </a>
+                                        </div>
+                                        <div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_app_17.png" class="img-frame" src="images/newcreate/frame/fr_app_17.png" data-category="2">
+                                            </a>
+                                        </div>
+                                        <div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_fb_1.png" class="img-frame" src="images/newcreate/frame/fr_fb_1.png" data-category="5">
+                                            </a>
+                                        </div>
+                                        <div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_fb_2.png" class="img-frame" src="images/newcreate/frame/fr_fb_2.png" data-category="5">
+                                            </a>
+                                        </div>
+                                        <div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_fb_3.png" class="img-frame" src="images/newcreate/frame/fr_fb_3.png" data-category="5">
+                                            </a>
+                                        </div>
+                                        <div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_fb_4.png" class="img-frame" src="images/newcreate/frame/fr_fb_4.png" data-category="5">
+                                            </a>
+                                        </div>
+                                        <div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_fb_5.png" class="img-frame" src="images/newcreate/frame/fr_fb_5.png" data-category="5">
+                                            </a>
+                                        </div>
+                                        <div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_fb_6.png" class="img-frame" src="images/newcreate/frame/fr_fb_6.png" data-category="5">
+                                            </a>
+                                        </div>
+                                        <div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_fb_7.png" class="img-frame" src="images/newcreate/frame/fr_fb_7.png" data-category="5">
+                                            </a>
+                                        </div>
+                                        <div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_fb_8.png" class="img-frame" src="images/newcreate/frame/fr_fb_8.png" data-category="5">
+                                            </a>
+                                        </div>
+                                        <div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_fb_9.png" class="img-frame" src="images/newcreate/frame/fr_fb_9.png" data-category="5">
+                                            </a>
+                                        </div>
+                                        <div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_fb_10.png" class="img-frame" src="images/newcreate/frame/fr_fb_10.png" data-category="5">
+                                            </a>
+                                        </div>
+                                        <div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_fb_11.png" class="img-frame" src="images/newcreate/frame/fr_fb_11.png" data-category="5">
+                                            </a>
+                                        </div>
+                                        <div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_fb_12.png" class="img-frame" src="images/newcreate/frame/fr_fb_12.png" data-category="5">
+                                            </a>
+                                        </div>
+                                        <div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_pdf_1.png" class="img-frame" src="images/newcreate/frame/fr_pdf_1.png" data-category="3">
+                                            </a>
+                                        </div>
+                                        <div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_pdf_2.png" class="img-frame" src="images/newcreate/frame/fr_pdf_2.png" data-category="3">
+                                            </a>
+                                        </div>
+                                        <div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_pdf_3.png" class="img-frame" src="images/newcreate/frame/fr_pdf_3.png" data-category="3">
+                                            </a>
+                                        </div>
+                                        <div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_pdf_4.png" class="img-frame" src="images/newcreate/frame/fr_pdf_4.png" data-category="3">
+                                            </a>
+                                        </div>
+                                        <div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_pdf_5.png" class="img-frame" src="images/newcreate/frame/fr_pdf_5.png" data-category="3">
+                                            </a>
+                                        </div>
+                                        <div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_pdf_6.png" class="img-frame" src="images/newcreate/frame/fr_pdf_6.png" data-category="3">
+                                            </a>
+                                        </div>
+                                        <div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_pdf_7.png" class="img-frame" src="images/newcreate/frame/fr_pdf_7.png" data-category="3">
+                                            </a>
+                                        </div><div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_pdf_8.png" class="img-frame" src="images/newcreate/frame/fr_pdf_8.png" data-category="3">
+                                            </a>
+                                        </div><div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_pdf_9.png" class="img-frame" src="images/newcreate/frame/fr_pdf_9.png" data-category="3">
+                                            </a>
+                                        </div><div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_pdf_10.png" class="img-frame" src="images/newcreate/frame/fr_pdf_10.png" data-category="3">
+                                            </a>
+                                        </div><div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_pdf_11.png" class="img-frame" src="images/newcreate/frame/fr_pdf_11.png" data-category="3">
+                                            </a>
+                                        </div><div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_pdf_12.png" class="img-frame" src="images/newcreate/frame/fr_pdf_12.png" data-category="3">
+                                            </a>
+                                        </div><div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_scan_me_1.png" class="img-frame" src="images/newcreate/frame/fr_scan_me_1.png" data-category="4">
+                                            </a>
+                                        </div><div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_scan_me_2.png" class="img-frame" src="images/newcreate/frame/fr_scan_me_2.png" data-category="4">
+                                            </a>
+                                        </div><div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_scan_me_3.png" class="img-frame" src="images/newcreate/frame/fr_scan_me_3.png" data-category="4">
+                                            </a>
+                                        </div><div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_scan_me_4.png" class="img-frame" src="images/newcreate/frame/fr_scan_me_4.png" data-category="4">
+                                            </a>
+                                        </div><div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_scan_me_5.png" class="img-frame" src="images/newcreate/frame/fr_scan_me_5.png" data-category="4">
+                                            </a>
+                                        </div><div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_scan_me_6.png" class="img-frame" src="images/newcreate/frame/fr_scan_me_6.png" data-category="4">
+                                            </a>
+                                        </div><div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_scan_me_7.png" class="img-frame" src="images/newcreate/frame/fr_scan_me_7.png" data-category="4">
+                                            </a>
+                                        </div><div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_scan_me_8.png" class="img-frame" src="images/newcreate/frame/fr_scan_me_8.png" data-category="4">
+                                            </a>
+                                        </div><div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_scan_me_9.png" class="img-frame" src="images/newcreate/frame/fr_scan_me_9.png" data-category="4">
+                                            </a>
+                                        </div><div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_scan_me_10.png" class="img-frame" src="images/newcreate/frame/fr_scan_me_10.png" data-category="4">
+                                            </a>
+                                        </div><div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_scan_me_11.png" class="img-frame" src="images/newcreate/frame/fr_scan_me_11.png" data-category="4">
+                                            </a>
+                                        </div><div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_vcard_1.png" class="img-frame" src="images/newcreate/frame/fr_vcard_1.png" data-category="6">
+                                            </a>
+                                        </div><div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_vcard_2.png" class="img-frame" src="images/newcreate/frame/fr_vcard_2.png" data-category="6">
+                                            </a>
+                                        </div><div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_vcard_3.png" class="img-frame" src="images/newcreate/frame/fr_vcard_3.png" data-category="6">
+                                            </a>
+                                        </div><div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_vcard_4.png" class="img-frame" src="images/newcreate/frame/fr_vcard_4.png" data-category="6">
+                                            </a>
+                                        </div><div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_vcard_5.png" class="img-frame" src="images/newcreate/frame/fr_vcard_5.png" data-category="6">
+                                            </a>
+                                        </div><div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_vcard_6.png" class="img-frame" src="images/newcreate/frame/fr_vcard_6.png" data-category="6">
+                                            </a>
+                                        </div><div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_vcard_7.png" class="img-frame" src="images/newcreate/frame/fr_vcard_7.png" data-category="6">
+                                            </a>
+                                        </div><div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_vcard_8.png" class="img-frame" src="images/newcreate/frame/fr_vcard_8.png" data-category="6">
+                                            </a>
+                                        </div><div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_vcard_9.png" class="img-frame" src="images/newcreate/frame/fr_vcard_9.png" data-category="6">
+                                            </a>
+                                        </div><div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_vcard_10.png" class="img-frame" src="images/newcreate/frame/fr_vcard_10.png" data-category="6">
+                                            </a>
+                                        </div><div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_vcard_11.png" class="img-frame" src="images/newcreate/frame/fr_vcard_11.png" data-category="6">
+                                            </a>
+                                        </div><div class="item">
+                                            <a href="javascript:void(0)">
+                                                <img alt="fr_vcard_12.png" class="img-frame" src="images/newcreate/frame/fr_vcard_12.png" data-category="6">
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -910,7 +973,7 @@
     </div>
     <!--popup upload-->
     <div id="uploadPopup" class="modal modal-material modal-xs">
-        <div class="modal-content">
+        <div class="modal-content hidden-mobile">
             <h4>Thêm logo</h4>
             <a class="modal-action modal-close close-header" title="Hủy">
                 <i class="fa fa-remove" aria-hidden="true"></i>
@@ -930,7 +993,7 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="modal-action modal-close waves-effect waves-light btn-material btn-default">Hủy</button>
+                <button type="button" class="modal-action modal-close waves-effect waves-light btn-material btn-default hidden-mobile">Hủy</button>
                 <button type="button" class="modal-action waves-effect waves-light btn-material btn-primary" id="popSave">Lưu</button>
             </div>
         </div>

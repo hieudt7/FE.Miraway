@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/font-awesome.min.css" rel="stylesheet" />
+    <link href="styles/bootstrap.css" rel="stylesheet" />
+    <link href="styles/styles.css" rel="stylesheet" />
+    <script src="scripts/jquery.js"></script>
+</head>
+<body>
+    <header class="container">
+        <h1>
+            <img src="images/logo.PNG" alt="logo" />
+        </h1>
+    </header>
+    <div class="container wrapper">
+        <!--body-->
+    </div>
+    <!--/end body-->
+    <footer class="container">
+        <span>A Product by </span><h2> MIRASCAN</h2>
+    </footer>    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var qrId = window.location.href.split('?id=')[1];
+            $.ajax({
+                url: 'http://mirascan.vn:31002/api/qrcode-api/get?id=' + qrId,
+                type: 'GET',
+                success: function (result) {
+                    if (result.status == "success") {
+                        console.log(result.data.type)                        
+                        window.location.href = result.data.data.path;
+                    } else {
+                        console.log('fail');
+                    }
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    //có lỗi xảy ra vui lòng tạo lại
+                    console.log(thrownError);
+                    console.log('something error')
+                }
+            });
+        });
+    </script>
+</body>
+</html>

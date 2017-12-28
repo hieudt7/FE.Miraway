@@ -3191,24 +3191,6 @@ body {
 .customize-qr .logo-list li {
   display: none; }
 
-@media screen and (max-width: 1023px) {
-  .customize-qr .tab-pane .panel-content {
-    position: fixed;
-    display: none; }
-    .customize-qr .tab-pane .panel-content.active {
-      display: block; }
-  .customize-qr .tab-pane .pannel-menu {
-    height: 60px;
-    opacity: .95;
-    background: #fff;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    background-color: #fff;
-    border-top: 1px solid #ddd;
-    z-index: 999; } }
-
 .logo-group .file-path {
   float: left !important;
   width: 180px !important;
@@ -3342,4 +3324,134 @@ body {
 
 .material-tooltip {
   font-size: 14px; }
+
+@media screen and (max-width: 1023px) {
+  .slick-slide > div:last-child {
+    margin-top: -6px; }
+  .slick-slide > div li {
+    outline: 0 !important; }
+    .slick-slide > div li a {
+      outline: 0 !important; }
+    .slick-slide > div li:last-child {
+      border-right: 1px solid #ddd !important; }
+  label {
+    font-size: 14px; }
+  .mobile-edit {
+    padding: 0;
+    margin: 0;
+    list-style: none; }
+    .mobile-edit li {
+      float: left;
+      width: 50%;
+      text-align: center; }
+      .mobile-edit li a span {
+        display: block;
+        margin-top: -5px;
+        text-transform: uppercase;
+        color: #010002; }
+      .mobile-edit li .svg-color svg {
+        width: 35px;
+        margin-top: 3px; }
+        .mobile-edit li .svg-color svg path {
+          fill: #010002; }
+      .mobile-edit li .svg-color span {
+        margin-top: -15px; }
+      .mobile-edit li .svg-pen svg {
+        width: 35px; }
+        .mobile-edit li .svg-pen svg path {
+          fill: #010002; }
+      .mobile-edit li.active a {
+        text-decoration: none; }
+        .mobile-edit li.active a span {
+          color: #4eb2cf; }
+        .mobile-edit li.active a svg path {
+          fill: #4eb2cf !important; }
+  .panel-edit {
+    position: fixed;
+    background-color: #fff;
+    z-index: 100;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    transition: all ease-in 0.65s;
+    margin-bottom: -100vh;
+    padding-left: 15px; }
+    .panel-edit.panel-active {
+      max-height: 360px;
+      overflow: auto;
+      margin-bottom: 0;
+      padding-bottom: 60px; }
+      .panel-edit.panel-active#eyeColor {
+        padding-bottom: 105px; }
+  .pannel-menu {
+    height: 60px;
+    opacity: .95;
+    background: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    z-index: 999; }
+  .customize-qr .conten-div {
+    padding: 0; }
+  .customize-qr .text-title {
+    margin-bottom: 5px;
+    padding: 0;
+    padding-bottom: 5px; }
+  .customize-qr .box-visible {
+    top: 0; }
+  .customize-qr .page-title {
+    margin-top: 0;
+    padding-top: 10px; }
+  .customize-qr #eyes .eyes-color li {
+    margin-bottom: 8px; }
+    .customize-qr #eyes .eyes-color li > div {
+      padding-left: 10px; }
+      .customize-qr #eyes .eyes-color li > div .form-control {
+        width: 85px; }
+  .customize-qr .right-pannel {
+    transition: all ease 0.4s; }
+    .customize-qr .right-pannel.panel-open {
+      transform: scale(0.9);
+      margin-top: -50px; }
+  .modal-footer {
+    border-top: 0; }
+  .logo-type {
+    min-height: 200px; }
+  .logo-pannel {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 100;
+    height: 430px;
+    padding: 0 15px; }
+  .modal-body {
+    padding: 0; }
+  .data-panel {
+    min-height: 240px; }
+    .data-panel .colorpick {
+      max-width: 50% !important; }
+  .warning-text {
+    padding: 20px; }
+  .panel-bg {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background: #fff;
+    left: 0;
+    padding: 0 15px;
+    padding-bottom: 150px;
+    z-index: 100; }
+  .svg-logo-up svg {
+    width: 40px; }
+  .svg-logo-up span {
+    margin-top: -20px !important; }
+  .svg-logo-type svg {
+    width: 42px; }
+  .svg-logo-type span {
+    margin-top: -22px !important; } }
 

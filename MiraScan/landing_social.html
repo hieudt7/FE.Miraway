@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/font-awesome.min.css" rel="stylesheet" />
+    <link href="styles/bootstrap.css" rel="stylesheet" />
+    <link href="styles/styles.css" rel="stylesheet" />
+    <script src="scripts/jquery.js"></script>
+</head>
+<body>
+    <header class="container">
+        <h1>
+            <img src="images/logo.PNG" alt="logo" />
+        </h1>
+    </header>
+    <div class="container wrapper">
+        <!--body-->
+        <section class="landing-social">
+            <h3>Mạng xã hội của tôi</h3>
+            <!-- class for social : .facebook, .google, .twiter, .linke, .pinterest, .instagram, .website -->
+            <div id="listSocial">
+
+            </div>
+        </section>
+    </div>
+    <!--/end body-->
+    <footer class="container">
+        <span>A Product by </span><h2> MIRASCAN</h2>
+    </footer>
+    <!--2XZmGzObU5201RU7gmp8-->
+    <script type="text/javascript">
+        //var qrId = window.location.href.split('?id=')[1];
+        $(document).ready(function () {
+            var qrId = window.location.href.split('?id=')[1];
+            function getURLbyParam(url,className) {
+                if (url != '' && url != undefined) {
+                    var html = '<a href="' + url + '" class="social-btn '+className+'">' +
+                                    '<i></i><span>' + url + '</span>' +
+                                '</a>';
+                    $('#listSocial').append(html);
+                }
+            }
+            $.ajax({
+                url: 'http://mirascan.vn:31002/api/qrcode-api/get?id=' + qrId,
+                type: 'GET',
+                success: function (result) {
+                    if (result.status == "success") {
+                        console.log(result.data.type);
+                        console.log(result.data.data);
+                        getURLbyParam(result.data.data.facebook.url, 'facebook');
+                        getURLbyParam(result.data.data.instagram.url, 'instagram');
+                        getURLbyParam(result.data.data.twitter.url, 'twitter');                        
+                        getURLbyParam(result.data.data.youtube.url, 'youtube');
+
+                    } else {
+                        console.log('fail');
+                    }
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    //có lỗi xảy ra vui lòng tạo lại
+                    console.log(thrownError);
+                    console.log('something error')
+                }
+            });
+        });
+    </script>
+</body>
+</html>
