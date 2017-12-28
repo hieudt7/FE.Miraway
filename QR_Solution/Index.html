@@ -164,6 +164,7 @@
         $('.single-item').slick({
             dots: true,
         });
+        if($(window).width()>1024)
         function changeSlide(number) {
             
             var imgURL = $('#slideImg').find('img[data-image="' + number + '"]').attr('src');            
