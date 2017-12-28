@@ -1,0 +1,46 @@
+﻿header {
+    z-index: 99;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    background: #ebb120; /* Old browsers */
+    background: -moz-linear-gradient(left, #ebb120 0%, #e87c24 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #ebb120 0%,#e87c24 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #ebb120 0%,#e87c24 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebb120', endColorstr='#e87c24',GradientType=1 ); /* IE6-9 */
+    color: #fff;
+    height: 10vh;
+    font-family: 'helveticaneuemedium';
+    font-size: 18px;
+    padding-top: 11px;
+    /*display: none;*/
+    #homeText {
+        text-align: center;
+        width: 100%;
+        font-size: 16px;
+        padding-top: 1vh;
+    }
+
+    .back-group {
+        padding: 0 15px;
+
+        a {
+            color: #fff;
+        }
+
+        i {
+            margin-right: 10px;
+            font-size: 30px;
+            margin-top: -3px;
+        }
+
+        &.animating {
+            position: absolute;
+            top: 8px;
+            width: 100%;
+            text-align: center;
+        }
+    }
+}

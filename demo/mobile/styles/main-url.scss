@@ -1,0 +1,43 @@
+﻿.content-wrapper {
+    padding-top: 10vh;
+    color: #696867;
+
+    .content {
+        padding: 2vh 4vh;
+
+        .tit-url {
+            text-transform: uppercase;
+            font-size: 16px;
+            font-family: helveticaneuebold;
+        }
+
+        .btn-url {
+            width: 100%;
+            background: #f48220;
+            color: #fff;
+            border: none;
+            border-radius: 2px;
+            padding: 2vh;
+            font-size: 16px;
+            font-family: helveticaneuebold;
+        }
+    }
+
+    .footer {
+        color: #fff;
+        position: fixed;
+        bottom: 0;
+        z-index: 99;
+        text-align: center;
+        width: 100%;
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ebb120+0,e87c24+100 */
+        background: #ebb120; /* Old browsers */
+        background: -moz-linear-gradient(left, #ebb120 0%, #e87c24 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(left, #ebb120 0%,#e87c24 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right, #ebb120 0%,#e87c24 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebb120', endColorstr='#e87c24',GradientType=1 ); /* IE6-9 */
+        p {
+            margin: 10px;
+        }
+    }
+}

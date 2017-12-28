@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>MiraScan - Landing page</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link href="styles/bootstrap.css" rel="stylesheet" />
+    <link href="styles/styles-sos.css" rel="stylesheet" />
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/bootstrap.js"></script>
+    <!--<script src="scripts/wow.min.js"></script>-->
+   <!-- <script src="scripts/app.js"></script>-->
+
+</head>
+<body>
+    <!--<script>
+    new WOW().init();
+    </script>-->
+    <header>
+        <div class="fadeIn animated" id="homeText">Trang Chủ</div>
+        <div class="back-group" style="display:none;">
+            <span class="pull-left">
+                <a class="menu-link" href="javascript:void(0)" data-text="Trang chủ" data-href="#html_home" id="backBtn"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+            </span>
+            <span class="text-display"></span>
+        </div>
+    </header>
+    <div class="content-wrapper">
+        <!--home page-->
+        <section class="phone" id="html_home" style="display:block;">
+            <div class="phone__screen fadeIn animated">
+                <div class="phone__scroll-cont">
+                    <div class="phone__content">
+                        <!--company info-->
+                        <!--<div class="section1" id="companySection">
+                            <div class="company-info">
+                                <div>
+                                    <img src="images/mirascan_logo.png" />
+                                </div>
+                            </div>
+                        </div>-->
+                        <!--end company info-->
+                        <!--wellcome -->
+                        <section class="card flip-step1 active flip-step2 flip-step3">
+                            <!--//product image-->
+                            <section class="card__part card__part-1">
+                                <div class="card__part__inner">
+                                    <div class="card__stats" style="background-image: url(images/sos/banner.png);">
+                                        <!--<img src="images/sos/banner.png" class="img-responsive" />-->
+                                        <div class="card__stats__item card__stats__item--req">
+                                            <img src="images/sos/soslogo2.png" class="img-responsive" />
+                                            <!--<h2 class="card__stats__type">KOREAN EXTRA PEARL CREAM</h2>-->
+                                            <p>Truy cập trong trường hợp khẩn cấp</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="card__part card__part-2">
+                                <!--first look-->
+                                <!--welcome-->
+                                <div class="card__part__side product-info">
+                                    <div class="card__sender">
+                                        <div class="card__sender__name-and-rating">
+                                            <p class="card__sender__name">
+                                                Xin hãy nhập 4 con số</br>
+                                                phía bên cạnh mã QR Code được in trên thẻ
+                                            </p>
+                                        </div>
+                                        <img src="images/sos/phao.png" />
+                                    </div>
+                                    <div class="verify-section">
+                                        <div class="slideInLeft animated" id="verify_group">
+                                            <input value="1234" placeholder="" id="input_verify" class="verify-code" />
+                                        </div>
+                                        <div class="toarst-block">
+                                            <span class="toarst-message"></span>                                           
+                                        </div>
+                                        <div class="btn-verify fadeIn animated">
+                                            <a href="./sos-land.html" class="card__request-btn" id="btn_verify">
+                                                <span>Xác Nhận</span>
+                                            </a>
+                                        </div>
+                                        <p class="message">Mã SOS QR Code không đúng. Xin nhập lại!</p>
+                                    </div>
+                                </div>
+                            </section>
+                        </section>
+                        <!--end welcome-->
+                        <!--product related-->
+                        <!--end-->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    
+    <!--end-->
+   
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var initLanding = new commonLanding(3);
+            initLanding.init();
+        })
+    </script>
+</body>
+</html>

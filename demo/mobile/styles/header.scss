@@ -1,0 +1,42 @@
+﻿header {
+    z-index: 99;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    background: $primary-color;
+    color: #fff;
+    height: 42px;
+    font-family: 'helveticaneuemedium';
+    font-size: 18px;
+    padding-top: 11px;
+    display: none;
+
+    #homeText {
+        text-align: center;
+        width: 100%;
+        font-size:16px;
+    }
+
+    .back-group {
+        padding: 0 15px;
+
+        a {
+            color: #fff;
+        }
+
+        i {
+            margin-right: 10px;
+            font-size: 30px;
+            margin-top: -3px;
+        }
+
+        &.animating {
+            position: absolute;
+            top: 8px;
+            width: 100%;
+            text-align: center;
+        }
+    }
+}

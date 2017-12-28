@@ -1,8 +1,15 @@
 ﻿.pricing {
+    .pr-menu {
+        @include desktop {
+            height: 100px;
+            background: #fff;
+        }
+    }
+
     .pr-title {
         background-color: #188095;
         color: #fff;
-        padding-top: 115px;
+        padding-top: 45px;
         text-align: center;
 
         .text {
@@ -77,7 +84,7 @@
                 background-color: #fff;
                 padding: 30px;
 
-                #price_mkt {
+                #bang_gia_0{
                     .trial {
                         padding: 30px 0;
 
@@ -96,8 +103,11 @@
                             text-align: center;
 
                             a {
+                                @include desktop{
+                                    padding: 20px 100px;
+                                }
                                 font-family: helveticaneuemedium;
-                                padding: 20px 100px;
+                                padding:10px;
                                 text-transform: uppercase;
 
                                 &:hover {
@@ -122,7 +132,7 @@
                         }
 
                         &:nth-child(2) {
-                            .arrow_box {
+                            .pr_arrow_box {
                                 position: relative;
                                 background: #188095;
                                 border: 1px solid #188095;
@@ -134,7 +144,7 @@
                                 }
                             }
 
-                            .arrow_box:after, .arrow_box:before {
+                            .pr_arrow_box:after, .pr_arrow_box:before {
                                 top: 100%;
                                 left: 50%;
                                 border: solid transparent;
@@ -145,14 +155,14 @@
                                 pointer-events: none;
                             }
 
-                            .arrow_box:after {
+                            .pr_arrow_box:after {
                                 border-color: rgba(24, 128, 149, 0);
                                 border-top-color: #188095;
                                 border-width: 10px;
                                 margin-left: -10px;
                             }
 
-                            .arrow_box:before {
+                            .pr_arrow_box:before {
                                 border-color: rgba(0, 0, 0, 0);
                                 border-top-color: transparent;
                                 border-width: 11px;
@@ -161,7 +171,7 @@
                         }
 
                         &:nth-child(3) {
-                            .arrow_box {
+                            .pr_arrow_box {
                                 position: relative;
                                 background: #f58220;
                                 border: 1px solid #f58220;
@@ -173,7 +183,7 @@
                                 }
                             }
 
-                            .arrow_box:after, .arrow_box:before {
+                            .pr_arrow_box:after, .pr_arrow_box:before {
                                 top: 100%;
                                 left: 50%;
                                 border: solid transparent;
@@ -184,14 +194,14 @@
                                 pointer-events: none;
                             }
 
-                            .arrow_box:after {
+                            .pr_arrow_box:after {
                                 border-color: rgba(24, 128, 149, 0);
                                 border-top-color: #f58220;
                                 border-width: 10px;
                                 margin-left: -10px;
                             }
 
-                            .arrow_box:before {
+                            .pr_arrow_box:before {
                                 border-color: rgba(0, 0, 0, 0);
                                 border-top-color: transparent;
                                 border-width: 11px;
@@ -287,7 +297,7 @@
                     }
                 }
 
-                #price_bulk {
+                #bang_gia_1 {
                     .pricebulk_text {
                         p {
                             color: #f58220;

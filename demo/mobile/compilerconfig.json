@@ -1,0 +1,10 @@
+﻿[
+  {
+    "outputFile": "styles/styles-sos.css",
+    "inputFile": "styles/styles-sos.scss"
+  },
+  {
+    "outputFile": "styles/styles-url.css",
+    "inputFile": "styles/styles-url.scss"
+  }
+]

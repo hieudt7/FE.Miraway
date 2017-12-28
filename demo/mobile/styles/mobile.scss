@@ -1,0 +1,28 @@
+﻿.company-info {
+    background-color: #efefef;
+    position: relative;
+    overflow: hidden;
+
+    img {
+        position: relative;
+        z-index: 10;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        left: -70%;
+        width: 100%;
+        height: 200%;
+        background-color: #e5e5e5;
+        top: 0;
+        -webkit-transform: rotate(65deg);
+        -moz-transform: rotate(65deg);
+        transform: rotate(65deg);
+        z-index: 9;
+    }
+}
+
+.block-temp {
+    padding: 0 15px;
+}

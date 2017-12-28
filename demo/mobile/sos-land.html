@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>MiraScan - Landing page</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link href="styles/bootstrap.css" rel="stylesheet" />
+    <link href="styles/styles-sos.css" rel="stylesheet" />
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/bootstrap.js"></script>
+    <!--<script src="scripts/wow.min.js"></script>-->
+    <!-- <script src="scripts/app.js"></script>-->
+
+</head>
+<body>
+    <!--<script>
+    new WOW().init();
+    </script>-->
+    <div class="sub-sos">
+        <ul class="nav nav-pills sos-tab">
+            <li class="active"><a data-toggle="pill" href="#call"><i class="sprite sprite-icon-phao"></i></a></li>
+            <li><a data-toggle="pill" href="#info"><i class="sprite sprite-icon-info"></i></a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="call" class="tab-pane fade in active">
+                <header>
+                    <div class="fadeIn animated" id="homeText">SOS cứu hộ</div>
+                    <div class="back-group" style="display:none;">
+                        <span class="pull-left">
+                            <a class="menu-link" href="javascript:void(0)" data-text="Trang chủ" data-href="#html_home" id="backBtn"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+                        </span>
+                        <span class="text-display"></span>
+                    </div>
+                </header>
+
+                <div class="sos-wrapper">
+                    <div class="avatar">
+                        <div class="avatar-img">
+                            <img src="images/sos/ava.png" />
+                        </div>
+                    </div>
+                    <div class="sos-content">
+                        <h3>John</h3>
+                        <p class="text-job">Traveller</p>
+                        <p class="text-content">Tôi tên là John Wick. Khi bạn quét được nhưng thông tin này có nghĩa là..... Dưới đây là những liên lạc khẩn cấp của người thân tôi...Mong bạn giúp đỡ</p>
+                        <p class="sos-tit">Cuộc gọi khẩn cấp cho người thân</p>
+
+                        <button type="button" class="sos-btn" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-phone" aria-hidden="true"></i> Gọi ngay</button>
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <!--<div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>-->
+                                    <div class="modal-body">
+                                        <p class="sos-tit">Cuộc gọi khẩn cấp cho người thân</p>
+                                        <a href="tel:012345677" type="button" class="sos-btn" ><i class="fa fa-phone" aria-hidden="true"></i> Gọi ngay</a>
+                                        <a href="tel:012345677" type="button" class="sos-btn"><i class="fa fa-phone" aria-hidden="true"></i> Gọi ngay</a>
+                                        <a href="tel:012345677" type="button" class="sos-btn" ><i class="fa fa-phone" aria-hidden="true"></i> Gọi ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="sos-tit">Gọi khẩn cấp</p>
+                        <div class="sos-form">
+                            <div class="form-group">
+                                <div class="tit-form" for="exampleInputEmail1">Tình trạng hiện tại</div>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Nếu có thể, bạn cung cấp thêm thông tin tình trạng hiện tại của tôi. Những thông tin này sẽ được gửi đến cho người thân của tôi"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <div class="tit-form" for="exampleInputEmail1">Địa điểm gặp tai nạn</div>
+                                <input type="text" class="form-control" id="" aria-describedby="emailHelp" placeholder="Địa điểm gặp tai nạn">
+                            </div>
+                            <div class="form-group">
+                                <div class="tit-form" for="exampleInputEmail1">Số điện thoại liên lạc</div>
+                                <input type="text" class="form-control" id="" aria-describedby="emailHelp" placeholder="Số điện thoại liên lạc">
+                            </div>
+                            <button type="submit" class="sos-btn" data-toggle="modal" data-target="#thank">Gửi thông tin</button>
+                            
+                        </div>
+                        <div class="modal fade" id="thank" tabindex="-1" role="dialog" aria-labelledby="thank" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-body">
+                                        <p class="sos-tit">Cảm ơn</p>
+                                        <p class="text-content">Cảm ơn bạn rất nhiều. Tất cả những thông tin bạn cung cấp về tình trạng của tôi hiện tại sẽ được gửi đến người thân của tôi. Mọi thông tin của bạn sẽ được bảo mật</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="info" class="tab-pane fade">
+                <header>
+                    <div class="fadeIn animated" id="homeText">Hồ sơ cá nhân</div>
+                    <div class="back-group" style="display:none;">
+                        <span class="pull-left">
+                            <a class="menu-link" href="javascript:void(0)" data-text="Trang chủ" data-href="#html_home" id="backBtn"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+                        </span>
+                        <span class="text-display"></span>
+                    </div>
+                </header>
+
+                <div class="sos-wrapper">
+                    <div class="avatar">
+                        <div class="avatar-img">
+                            <img src="images/sos/ava.png" />
+                        </div>
+                    </div>
+                    <div class="sos-content">
+                        <div class="sos-form">
+                            <div class="form-group">
+                                <div class="tit-form" for="exampleInputEmail1">Họ và tên</div>
+                                <input type="text" class="form-control" id="" aria-describedby="emailHelp" placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <div class="tit-form" for="exampleInputEmail1">Ngày/tháng/năm sinh</div>
+                                <input type="text" class="form-control" id="" aria-describedby="emailHelp" placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <div class="tit-form" for="exampleInputEmail1">Địa chỉ</div>
+                                <input type="text" class="form-control" id="" aria-describedby="emailHelp" placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <div class="tit-form" for="exampleInputEmail1">Nhóm máu</div>
+                                <input type="text" class="form-control" id="" aria-describedby="emailHelp" placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <div class="tit-form" for="exampleInputEmail1">Quốc tịch</div>
+                                <input type="text" class="form-control" id="" aria-describedby="emailHelp" placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <div class="tit-form" for="exampleInputEmail1">Thông tin về tình trạng sức khỏe</div>
+                                <input type="text" class="form-control" id="" aria-describedby="emailHelp" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!--end-->
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var initLanding = new commonLanding(3);
+            initLanding.init();
+        })
+    </script>
+</body>
+</html>
