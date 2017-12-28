@@ -1,22 +1,22 @@
-[
+﻿[
   {
     "outputFile": "styles/styles.css",
-    "inputFile": "styles/styles.scss",
-    "sourceMap": false
+    "inputFile": "styles/styles.scss"
   },
   {
     "outputFile": "styles/sass/materialize.css",
-    "inputFile": "styles/sass/materialize.scss",
-    "sourceMap": false
+    "inputFile": "styles/sass/materialize.scss"
   },
   {
     "outputFile": "styles/create-all.css",
-    "inputFile": "styles/create-all.scss",
-    "sourceMap": false
+    "inputFile": "styles/create-all.scss"
   },
   {
     "outputFile": "styles/lib.css",
-    "inputFile": "styles/lib.scss",
-    "sourceMap": false
+    "inputFile": "styles/lib.scss"
+  },
+  {
+    "outputFile": "styles/pricing.css",
+    "inputFile": "styles/pricing.scss"
   }
 ]

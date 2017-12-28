@@ -108,6 +108,9 @@ body, html {
 .grid-item--width2 {
   width: 50%; }
 
+.slick-slide {
+  outline: none !important; }
+
 .home-page .home-banner {
   margin-top: 50px;
   position: relative; }
@@ -417,8 +420,77 @@ body, html {
         .home-page .home-app ul.ul-left {
           padding: 0 15px;
           text-align: left; } }
+      .home-page .home-app ul.ul-left li.active .app-icon {
+        position: absolute;
+        top: 0;
+        right: 2px;
+        width: 75px; }
+        @media screen and (max-width: 1023px) {
+          .home-page .home-app ul.ul-left li.active .app-icon {
+            display: none; } }
+        .home-page .home-app ul.ul-left li.active .app-icon span {
+          position: relative;
+          width: 75px;
+          height: 75px;
+          text-align: center;
+          line-height: 75px;
+          z-index: 1;
+          border-radius: 50%;
+          background-color: #fff;
+          border: 2px solid #f58220;
+          color: #fff;
+          display: block; }
+          .home-page .home-app ul.ul-left li.active .app-icon span:before {
+            content: "";
+            width: 67px;
+            /* line-height: 65px; */
+            position: absolute;
+            pointer-events: none;
+            background-color: #f58220;
+            border: 1px solid #f58220;
+            left: 2px;
+            top: 2px;
+            height: 67px;
+            border-radius: 50%; }
+          .home-page .home-app ul.ul-left li.active .app-icon span i {
+            position: relative; }
       .home-page .home-app ul.ul-left img {
         right: 0; }
+      .home-page .home-app ul.ul-left .app-icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 75px; }
+        @media screen and (max-width: 1023px) {
+          .home-page .home-app ul.ul-left .app-icon {
+            display: none; } }
+        .home-page .home-app ul.ul-left .app-icon span {
+          position: relative;
+          width: 75px;
+          height: 75px;
+          text-align: center;
+          line-height: 75px;
+          z-index: 1;
+          border-radius: 50%;
+          background-color: #fff;
+          border: 2px solid #b1b1b1;
+          color: #b1b1b1;
+          display: block; }
+          .home-page .home-app ul.ul-left .app-icon span:before {
+            content: "";
+            width: 67px;
+            /* line-height: 65px; */
+            position: absolute;
+            pointer-events: none;
+            /* background-color: #f58220; */
+            /* border: 1px solid #f58220; */
+            left: 2px;
+            top: 2px;
+            height: 67px;
+            border-radius: 50%; }
+          .home-page .home-app ul.ul-left .app-icon span i {
+            position: relative;
+            font-size: 24px; }
       .home-page .home-app ul.ul-left li {
         padding-right: 105px; }
         .home-page .home-app ul.ul-left li:nth-child(2) {
@@ -437,8 +509,77 @@ body, html {
         .home-page .home-app ul.ul-right {
           padding: 0 15px;
           text-align: left; } }
+      .home-page .home-app ul.ul-right li.active .app-icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 75px; }
+        @media screen and (max-width: 1023px) {
+          .home-page .home-app ul.ul-right li.active .app-icon {
+            display: none; } }
+        .home-page .home-app ul.ul-right li.active .app-icon span {
+          position: relative;
+          width: 75px;
+          height: 75px;
+          text-align: center;
+          line-height: 75px;
+          z-index: 1;
+          border-radius: 50%;
+          background-color: #fff;
+          border: 2px solid #f58220;
+          color: #fff;
+          display: block; }
+          .home-page .home-app ul.ul-right li.active .app-icon span:before {
+            content: "";
+            width: 67px;
+            /* line-height: 65px; */
+            position: absolute;
+            pointer-events: none;
+            background-color: #f58220;
+            border: 1px solid #f58220;
+            left: 2px;
+            top: 2px;
+            height: 67px;
+            border-radius: 50%; }
+          .home-page .home-app ul.ul-right li.active .app-icon span i {
+            position: relative; }
       .home-page .home-app ul.ul-right img {
         left: 0; }
+      .home-page .home-app ul.ul-right .app-icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 75px; }
+        @media screen and (max-width: 1023px) {
+          .home-page .home-app ul.ul-right .app-icon {
+            display: none; } }
+        .home-page .home-app ul.ul-right .app-icon span {
+          position: relative;
+          width: 75px;
+          height: 75px;
+          text-align: center;
+          line-height: 75px;
+          z-index: 1;
+          border-radius: 50%;
+          background-color: #fff;
+          border: 2px solid #b1b1b1;
+          color: #b1b1b1;
+          display: block; }
+          .home-page .home-app ul.ul-right .app-icon span:before {
+            content: "";
+            width: 67px;
+            /* line-height: 65px; */
+            position: absolute;
+            pointer-events: none;
+            /* background-color: #f58220; */
+            /* border: 1px solid #f58220; */
+            left: 2px;
+            top: 2px;
+            height: 67px;
+            border-radius: 50%; }
+          .home-page .home-app ul.ul-right .app-icon span i {
+            position: relative;
+            font-size: 24px; }
       .home-page .home-app ul.ul-right li {
         padding-left: 105px; }
         .home-page .home-app ul.ul-right li:nth-child(2) {

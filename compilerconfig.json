@@ -1,0 +1,10 @@
+﻿[
+  {
+    "outputFile": "QR_Solution/styles/styles.css",
+    "inputFile": "QR_Solution/styles/styles.scss"
+  },
+  {
+    "outputFile": "QR_Solution/styles/pricing.css",
+    "inputFile": "QR_Solution/styles/pricing.scss"
+  }
+]
