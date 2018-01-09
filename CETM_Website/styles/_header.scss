@@ -1,0 +1,292 @@
+header {
+    padding: 0 30px;
+
+    @include device {
+        padding: 0 15px;
+    }
+
+    .logo {
+        float: left;
+        padding-left: 30px;
+
+        @include device {
+            margin-top: 5px;
+            padding-left: 0;
+        }
+
+        img {
+            max-width: 180px;
+
+            @include device {
+                max-width: 120px;
+            }
+        }
+    }
+
+    #navMenu {
+        float: right;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        margin-top: 30px;
+
+        @include device {
+            margin-top: 0;
+            right: 100px;
+            position: fixed;
+            z-index: 99;
+            background-color: #fff;
+            display: block;
+            top: 0;
+            height: 100%;
+            width: 300px;
+            right: 0;
+            z-index: 1032;
+            visibility: visible;
+            overflow-y: visible;
+            border-top: none;
+            text-align: left;
+            border-left: 1px solid #e3e3e3;
+            padding-right: 0px;
+            padding-left: 10px;
+            -webkit-transform: translate3d(300px, 0, 0);
+            -moz-transform: translate3d(300px, 0, 0);
+            -o-transform: translate3d(300px, 0, 0);
+            -ms-transform: translate3d(300px, 0, 0);
+            transform: translate3d(300px, 0, 0);
+            -webkit-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+            -moz-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+            -o-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+            -ms-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+            transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+        }
+
+        @include iphone5Landscape() {
+            width: 275px;
+        }
+
+        > li {
+            display: inline-block;
+            margin: 0 15px;
+            position: relative;
+
+            .fa {
+                font-size: 18px;
+                margin-left: 10px;
+
+                @include device {
+                    font-size: 20px;
+                    float: right;
+                    margin-top: -5px;
+                }
+            }
+
+            @include device {
+                display: block;
+                border-bottom: 1px solid #e5e5e5;
+                border-right: 0;
+
+                &:last-child {
+                    border-bottom: 0;
+                }
+            }
+
+            &.active {
+                &:after {
+                    @extend .underline-menu;
+
+                    @include device {
+                        content: none;
+                    }
+                }
+            }
+
+            > a {
+                color: #666666;
+                font-size: 16px;
+                text-decoration: none;
+                display: block;
+                padding: 10px 0;
+
+                &:hover {
+                    text-decoration: none;
+
+                    &:after {
+                        @extend .underline-menu;
+
+                        @include device {
+                            content: none;
+                        }
+                    }
+                }
+
+                @include device {
+                    margin: 0px 0px;
+                    color: #444444;
+                    text-transform: uppercase;
+                    font-size: 13px;
+                    line-height: 13px;
+                    padding: 24px 0;
+                }
+            }
+        }
+    }
+
+
+
+    &.landing-page {
+        background-color: #f2f3f7;
+    }
+
+    &:before, &:after {
+        content: " ";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+
+    .mobile-menu {
+        float: right;
+
+        svg {
+            width: 80px;
+            height: 83px;
+            cursor: pointer;
+            -webkit-transform: translate3d(0, 0, 0);
+            -moz-transform: translate3d(0, 0, 0);
+            -o-transform: translate3d(0, 0, 0);
+            -ms-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+            margin-right: 0px;
+            margin-top: -15px;
+        }
+
+        path {
+            fill: none;
+            -webkit-transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25), stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25);
+            -moz-transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25), stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25);
+            -o-transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25), stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25);
+            -ms-transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25), stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25);
+            transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25), stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25);
+            stroke-width: 35px;
+            stroke-linecap: round;
+            stroke: #0e7f99;
+            stroke-dashoffset: 0px;
+        }
+
+        path#top,
+        path#bottom {
+            stroke-dasharray: 240px 950px;
+        }
+
+        path#middle {
+            stroke-dasharray: 240px 240px;
+        }
+    }
+
+    .custom-check label {
+        margin: 0px 0px;
+        color: #444444;
+        text-transform: uppercase;
+        font-size: 13px;
+        line-height: 13px;
+        padding: 24px 0;
+    }
+
+    [type="checkbox"] + label:before, [type="checkbox"]:not(.filled-in) + label:after {
+        top: 18px;
+    }
+
+    .sub-menu {
+        overflow: hidden;
+        width: auto !important;
+        margin-left: -50px;
+        padding-top: 10px;
+
+        li {
+            display: block;
+            margin: 0;
+            white-space: nowrap;
+
+            a {
+                font-size: 14px;
+                color: #333;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+
+        &.active {
+            @include device() {
+                position: relative !important;
+                left: auto !important;
+                top: auto !important;
+                margin: 0;
+                padding: 0;
+                box-shadow: none;
+                display: block !important;
+                opacity: 1 !important;
+
+                li {
+                    border-bottom: 1px solid #e5e5e5;
+                }
+            }
+        }
+    }
+}
+
+.wrapper,
+.mobile-menu,
+.logo {
+    -webkit-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+    -moz-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+    -o-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+    -ms-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+    transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+    left: 0;
+}
+
+
+
+
+.nav-open {
+    .mobile-menu {
+        path#top,
+        path#bottom {
+            stroke-dashoffset: -650px;
+            stroke-dashoffset: -650px;
+        }
+
+        path#middle {
+            stroke-dashoffset: -115px;
+            stroke-dasharray: 1px 220px;
+        }
+    }
+
+    header {
+        #navMenu {
+            -webkit-transform: translate3d(0px, 0, 0);
+            -moz-transform: translate3d(0px, 0, 0);
+            -o-transform: translate3d(0px, 0, 0);
+            -ms-transform: translate3d(0px, 0, 0);
+            transform: translate3d(0px, 0, 0);
+        }
+    }
+
+    .wrapper,
+    .mobile-menu {
+        @include translate3D(-290px, 0, 0);
+
+        @include iphone5Landscape() {
+            @include translate3D(-255px, 0, 0);
+        }
+    }
+
+    .logo {
+        @include translate3D(-300px, 0, 0);
+    }
+}

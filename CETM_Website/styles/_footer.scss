@@ -1,0 +1,207 @@
+footer {
+    background-color: #003246;
+
+    .logo {
+        max-width: 135px;
+        float: left;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .menu {
+        float: left;
+        padding: 0;
+        margin: 0;
+        margin-top: 35px;
+        margin-left: 45px;
+
+        @include device {
+            margin: 0;
+        }
+
+        li {
+            display: inline-block;
+            list-style: none;
+            margin: 0 15px;
+
+            @include device {
+                margin: 0 5px;
+            }
+
+            @include iphone5Landscape {
+                margin: 0 2px;
+            }
+
+            a {
+                color: #fff;
+                text-transform: uppercase;
+                font-size: 12px;
+
+                @include device {
+                    font-size: 10px;
+                }
+
+                &:hover {
+                    text-decoration: none;
+                    color: #fff;
+                    opacity: 0.85;
+                }
+            }
+        }
+    }
+
+    .social {
+        float: right;
+        padding: 0;
+        margin: 0;
+        margin-top: 22px;
+
+        @include device {
+            float: left;
+        }
+
+        li {
+            display: inline-block;
+            list-style: none;
+            margin: 0 5px;
+
+            span {
+                color: #fff;
+                font-size: 13px;
+                text-transform: uppercase;
+            }
+
+            a {
+                display: inline-block;
+                width: 35px;
+                height: 35px;
+                border: 1px solid #fff;
+                border-radius: 50%;
+                text-align: center;
+                color: #fff;
+                padding-top: 7px;
+
+                &:hover {
+                    text-decoration: none;
+                    background-color: #fff;
+                    color: #2791da;
+                    transition: all ease 0.15s;
+                }
+            }
+        }
+    }
+
+    &:before, &:after {
+        content: " ";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+
+    .img-qr {
+        float: left;
+
+        img {
+            max-width: 150px;
+        }
+    }
+
+    .company-info {
+        padding: 0;
+        margin: 0;
+        float: left;
+        list-style: none;
+        color: #fff;
+        font-size: 13px;
+        margin-left: 25px;
+
+        @include device {
+            margin-left: 15px;
+        }
+
+        li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+
+            &:first-child {
+                padding-left: 0;
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 2px;
+                font: normal normal normal 14px/1 FontAwesome;
+            }
+
+            &.adddress {
+                &:before {
+                    content: "\f041";
+                }
+            }
+
+            &.phone {
+                &:before {
+                    content: "\f095";
+                }
+            }
+
+            &.email {
+                &:before {
+                    content: "\f0e0";
+                }
+            }
+        }
+
+        h3 {
+            font-size: 13px;
+            text-transform: uppercase;
+            margin-top: 0;
+
+            @include device() {
+                line-height: 21px;
+            }
+        }
+    }
+
+    .app-info {
+        float: right;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        @include device {
+            float: left;
+            margin-left: 15px;
+            margin-top: 20px;
+        }
+
+        li {
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #fff;
+            font-size: 13px;
+        }
+    }
+
+    .copyright {
+        margin-top: 25px;
+        background-color: #033d54;
+        text-align: center;
+        min-height: 36px;
+        padding-top: 10px;
+
+        p {
+            color: #fff;
+            font-size: 12px;
+        }
+    }
+}
