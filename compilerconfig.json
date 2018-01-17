@@ -6,5 +6,9 @@
   {
     "outputFile": "QR_Solution/styles/pricing.css",
     "inputFile": "QR_Solution/styles/pricing.scss"
+  },
+  {
+    "outputFile": "CETM_Website/styles/styles.css",
+    "inputFile": "CETM_Website/styles/styles.scss"
   }
 ]
