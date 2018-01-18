@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
     <title></title>
     <meta charset="utf-8" />
@@ -14,6 +15,7 @@
     <script src="scripts/jquery-circle-progress.js"></script>
     <script src="scripts/custom.js"></script>
 </head>
+
 <body>
     <div class="contact-page">
         <div class="banner" style="background-image:url('images/banner.jpg');">
@@ -39,16 +41,14 @@
                                 <span>
                                     <span>
                                         <span>kiosk giao dịch</span>
-                                        <a href="javascript:void(0)" class="view-popup" title="xem thêm">xem thêm</a>
-                                    </span>
-                                </span>
+                            <a href="javascript:void(0)" class="view-popup" title="xem thêm">xem thêm</a>
+                            </span>
+                            </span>
                             </span>
                         </div>
                     </div>
                 </div>
             </div>
-<<<<<<< HEAD
-=======
         </section>
     </div>
     <div id="imgModal" class="modal fade" role="dialog">
@@ -64,22 +64,21 @@
                     <ul class="list-thumb"></ul>
                 </div>
             </div>
->>>>>>> 6da0bedaae4920ad5ec0344a6b5653e126ec8f4f
         </div>
     </div>
     <script type="text/javascript">
-        $(document).ready(function () {
-            $('.view-popup').on('click', function () {
+        $(document).ready(function() {
+            $('.view-popup').on('click', function() {
                 var imgThumb = $(this).parents('.overlay-link:first').find('.img-thumb').attr('src');
                 var html = '<li class="active"><img src="' + imgThumb + '" /></li>';
-                $('.list-img-show img').each(function () {
+                $('.list-img-show img').each(function() {
                     html += '<li><img src="' + $(this).attr('src') + '" /></li>';
                 })
                 $('#imgModal').modal('show');
-                $("#imgModal").on('shown.bs.modal', function () {
+                $("#imgModal").on('shown.bs.modal', function() {
                     $('.img-show').append('<img src="' + imgThumb + '" />');
                     $('.list-thumb').append(html);
-                    $('.list-thumb li').on('click', function () {
+                    $('.list-thumb li').on('click', function() {
                         $('.list-thumb li').removeClass('active');
                         $(this).addClass('active');
                         var imgShow = $(this).find('img').attr('src');
@@ -90,4 +89,5 @@
         });
     </script>
 </body>
+
 </html>
