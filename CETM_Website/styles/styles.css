@@ -798,7 +798,8 @@ header {
     color: #000; }
 
 .contact-page .content-ser {
-  margin-top: 30px; }
+  margin-top: 30px;
+  margin-bottom: 30px; }
   .contact-page .content-ser h3 {
     text-transform: uppercase;
     font-family: 'helveticaneuebold';
@@ -808,7 +809,8 @@ header {
     text-transform: uppercase;
     font-family: 'helveticaneuebold';
     color: #e56300;
-    font-size: 24px; }
+    font-size: 24px;
+    padding-top: 0; }
   .contact-page .content-ser .ser-img {
     padding-top: 30px; }
   .contact-page .content-ser .sv-text {
@@ -832,6 +834,13 @@ header {
         top: 5px;
         left: 0;
         color: #128097; }
+  .contact-page .content-ser .ser-map {
+    width: calc( 100% - 500px);
+    float: left;
+    padding: 0 30px; }
+  .contact-page .content-ser .ser-map-img {
+    width: 500px;
+    float: left; }
 
 .contact-page .abt {
   background-color: #f6f6f6; }
@@ -856,4 +865,23 @@ header {
 
 .contact-page input:focus {
   border-color: #66afe9; }
+
+.contact-page .sent-email {
+  background-color: #f3f2f2;
+  padding: 15px 0;
+  margin-top: 30px; }
+
+.contact-page .sent-form {
+  text-align: right;
+  line-height: 100px; }
+  .contact-page .sent-form .form-group {
+    width: calc( 100% - 200px); }
+    .contact-page .sent-form .form-group .form-control {
+      line-height: 34px;
+      width: 100%;
+      height: auto; }
+  .contact-page .sent-form .sent-ab {
+    line-height: 28px;
+    background-color: #e2574c;
+    margin-left: 15px; }
 
