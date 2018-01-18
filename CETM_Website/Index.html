@@ -10,13 +10,12 @@
     <link href="styles/styles.css" rel="stylesheet" />
     <script src="scripts/jquery.js"></script>
     <script src="scripts/bootstrap.js"></script>
-    <script src="scripts/bootstrap-slider.min.js"></script>
     <script src="scripts/materialize.min.js"></script>
     <script src="scripts/jquery-circle-progress.js"></script>
     <script src="scripts/custom.js"></script>
 </head>
-<body class="landing-page">
-    <header style="background-image: url('images/banner.jpg');">
+<body>
+    <header>
         <div class="container-percent">
             <h1 class="logo">
                 <a href="/" title="Miraway">
@@ -93,6 +92,10 @@
                     </div>
                 </li>
             </ul>
+        </div>
+    </header>
+    <section class="banner-section" style="background-image: url('images/banner.jpg');">
+        <div class="container-percent">
             <div class="banner-text">
                 <h3>giải pháp miraway cetm</h3>
                 <h2>
@@ -103,7 +106,7 @@
                 <a href="#">Tìm hiểu ngay</a>
             </div>
         </div>
-    </header>
+    </section>
     <section class="why-us">
         <div class="container-percent">
             <h3 class="title-underline">Tại sao là chúng tôi?</h3>
@@ -398,7 +401,7 @@
     </footer>
     <script type="text/javascript">
         $(document).ready(function () {
-
+            $('body').addClass('landing-page');
             $(window).scroll(function () {
                 var top_of_element = $(".cetm-benefit").offset().top + 120;
                 var bottom_of_element = $(".cetm-benefit").offset().top + $(".cetm-benefit").outerHeight();
