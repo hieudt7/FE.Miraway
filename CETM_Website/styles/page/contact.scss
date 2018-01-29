@@ -48,6 +48,7 @@
 
     .content-ser {
         margin-top: 30px;
+        margin-bottom:30px;
 
         h3 {
             text-transform: uppercase;
@@ -61,6 +62,7 @@
             font-family: 'helveticaneuebold';
             color: #e56300;
             font-size: 24px;
+            padding-top: 0;
         }
 
         .ser-img {
@@ -97,6 +99,17 @@
                 }
             }
         }
+
+        .ser-map {
+            width: calc( 100% - 500px);
+            float: left;
+            padding: 0 30px;
+        }
+
+        .ser-map-img {
+            width: 500px;
+            float: left;
+        }
     }
 
     .abt {
@@ -130,6 +143,33 @@
 
     input:focus {
         border-color: #66afe9;
+    }
+
+    .sent-email {
+        background-color: #f3f2f2;
+        padding: 15px 0;
+        margin-top: 30px;
+    }
+
+    .sent-form {
+        text-align: right;
+        line-height: 100px;
+
+        .form-group {
+            width: calc( 100% - 200px);
+
+            .form-control {
+                line-height: 34px;
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .sent-ab {
+            line-height: 28px;
+            background-color: #e2574c;
+            margin-left: 15px;
+        }
     }
 }
 
