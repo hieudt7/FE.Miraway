@@ -73,6 +73,7 @@
     <div id="callme">
         <div id="callmeMain">
             <a href="tel:0969059786" title="0969059786"></a>
+            <span>0969059786</span>
         </div>
     </div>
     <footer>
@@ -122,7 +123,7 @@
                             <li><h4>tài liệu</h4></li>
                             <li><a>Hướng dẫn sử dụng</a></li>
                             <li><a>Điều khoản sử dụng</a></li>
-                            <li><a>Chính sách bảo mật</a></li>                            
+                            <li><a>Chính sách bảo mật</a></li>
                         </ul>
                     </div>
                 </div>
@@ -305,7 +306,16 @@
                 });
             infowindow = new google.maps.InfoWindow({ content: '<strong>MiraScan</strong><br>14 Pháo Đài Láng, Láng Thượng, Hà Nội, Việt Nam<br>' });
             google.maps.event.addListener(marker, 'click', function () { infowindow.open(map, marker); }); infowindow.open(map, marker);
-        }
+        };
+        //
+        $(document).ready(function () {
+            if (window.screen.width > 1024) {
+                $('#callme a').attr('href', 'javascript:void(0)');
+                $('#callme').on('click', function () {
+                    $(this).toggleClass('active');
+                })
+            }
+        })
     </script>
 </body>
 </html>

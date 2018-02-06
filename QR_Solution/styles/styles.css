@@ -3550,6 +3550,7 @@ body {
   opacity: 0.9;
   z-index: 99990; }
   #callme #callmeMain {
+    transition: all ease 0.35s;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
     border-radius: 50%;
@@ -3581,6 +3582,25 @@ body {
       height: 70px;
       position: relative;
       z-index: 999; }
+    #callme #callmeMain span {
+      display: none; }
+  #callme.active #callmeMain {
+    -webkit-animation: none;
+    -moz-animation: none;
+    animation: none;
+    width: 220px;
+    border-radius: 40px; }
+    #callme.active #callmeMain:before {
+      content: none; }
+    #callme.active #callmeMain a {
+      display: none; }
+    #callme.active #callmeMain span {
+      display: block;
+      color: #fff;
+      font-weight: bold;
+      font-size: 27px;
+      line-height: 70px;
+      text-align: center; }
 
 @-webkit-keyframes zcwphone {
   0% {
