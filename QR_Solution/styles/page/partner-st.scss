@@ -1,0 +1,96 @@
+﻿.img-partner {
+    text-align: center;
+    margin-top: 15px;
+
+    img {
+        width: 30%;
+        padding: 15px;
+    }
+}
+
+.partner-content {
+    background-color: #ea9f60;
+
+    .item-content {
+        @include desktop {
+            &:first-child {
+                border-right: solid 1px #000;
+            }
+        }
+
+        border-bottom: solid 10px #fff;
+        border-top: solid 10px #fff;
+        min-height: 170px;
+    }
+
+    h3 {
+        background-image: url('../../images/contact/bga.jpg');
+        text-align: center;
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 18px;
+    }
+
+    ul {
+        list-style: none;
+    }
+}
+
+.pt-table-content {
+    text-align: center;
+
+    .table {
+        width: 60% !important;
+        display: inline-table;
+    }
+}
+
+.pt-page {
+    .pr-title {
+        padding-top: 15px;
+        /*background-color:transparent !important;*/
+    }
+
+    .pr-table .menu {
+        background-color: transparent;
+    }
+
+    .pr-table {
+        padding-bottom: 0;
+    }
+
+    .pt-form {
+        margin-bottom: 60px;
+
+        @include desktop {
+            padding: 0 220px;
+        }
+
+        .form-group {
+            .form-control {
+                border-radius: 0;
+                &:focus{
+                    box-shadow: none;
+                }
+            }
+        }
+
+        .send-btn {
+            &:hover{
+                background-color: #f58220;
+            }
+            &:focus{
+                border: none;
+                outline:none;
+            }
+            border: none;
+            border-radius: 0;
+        }
+    }
+    .img-slogan{
+        text-align:center;
+    }
+    span{
+        background-color: #ea9f60 ;
+    }
+}

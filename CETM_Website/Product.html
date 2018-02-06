@@ -47,6 +47,24 @@
                             </span>
                         </div>
                     </div>
+                    <div class="col-md-3">
+                        <div class="overlay-link">
+                            <img src="images/qr_logo.PNG" class="img-thumb" />
+                            <div class="list-img-show">
+                                <img src="images/sp1.png" />
+                                <img src="images/sp1.png" />
+                                <img src="images/sp1.png" />
+                            </div>
+                            <span class="overlay-info">
+                                <span>
+                                    <span>
+                                        <span>kiosk giao dịch</span>
+                                        <a href="javascript:void(0)" class="view-popup" title="xem thêm">xem thêm</a>
+                                    </span>
+                                </span>
+                            </span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -68,22 +86,28 @@
     </div>
     <script type="text/javascript">
         $(document).ready(function() {
-            $('.view-popup').on('click', function() {
+            $('.view-popup').on('click', function () {
+                $('.overlay-link').removeClass('slide-active');
+                $(this).parents('.overlay-link:first').addClass('slide-active');
                 var imgThumb = $(this).parents('.overlay-link:first').find('.img-thumb').attr('src');
                 var html = '<li class="active"><img src="' + imgThumb + '" /></li>';
-                $('.list-img-show img').each(function() {
+                $('.slide-active .list-img-show img').each(function () {
                     html += '<li><img src="' + $(this).attr('src') + '" /></li>';
                 })
                 $('#imgModal').modal('show');
                 $("#imgModal").on('shown.bs.modal', function() {
-                    $('.img-show').append('<img src="' + imgThumb + '" />');
-                    $('.list-thumb').append(html);
+                    $('.img-show').html('<img src="' + imgThumb + '" />');
+                    $('.list-thumb').html(html);
                     $('.list-thumb li').on('click', function() {
                         $('.list-thumb li').removeClass('active');
                         $(this).addClass('active');
                         var imgShow = $(this).find('img').attr('src');
                         $('.img-show').html('<img src="' + imgShow + '" />');
                     })
+                });
+                $("#imgModal").on('hidden.bs.modal', function () {
+                    $('.img-show').html('');
+                    $('.list-thumb').html('');
                 });
             })
         });

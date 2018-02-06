@@ -10,5 +10,9 @@
   {
     "outputFile": "CETM_Website/styles/styles.css",
     "inputFile": "CETM_Website/styles/styles.scss"
+  },
+  {
+    "outputFile": "QR_Solution/styles/partner.css",
+    "inputFile": "QR_Solution/styles/partner.scss"
   }
 ]
